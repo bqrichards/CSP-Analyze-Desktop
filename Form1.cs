@@ -128,7 +128,7 @@ namespace CSP_Analyze
 
         private void RunQueryButton_Click(object sender, EventArgs e)
         {
-            QueryResultsForm resultsForm = new QueryResultsForm();
+            QueryResultsForm resultsForm = new QueryResultsForm(dbController, queryRichTextBox.Text);
             resultsForm.Show();
         }
 

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CSP_Analyze
 {
-    class DatabaseController
+    public class DatabaseController
     {
         public string CurrentQueryName;
         public string RemoteLastUpdated = "Never";
@@ -203,6 +203,16 @@ namespace CSP_Analyze
             numberOfLocalMatchScoutingChanges -= result;
             SaveInfo();
             return string.Format("{0} rows affected by the push.", result);
+        }
+
+        public async Task<LinkedList<CspAnalyzeDataSet.matchscoutingRow>> GetResultsFromQuery(string rawQuery)
+        {
+            string[] queries = rawQuery.Split(new string[] { "\r\n", "r", "\n" }, StringSplitOptions.None);
+            LinkedList<CspAnalyzeDataSet.matchscoutingRow> rows = new LinkedList<CspAnalyzeDataSet.matchscoutingRow>();
+
+            // TODO - Run query
+
+            return rows;
         }
     }
 }

@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label label2;
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.resultsDataGridView = new System.Windows.Forms.DataGridView();
+            this.numberOfRowsLabel = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 36);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 402);
-            this.dataGridView1.TabIndex = 0;
             // 
             // label2
             // 
@@ -60,16 +47,41 @@
             label2.TabIndex = 5;
             label2.Text = "RESULTS";
             // 
+            // resultsDataGridView
+            // 
+            this.resultsDataGridView.AllowUserToAddRows = false;
+            this.resultsDataGridView.AllowUserToDeleteRows = false;
+            this.resultsDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.resultsDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.resultsDataGridView.Location = new System.Drawing.Point(12, 57);
+            this.resultsDataGridView.Name = "resultsDataGridView";
+            this.resultsDataGridView.ReadOnly = true;
+            this.resultsDataGridView.Size = new System.Drawing.Size(776, 381);
+            this.resultsDataGridView.TabIndex = 0;
+            // 
+            // numberOfRowsLabel
+            // 
+            this.numberOfRowsLabel.AutoSize = true;
+            this.numberOfRowsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numberOfRowsLabel.Location = new System.Drawing.Point(13, 38);
+            this.numberOfRowsLabel.Name = "numberOfRowsLabel";
+            this.numberOfRowsLabel.Size = new System.Drawing.Size(113, 16);
+            this.numberOfRowsLabel.TabIndex = 6;
+            this.numberOfRowsLabel.Text = "Number of Rows: ";
+            // 
             // QueryResultsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numberOfRowsLabel);
             this.Controls.Add(label2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.resultsDataGridView);
             this.Name = "QueryResultsForm";
             this.Text = "Query Results";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.resultsDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -77,6 +89,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView resultsDataGridView;
+        private System.Windows.Forms.Label numberOfRowsLabel;
     }
 }
