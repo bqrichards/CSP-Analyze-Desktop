@@ -34,6 +34,10 @@
             System.Windows.Forms.Label label3;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.statusTabPage = new System.Windows.Forms.TabPage();
+            this.pushDatabaseButton = new System.Windows.Forms.Button();
+            this.numberOfLocalChangesLabel = new System.Windows.Forms.Label();
+            this.pullDatabaseButton = new System.Windows.Forms.Button();
+            this.lastUpdatedLabel = new System.Windows.Forms.Label();
             this.telemetryRichTextBox = new System.Windows.Forms.RichTextBox();
             this.importButton = new System.Windows.Forms.Button();
             this.queryTabPage = new System.Windows.Forms.TabPage();
@@ -44,10 +48,6 @@
             this.loadQueryButton = new System.Windows.Forms.Button();
             this.newQueryButton = new System.Windows.Forms.Button();
             this.queryHeaderLabel = new System.Windows.Forms.Label();
-            this.lastUpdatedLabel = new System.Windows.Forms.Label();
-            this.pullDatabaseButton = new System.Windows.Forms.Button();
-            this.numberOfLocalChangesLabel = new System.Windows.Forms.Label();
-            this.pushDatabaseButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             instructionsRichTextBox = new System.Windows.Forms.RichTextBox();
             label2 = new System.Windows.Forms.Label();
@@ -71,7 +71,10 @@
             // 
             // instructionsRichTextBox
             // 
-            instructionsRichTextBox.BackColor = System.Drawing.Color.White;
+            instructionsRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            instructionsRichTextBox.BackColor = System.Drawing.Color.WhiteSmoke;
             instructionsRichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             instructionsRichTextBox.Location = new System.Drawing.Point(196, 30);
             instructionsRichTextBox.Name = "instructionsRichTextBox";
@@ -93,8 +96,23 @@
             label2.TabIndex = 4;
             label2.Text = "TELEMETRY";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Black;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(13, 162);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(111, 24);
+            label3.TabIndex = 5;
+            label3.Text = "DATABASE";
+            // 
             // tabControl1
             // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.statusTabPage);
             this.tabControl1.Controls.Add(this.queryTabPage);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -123,8 +141,48 @@
             this.statusTabPage.Text = "Status";
             this.statusTabPage.UseVisualStyleBackColor = true;
             // 
+            // pushDatabaseButton
+            // 
+            this.pushDatabaseButton.Location = new System.Drawing.Point(12, 297);
+            this.pushDatabaseButton.Name = "pushDatabaseButton";
+            this.pushDatabaseButton.Size = new System.Drawing.Size(151, 23);
+            this.pushDatabaseButton.TabIndex = 9;
+            this.pushDatabaseButton.Text = "Push";
+            this.pushDatabaseButton.UseVisualStyleBackColor = true;
+            this.pushDatabaseButton.Click += new System.EventHandler(this.PushDatabaseButton_Click);
+            // 
+            // numberOfLocalChangesLabel
+            // 
+            this.numberOfLocalChangesLabel.AutoSize = true;
+            this.numberOfLocalChangesLabel.Location = new System.Drawing.Point(12, 277);
+            this.numberOfLocalChangesLabel.Name = "numberOfLocalChangesLabel";
+            this.numberOfLocalChangesLabel.Size = new System.Drawing.Size(169, 16);
+            this.numberOfLocalChangesLabel.TabIndex = 8;
+            this.numberOfLocalChangesLabel.Text = "Number of Local Changes: ";
+            // 
+            // pullDatabaseButton
+            // 
+            this.pullDatabaseButton.Location = new System.Drawing.Point(12, 210);
+            this.pullDatabaseButton.Name = "pullDatabaseButton";
+            this.pullDatabaseButton.Size = new System.Drawing.Size(151, 23);
+            this.pullDatabaseButton.TabIndex = 7;
+            this.pullDatabaseButton.Text = "Pull";
+            this.pullDatabaseButton.UseVisualStyleBackColor = true;
+            this.pullDatabaseButton.Click += new System.EventHandler(this.PullDatabaseButton_Click);
+            // 
+            // lastUpdatedLabel
+            // 
+            this.lastUpdatedLabel.AutoSize = true;
+            this.lastUpdatedLabel.Location = new System.Drawing.Point(17, 190);
+            this.lastUpdatedLabel.Name = "lastUpdatedLabel";
+            this.lastUpdatedLabel.Size = new System.Drawing.Size(95, 16);
+            this.lastUpdatedLabel.TabIndex = 6;
+            this.lastUpdatedLabel.Text = "Last Updated: ";
+            // 
             // telemetryRichTextBox
             // 
+            this.telemetryRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.telemetryRichTextBox.Location = new System.Drawing.Point(228, 50);
             this.telemetryRichTextBox.Name = "telemetryRichTextBox";
             this.telemetryRichTextBox.Size = new System.Drawing.Size(538, 295);
@@ -172,6 +230,7 @@
             // 
             // runQueryButton
             // 
+            this.runQueryButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.runQueryButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.runQueryButton.Location = new System.Drawing.Point(603, 100);
             this.runQueryButton.Name = "runQueryButton";
@@ -183,6 +242,8 @@
             // 
             // queryRichTextBox
             // 
+            this.queryRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.queryRichTextBox.Location = new System.Drawing.Point(9, 136);
             this.queryRichTextBox.Name = "queryRichTextBox";
             this.queryRichTextBox.Size = new System.Drawing.Size(775, 278);
@@ -231,56 +292,6 @@
             this.queryHeaderLabel.Size = new System.Drawing.Size(186, 24);
             this.queryHeaderLabel.TabIndex = 0;
             this.queryHeaderLabel.Text = "Current Query: None";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = System.Drawing.Color.Black;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            label3.ForeColor = System.Drawing.Color.White;
-            label3.Location = new System.Drawing.Point(13, 162);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(111, 24);
-            label3.TabIndex = 5;
-            label3.Text = "DATABASE";
-            // 
-            // lastUpdatedLabel
-            // 
-            this.lastUpdatedLabel.AutoSize = true;
-            this.lastUpdatedLabel.Location = new System.Drawing.Point(17, 190);
-            this.lastUpdatedLabel.Name = "lastUpdatedLabel";
-            this.lastUpdatedLabel.Size = new System.Drawing.Size(95, 16);
-            this.lastUpdatedLabel.TabIndex = 6;
-            this.lastUpdatedLabel.Text = "Last Updated: ";
-            // 
-            // pullDatabaseButton
-            // 
-            this.pullDatabaseButton.Location = new System.Drawing.Point(12, 210);
-            this.pullDatabaseButton.Name = "pullDatabaseButton";
-            this.pullDatabaseButton.Size = new System.Drawing.Size(151, 23);
-            this.pullDatabaseButton.TabIndex = 7;
-            this.pullDatabaseButton.Text = "Pull";
-            this.pullDatabaseButton.UseVisualStyleBackColor = true;
-            this.pullDatabaseButton.Click += new System.EventHandler(this.PullDatabaseButton_Click);
-            // 
-            // numberOfLocalChangesLabel
-            // 
-            this.numberOfLocalChangesLabel.AutoSize = true;
-            this.numberOfLocalChangesLabel.Location = new System.Drawing.Point(12, 277);
-            this.numberOfLocalChangesLabel.Name = "numberOfLocalChangesLabel";
-            this.numberOfLocalChangesLabel.Size = new System.Drawing.Size(169, 16);
-            this.numberOfLocalChangesLabel.TabIndex = 8;
-            this.numberOfLocalChangesLabel.Text = "Number of Local Changes: ";
-            // 
-            // pushDatabaseButton
-            // 
-            this.pushDatabaseButton.Location = new System.Drawing.Point(12, 297);
-            this.pushDatabaseButton.Name = "pushDatabaseButton";
-            this.pushDatabaseButton.Size = new System.Drawing.Size(151, 23);
-            this.pushDatabaseButton.TabIndex = 9;
-            this.pushDatabaseButton.Text = "Push";
-            this.pushDatabaseButton.UseVisualStyleBackColor = true;
-            this.pushDatabaseButton.Click += new System.EventHandler(this.PushDatabaseButton_Click);
             // 
             // Form1
             // 

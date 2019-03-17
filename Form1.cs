@@ -128,7 +128,8 @@ namespace CSP_Analyze
 
         private void RunQueryButton_Click(object sender, EventArgs e)
         {
-
+            QueryResultsForm resultsForm = new QueryResultsForm();
+            resultsForm.Show();
         }
 
         private string StringPrompt()
@@ -174,24 +175,25 @@ namespace CSP_Analyze
             return textBox.Text;
         }
 
-        private void PullDatabaseButton_Click(object sender, EventArgs e)
+        private async void PullDatabaseButton_Click(object sender, EventArgs e)
         {
             pushDatabaseButton.Enabled = false;
             pullDatabaseButton.Enabled = false;
             Log("Pulling data from remote database");
-            string result = dbController.RemotePull(this);
+            string result = await Task.Run(() => dbController.RemotePull());
             Log(result);
             pushDatabaseButton.Enabled = true;
             pullDatabaseButton.Enabled = true;
         }
 
-        private void PushDatabaseButton_Click(object sender, EventArgs e)
+        private async void PushDatabaseButton_Click(object sender, EventArgs e)
         {
             pushDatabaseButton.Enabled = false;
             pullDatabaseButton.Enabled = false;
             Log("Pushing data to remote database");
-            string result = dbController.RemotePush();
+            string result = await Task.Run(() => dbController.RemotePush());
             Log(result);
+            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + dbController.numberOfLocalMatchScoutingChanges;
             pushDatabaseButton.Enabled = true;
             pullDatabaseButton.Enabled = true;
         }

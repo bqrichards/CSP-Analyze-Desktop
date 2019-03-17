@@ -46,9 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CspAnalyzeDataSet.cs">
-      <DependentUpon>CspAnalyzeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="CspAnalyzeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryResultsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QueryResultsForm.Designer.cs">
+      <DependentUpon>QueryResultsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +78,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QueryResultsForm.resx">
+      <DependentUpon>QueryResultsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="CspAnalyzeDataSet.xsc">
       <DependentUpon>CspAnalyzeDataSet.xsd</DependentUpon>
     </None>

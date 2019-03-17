@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace CSP_Analyze
@@ -78,11 +80,18 @@ namespace CSP_Analyze
         private void SaveInfo()
         {
             File.WriteAllText(infoFilePath, "remote_last_updated=" + RemoteLastUpdated + "\nlocal_matchscouting_changes=" + numberOfLocalMatchScoutingChanges);
+
+            try
+            {
+                matchscoutingDataTable.WriteXml(matchscoutingSavedPath);
+            }
+            catch (Exception) {}
         }
 
         public int ImportMatchScoutingRows(LinkedList<string> matches)
         {
             DataColumnCollection columns = matchscoutingDataTable.Columns;
+            Regex dateRegex = new Regex("(\\d+)\\/(\\d+)\\/(\\d+)\\+? ?(\\d+):(\\d+):(\\d+)", RegexOptions.Compiled);
 
             foreach (string match in matches)
             {
@@ -94,16 +103,35 @@ namespace CSP_Analyze
                 {
                     string columnName = columns[i].ColumnName.ToString();
                     string value = values[i];
-                    newMatch[columnName] = value;
+
+                    if (columnName.IndexOf("dt") >= 0)
+                    {
+                        // this is a date. we need to parse value and turn it into a datetime object
+                        Match dateMatches = dateRegex.Match(value);
+                        GroupCollection groups = dateMatches.Groups;
+                        int[] dateMatchResults = new int[groups.Count];
+                        for (int j = 1; j < dateMatchResults.Length; j++)
+                        {
+                            dateMatchResults[j-1] = int.Parse(groups[j].Value);
+                        }
+
+                        // year month day hour minute second
+                        DateTime dateTime = new DateTime(dateMatchResults[0], dateMatchResults[1], dateMatchResults[2], dateMatchResults[3], dateMatchResults[4], dateMatchResults[5]);
+                        newMatch[columnName] = dateTime;
+                        Console.WriteLine("Set " + columnName + " to " + dateTime);
+                    }
+                    else
+                    {
+                        newMatch[columnName] = value;
+                        Console.WriteLine("Set " + columnName + " to " + value);
+                    }
                 }
 
                 // Add rows
                 matchscoutingDataTable.Rows.Add(newMatch);
                 numberOfLocalMatchScoutingChanges++;
             }
-
-            SaveInfo();
-
+            
             return numberOfLocalMatchScoutingChanges;
         }
 
@@ -145,27 +173,36 @@ namespace CSP_Analyze
             }
         }
 
-        public string RemotePull(Form1 form)
+        public string RemotePull()
         {
-            int results = matchscoutingTableAdapter.Fill(matchscoutingDataTable);
+            int result;
+            try
+            {
+                result = matchscoutingTableAdapter.Fill(matchscoutingDataTable);
+            }
+            catch (SqlException e)
+            {
+                return "An error occurred: " + e.Message;
+            }
+            
 
             try
             {
                 matchscoutingDataTable.WriteXml(matchscoutingSavedPath);
             }
-            catch (Exception e)
-            {
-                form.Log("An exception occurred while writing matchscouting xml: " + e.Message);
-            }
+            catch (Exception) {}
 
-            return string.Format("{0} rows affected by the pull.", results);
+            SaveInfo();
+
+            return string.Format("{0} rows affected by the pull.", result);
         }
 
         public string RemotePush()
         {
-
-
-            return "TODO";
+            int result = matchscoutingTableAdapter.Update(matchscoutingDataTable);
+            numberOfLocalMatchScoutingChanges -= result;
+            SaveInfo();
+            return string.Format("{0} rows affected by the push.", result);
         }
     }
 }

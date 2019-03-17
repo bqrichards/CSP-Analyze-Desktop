@@ -281,7 +281,11 @@ namespace CSP_Analyze {
             
             private global::System.Data.DataColumn columnid;
             
+            private global::System.Data.DataColumn columnevent;
+            
             private global::System.Data.DataColumn columnnumMatch;
+            
+            private global::System.Data.DataColumn columnteam;
             
             private global::System.Data.DataColumn columnidAlliance;
             
@@ -445,10 +449,6 @@ namespace CSP_Analyze {
             
             private global::System.Data.DataColumn columnflRanking2;
             
-            private global::System.Data.DataColumn columnevent;
-            
-            private global::System.Data.DataColumn columnteam;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingDataTable() {
@@ -492,9 +492,25 @@ namespace CSP_Analyze {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn eventColumn {
+                get {
+                    return this.columnevent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn numMatchColumn {
                 get {
                     return this.columnnumMatch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn teamColumn {
+                get {
+                    return this.columnteam;
                 }
             }
             
@@ -1148,22 +1164,6 @@ namespace CSP_Analyze {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn eventColumn {
-                get {
-                    return this.columnevent;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn teamColumn {
-                get {
-                    return this.columnteam;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1200,8 +1200,9 @@ namespace CSP_Analyze {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow AddmatchscoutingRow(
-                        int id, 
+                        string _event, 
                         int numMatch, 
+                        int team, 
                         int idAlliance, 
                         int idDriveStation, 
                         string txScoutName, 
@@ -1282,13 +1283,13 @@ namespace CSP_Analyze {
                         System.DateTime dtModified, 
                         string txComputerName, 
                         bool flRanking1, 
-                        bool flRanking2, 
-                        string _event, 
-                        int team) {
+                        bool flRanking2) {
                 matchscoutingRow rowmatchscoutingRow = ((matchscoutingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        id,
+                        null,
+                        _event,
                         numMatch,
+                        team,
                         idAlliance,
                         idDriveStation,
                         txScoutName,
@@ -1369,9 +1370,7 @@ namespace CSP_Analyze {
                         dtModified,
                         txComputerName,
                         flRanking1,
-                        flRanking2,
-                        _event,
-                        team};
+                        flRanking2};
                 rowmatchscoutingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmatchscoutingRow);
                 return rowmatchscoutingRow;
@@ -1402,7 +1401,9 @@ namespace CSP_Analyze {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
+                this.columnevent = base.Columns["event"];
                 this.columnnumMatch = base.Columns["numMatch"];
+                this.columnteam = base.Columns["team"];
                 this.columnidAlliance = base.Columns["idAlliance"];
                 this.columnidDriveStation = base.Columns["idDriveStation"];
                 this.columntxScoutName = base.Columns["txScoutName"];
@@ -1484,8 +1485,6 @@ namespace CSP_Analyze {
                 this.columntxComputerName = base.Columns["txComputerName"];
                 this.columnflRanking1 = base.Columns["flRanking1"];
                 this.columnflRanking2 = base.Columns["flRanking2"];
-                this.columnevent = base.Columns["event"];
-                this.columnteam = base.Columns["team"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1493,8 +1492,15 @@ namespace CSP_Analyze {
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
+                this.columnevent = new global::System.Data.DataColumn("event", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "eventColumn");
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnevent");
+                this.columnevent.ExtendedProperties.Add("Generator_UserColumnName", "event");
+                base.Columns.Add(this.columnevent);
                 this.columnnumMatch = new global::System.Data.DataColumn("numMatch", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumMatch);
+                this.columnteam = new global::System.Data.DataColumn("team", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnteam);
                 this.columnidAlliance = new global::System.Data.DataColumn("idAlliance", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidAlliance);
                 this.columnidDriveStation = new global::System.Data.DataColumn("idDriveStation", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1657,18 +1663,18 @@ namespace CSP_Analyze {
                 base.Columns.Add(this.columnflRanking1);
                 this.columnflRanking2 = new global::System.Data.DataColumn("flRanking2", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnflRanking2);
-                this.columnevent = new global::System.Data.DataColumn("event", typeof(string), null, global::System.Data.MappingType.Element);
-                this.columnevent.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "eventColumn");
-                this.columnevent.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnevent");
-                this.columnevent.ExtendedProperties.Add("Generator_UserColumnName", "event");
-                base.Columns.Add(this.columnevent);
-                this.columnteam = new global::System.Data.DataColumn("team", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnteam);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
                 this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
                 this.columnid.Unique = true;
+                this.columnevent.AllowDBNull = false;
+                this.columnevent.MaxLength = 2147483647;
                 this.columnnumMatch.AllowDBNull = false;
+                this.columnteam.AllowDBNull = false;
                 this.columnidAlliance.AllowDBNull = false;
                 this.columnidDriveStation.AllowDBNull = false;
                 this.columntxScoutName.AllowDBNull = false;
@@ -1753,9 +1759,6 @@ namespace CSP_Analyze {
                 this.columntxComputerName.MaxLength = 2147483647;
                 this.columnflRanking1.AllowDBNull = false;
                 this.columnflRanking2.AllowDBNull = false;
-                this.columnevent.AllowDBNull = false;
-                this.columnevent.MaxLength = 2147483647;
-                this.columnteam.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1909,12 +1912,34 @@ namespace CSP_Analyze {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string _event {
+                get {
+                    return ((string)(this[this.tablematchscouting.eventColumn]));
+                }
+                set {
+                    this[this.tablematchscouting.eventColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int numMatch {
                 get {
                     return ((int)(this[this.tablematchscouting.numMatchColumn]));
                 }
                 set {
                     this[this.tablematchscouting.numMatchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int team {
+                get {
+                    return ((int)(this[this.tablematchscouting.teamColumn]));
+                }
+                set {
+                    this[this.tablematchscouting.teamColumn] = value;
                 }
             }
             
@@ -2808,28 +2833,6 @@ namespace CSP_Analyze {
                     this[this.tablematchscouting.flRanking2Column] = value;
                 }
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string _event {
-                get {
-                    return ((string)(this[this.tablematchscouting.eventColumn]));
-                }
-                set {
-                    this[this.tablematchscouting.eventColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int team {
-                get {
-                    return ((int)(this[this.tablematchscouting.teamColumn]));
-                }
-                set {
-                    this[this.tablematchscouting.teamColumn] = value;
-                }
-            }
         }
         
         /// <summary>
@@ -2992,7 +2995,9 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "matchscouting";
             tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("event", "event");
             tableMapping.ColumnMappings.Add("numMatch", "numMatch");
+            tableMapping.ColumnMappings.Add("team", "team");
             tableMapping.ColumnMappings.Add("idAlliance", "idAlliance");
             tableMapping.ColumnMappings.Add("idDriveStation", "idDriveStation");
             tableMapping.ColumnMappings.Add("txScoutName", "txScoutName");
@@ -3074,8 +3079,6 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("txComputerName", "txComputerName");
             tableMapping.ColumnMappings.Add("flRanking1", "flRanking1");
             tableMapping.ColumnMappings.Add("flRanking2", "flRanking2");
-            tableMapping.ColumnMappings.Add("event", "event");
-            tableMapping.ColumnMappings.Add("team", "team");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -3229,86 +3232,85 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [matchscouting] ([id], [event], [numMatch], [team], [idAlliance], [id" +
-                "DriveStation], [txScoutName], [flCrashed], [flYellow], [flRed], [auto_flState], " +
-                "[auto_idStartPosition], [auto_idStatrLevel], [auto_baseLine], [auto_idStartObjec" +
-                "t], [auto_numShipFrontHatchAttempt], [auto_numShipFrontHatchSuccess], [auto_numS" +
-                "hipSideHatchAttempt], [auto_numShipSideHatchSuccess], [auto_numShipFrontCargoAtt" +
-                "empt], [auto_numShipFrontCargoSuccess], [auto_numShipSideCargoAttempt], [auto_nu" +
-                "mShipSideCargoSuccess], [auto_numRocketLowHatchAttempt], [auto_numRocketLowHatch" +
-                "Success], [auto_numRocketMidHatchAttempt], [auto_numRocketMidHatchSuccess], [aut" +
-                "o_numRocketHighHatchAttempt], [auto_numRocketHighHatchSuccess], [auto_numRocketL" +
-                "owCargoAttempt], [auto_numRocketLowCargoSuccess], [auto_numRocketMidCargoAttempt" +
-                "], [auto_numRocketMidCargoSuccess], [auto_numRocketHighCargoAttempt], [auto_numR" +
-                "ocketHighCargoSuccess], [auto_flLoseStartObject], [auto_flRobotContact], [auto_f" +
-                "lFoul], [auto_flCrossOver], [tele_numShipFrontHatchAttempt], [tele_numShipFrontH" +
-                "atchSuccess], [tele_numShipSideHatchAttempt], [tele_numShipSideHatchSuccess], [t" +
-                "ele_numShipFrontCargoAttempt], [tele_numShipFrontCargoSuccess], [tele_numShipSid" +
-                "eCargoAttempt], [tele_numShipSideCargoSuccess], [tele_numRocketLowHatchAttempt]," +
-                " [tele_numRocketLowHatchSuccess], [tele_numRocketMidHatchAttempt], [tele_numRock" +
-                "etMidHatchSuccess], [tele_numRocketHighAttempt], [tele_numRocketHighSuccess], [t" +
-                "ele_numRocketLowCargoAttempt], [tele_numRocketLowCargoSuccess], [tele_numRocketM" +
-                "idCargoAttempt], [tele_numRocketMidCargoSuccess], [tele_numRocketHighCargoAttemp" +
-                "t], [tele_numRocketHighCargoSuccess], [tele_idClimb], [tele_idClimbOutcome], [te" +
-                "le_idClimbGrab], [tele_idClimbSpeed], [tele_numClimbAssists], [tele_idClimbLevel" +
-                "], [tele_flClimbFall], [tele_flDefence], [flIntakeHatchGround], [flIntakeHatchSt" +
-                "ation], [flIntakeCargoGround], [flIntakeCargoStation], [comm_txNotes], [comm_flH" +
-                "ighlight], [comm_flWarning], [comm_idDriveRating], [comm_flAlliance], [comm_flRe" +
-                "covery], [comm_flStrategy], [comm_flOwnThing], [comm_flGoodDefence], [dtCreation" +
-                "], [dtModified], [txComputerName], [flRanking1], [flRanking2]) VALUES (@id, @eve" +
-                "nt, @numMatch, @team, @idAlliance, @idDriveStation, @txScoutName, @flCrashed, @f" +
-                "lYellow, @flRed, @auto_flState, @auto_idStartPosition, @auto_idStatrLevel, @auto" +
-                "_baseLine, @auto_idStartObject, @auto_numShipFrontHatchAttempt, @auto_numShipFro" +
-                "ntHatchSuccess, @auto_numShipSideHatchAttempt, @auto_numShipSideHatchSuccess, @a" +
-                "uto_numShipFrontCargoAttempt, @auto_numShipFrontCargoSuccess, @auto_numShipSideC" +
-                "argoAttempt, @auto_numShipSideCargoSuccess, @auto_numRocketLowHatchAttempt, @aut" +
-                "o_numRocketLowHatchSuccess, @auto_numRocketMidHatchAttempt, @auto_numRocketMidHa" +
-                "tchSuccess, @auto_numRocketHighHatchAttempt, @auto_numRocketHighHatchSuccess, @a" +
-                "uto_numRocketLowCargoAttempt, @auto_numRocketLowCargoSuccess, @auto_numRocketMid" +
-                "CargoAttempt, @auto_numRocketMidCargoSuccess, @auto_numRocketHighCargoAttempt, @" +
-                "auto_numRocketHighCargoSuccess, @auto_flLoseStartObject, @auto_flRobotContact, @" +
-                "auto_flFoul, @auto_flCrossOver, @tele_numShipFrontHatchAttempt, @tele_numShipFro" +
-                "ntHatchSuccess, @tele_numShipSideHatchAttempt, @tele_numShipSideHatchSuccess, @t" +
-                "ele_numShipFrontCargoAttempt, @tele_numShipFrontCargoSuccess, @tele_numShipSideC" +
-                "argoAttempt, @tele_numShipSideCargoSuccess, @tele_numRocketLowHatchAttempt, @tel" +
-                "e_numRocketLowHatchSuccess, @tele_numRocketMidHatchAttempt, @tele_numRocketMidHa" +
-                "tchSuccess, @tele_numRocketHighAttempt, @tele_numRocketHighSuccess, @tele_numRoc" +
-                "ketLowCargoAttempt, @tele_numRocketLowCargoSuccess, @tele_numRocketMidCargoAttem" +
-                "pt, @tele_numRocketMidCargoSuccess, @tele_numRocketHighCargoAttempt, @tele_numRo" +
-                "cketHighCargoSuccess, @tele_idClimb, @tele_idClimbOutcome, @tele_idClimbGrab, @t" +
-                "ele_idClimbSpeed, @tele_numClimbAssists, @tele_idClimbLevel, @tele_flClimbFall, " +
-                "@tele_flDefence, @flIntakeHatchGround, @flIntakeHatchStation, @flIntakeCargoGrou" +
-                "nd, @flIntakeCargoStation, @comm_txNotes, @comm_flHighlight, @comm_flWarning, @c" +
-                "omm_idDriveRating, @comm_flAlliance, @comm_flRecovery, @comm_flStrategy, @comm_f" +
-                "lOwnThing, @comm_flGoodDefence, @dtCreation, @dtModified, @txComputerName, @flRa" +
-                "nking1, @flRanking2);\r\nSELECT id, event, numMatch, team, idAlliance, idDriveStat" +
-                "ion, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition" +
-                ", auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAt" +
-                "tempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShip" +
-                "SideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, " +
-                "auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHat" +
-                "chAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_nu" +
-                "mRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchS" +
-                "uccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRo" +
-                "cketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttem" +
-                "pt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact," +
-                " auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFront" +
-                "HatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_n" +
-                "umShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAtt" +
-                "empt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocke" +
-                "tLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, " +
-                "tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAtte" +
-                "mpt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocke" +
-                "tMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess" +
-                ", tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_n" +
-                "umClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHat" +
-                "chGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_" +
-                "txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, " +
-                "comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreatio" +
-                "n, dtModified, txComputerName, flRanking1, flRanking2 FROM matchscouting WHERE (" +
-                "id = @id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [matchscouting] ([event], [numMatch], [team], [idAlliance], [idDriveS" +
+                "tation], [txScoutName], [flCrashed], [flYellow], [flRed], [auto_flState], [auto_" +
+                "idStartPosition], [auto_idStatrLevel], [auto_baseLine], [auto_idStartObject], [a" +
+                "uto_numShipFrontHatchAttempt], [auto_numShipFrontHatchSuccess], [auto_numShipSid" +
+                "eHatchAttempt], [auto_numShipSideHatchSuccess], [auto_numShipFrontCargoAttempt]," +
+                " [auto_numShipFrontCargoSuccess], [auto_numShipSideCargoAttempt], [auto_numShipS" +
+                "ideCargoSuccess], [auto_numRocketLowHatchAttempt], [auto_numRocketLowHatchSucces" +
+                "s], [auto_numRocketMidHatchAttempt], [auto_numRocketMidHatchSuccess], [auto_numR" +
+                "ocketHighHatchAttempt], [auto_numRocketHighHatchSuccess], [auto_numRocketLowCarg" +
+                "oAttempt], [auto_numRocketLowCargoSuccess], [auto_numRocketMidCargoAttempt], [au" +
+                "to_numRocketMidCargoSuccess], [auto_numRocketHighCargoAttempt], [auto_numRocketH" +
+                "ighCargoSuccess], [auto_flLoseStartObject], [auto_flRobotContact], [auto_flFoul]" +
+                ", [auto_flCrossOver], [tele_numShipFrontHatchAttempt], [tele_numShipFrontHatchSu" +
+                "ccess], [tele_numShipSideHatchAttempt], [tele_numShipSideHatchSuccess], [tele_nu" +
+                "mShipFrontCargoAttempt], [tele_numShipFrontCargoSuccess], [tele_numShipSideCargo" +
+                "Attempt], [tele_numShipSideCargoSuccess], [tele_numRocketLowHatchAttempt], [tele" +
+                "_numRocketLowHatchSuccess], [tele_numRocketMidHatchAttempt], [tele_numRocketMidH" +
+                "atchSuccess], [tele_numRocketHighAttempt], [tele_numRocketHighSuccess], [tele_nu" +
+                "mRocketLowCargoAttempt], [tele_numRocketLowCargoSuccess], [tele_numRocketMidCarg" +
+                "oAttempt], [tele_numRocketMidCargoSuccess], [tele_numRocketHighCargoAttempt], [t" +
+                "ele_numRocketHighCargoSuccess], [tele_idClimb], [tele_idClimbOutcome], [tele_idC" +
+                "limbGrab], [tele_idClimbSpeed], [tele_numClimbAssists], [tele_idClimbLevel], [te" +
+                "le_flClimbFall], [tele_flDefence], [flIntakeHatchGround], [flIntakeHatchStation]" +
+                ", [flIntakeCargoGround], [flIntakeCargoStation], [comm_txNotes], [comm_flHighlig" +
+                "ht], [comm_flWarning], [comm_idDriveRating], [comm_flAlliance], [comm_flRecovery" +
+                "], [comm_flStrategy], [comm_flOwnThing], [comm_flGoodDefence], [dtCreation], [dt" +
+                "Modified], [txComputerName], [flRanking1], [flRanking2]) VALUES (@event, @numMat" +
+                "ch, @team, @idAlliance, @idDriveStation, @txScoutName, @flCrashed, @flYellow, @f" +
+                "lRed, @auto_flState, @auto_idStartPosition, @auto_idStatrLevel, @auto_baseLine, " +
+                "@auto_idStartObject, @auto_numShipFrontHatchAttempt, @auto_numShipFrontHatchSucc" +
+                "ess, @auto_numShipSideHatchAttempt, @auto_numShipSideHatchSuccess, @auto_numShip" +
+                "FrontCargoAttempt, @auto_numShipFrontCargoSuccess, @auto_numShipSideCargoAttempt" +
+                ", @auto_numShipSideCargoSuccess, @auto_numRocketLowHatchAttempt, @auto_numRocket" +
+                "LowHatchSuccess, @auto_numRocketMidHatchAttempt, @auto_numRocketMidHatchSuccess," +
+                " @auto_numRocketHighHatchAttempt, @auto_numRocketHighHatchSuccess, @auto_numRock" +
+                "etLowCargoAttempt, @auto_numRocketLowCargoSuccess, @auto_numRocketMidCargoAttemp" +
+                "t, @auto_numRocketMidCargoSuccess, @auto_numRocketHighCargoAttempt, @auto_numRoc" +
+                "ketHighCargoSuccess, @auto_flLoseStartObject, @auto_flRobotContact, @auto_flFoul" +
+                ", @auto_flCrossOver, @tele_numShipFrontHatchAttempt, @tele_numShipFrontHatchSucc" +
+                "ess, @tele_numShipSideHatchAttempt, @tele_numShipSideHatchSuccess, @tele_numShip" +
+                "FrontCargoAttempt, @tele_numShipFrontCargoSuccess, @tele_numShipSideCargoAttempt" +
+                ", @tele_numShipSideCargoSuccess, @tele_numRocketLowHatchAttempt, @tele_numRocket" +
+                "LowHatchSuccess, @tele_numRocketMidHatchAttempt, @tele_numRocketMidHatchSuccess," +
+                " @tele_numRocketHighAttempt, @tele_numRocketHighSuccess, @tele_numRocketLowCargo" +
+                "Attempt, @tele_numRocketLowCargoSuccess, @tele_numRocketMidCargoAttempt, @tele_n" +
+                "umRocketMidCargoSuccess, @tele_numRocketHighCargoAttempt, @tele_numRocketHighCar" +
+                "goSuccess, @tele_idClimb, @tele_idClimbOutcome, @tele_idClimbGrab, @tele_idClimb" +
+                "Speed, @tele_numClimbAssists, @tele_idClimbLevel, @tele_flClimbFall, @tele_flDef" +
+                "ence, @flIntakeHatchGround, @flIntakeHatchStation, @flIntakeCargoGround, @flInta" +
+                "keCargoStation, @comm_txNotes, @comm_flHighlight, @comm_flWarning, @comm_idDrive" +
+                "Rating, @comm_flAlliance, @comm_flRecovery, @comm_flStrategy, @comm_flOwnThing, " +
+                "@comm_flGoodDefence, @dtCreation, @dtModified, @txComputerName, @flRanking1, @fl" +
+                "Ranking2);\r\nSELECT id, event, numMatch, team, idAlliance, idDriveStation, txScou" +
+                "tName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idSt" +
+                "atrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto" +
+                "_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSu" +
+                "ccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShi" +
+                "pSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, " +
+                "auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidH" +
+                "atchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, aut" +
+                "o_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCarg" +
+                "oAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_nu" +
+                "mRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFou" +
+                "l, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSucces" +
+                "s, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFront" +
+                "CargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_" +
+                "numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSu" +
+                "ccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRoc" +
+                "ketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_n" +
+                "umRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSu" +
+                "ccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idCl" +
+                "imb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssi" +
+                "sts, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, f" +
+                "lIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, co" +
+                "mm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flReco" +
+                "very, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModifi" +
+                "ed, txComputerName, flRanking1, flRanking2 FROM matchscouting WHERE (id = SCOPE_" +
+                "IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3395,152 +3397,151 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [matchscouting] SET [id] = @id, [event] = @event, [numMatch] = @numMatch, " +
-                "[team] = @team, [idAlliance] = @idAlliance, [idDriveStation] = @idDriveStation, " +
-                "[txScoutName] = @txScoutName, [flCrashed] = @flCrashed, [flYellow] = @flYellow, " +
-                "[flRed] = @flRed, [auto_flState] = @auto_flState, [auto_idStartPosition] = @auto" +
-                "_idStartPosition, [auto_idStatrLevel] = @auto_idStatrLevel, [auto_baseLine] = @a" +
-                "uto_baseLine, [auto_idStartObject] = @auto_idStartObject, [auto_numShipFrontHatc" +
-                "hAttempt] = @auto_numShipFrontHatchAttempt, [auto_numShipFrontHatchSuccess] = @a" +
-                "uto_numShipFrontHatchSuccess, [auto_numShipSideHatchAttempt] = @auto_numShipSide" +
-                "HatchAttempt, [auto_numShipSideHatchSuccess] = @auto_numShipSideHatchSuccess, [a" +
-                "uto_numShipFrontCargoAttempt] = @auto_numShipFrontCargoAttempt, [auto_numShipFro" +
-                "ntCargoSuccess] = @auto_numShipFrontCargoSuccess, [auto_numShipSideCargoAttempt]" +
-                " = @auto_numShipSideCargoAttempt, [auto_numShipSideCargoSuccess] = @auto_numShip" +
-                "SideCargoSuccess, [auto_numRocketLowHatchAttempt] = @auto_numRocketLowHatchAttem" +
-                "pt, [auto_numRocketLowHatchSuccess] = @auto_numRocketLowHatchSuccess, [auto_numR" +
-                "ocketMidHatchAttempt] = @auto_numRocketMidHatchAttempt, [auto_numRocketMidHatchS" +
-                "uccess] = @auto_numRocketMidHatchSuccess, [auto_numRocketHighHatchAttempt] = @au" +
-                "to_numRocketHighHatchAttempt, [auto_numRocketHighHatchSuccess] = @auto_numRocket" +
-                "HighHatchSuccess, [auto_numRocketLowCargoAttempt] = @auto_numRocketLowCargoAttem" +
-                "pt, [auto_numRocketLowCargoSuccess] = @auto_numRocketLowCargoSuccess, [auto_numR" +
-                "ocketMidCargoAttempt] = @auto_numRocketMidCargoAttempt, [auto_numRocketMidCargoS" +
-                "uccess] = @auto_numRocketMidCargoSuccess, [auto_numRocketHighCargoAttempt] = @au" +
-                "to_numRocketHighCargoAttempt, [auto_numRocketHighCargoSuccess] = @auto_numRocket" +
-                "HighCargoSuccess, [auto_flLoseStartObject] = @auto_flLoseStartObject, [auto_flRo" +
-                "botContact] = @auto_flRobotContact, [auto_flFoul] = @auto_flFoul, [auto_flCrossO" +
-                "ver] = @auto_flCrossOver, [tele_numShipFrontHatchAttempt] = @tele_numShipFrontHa" +
-                "tchAttempt, [tele_numShipFrontHatchSuccess] = @tele_numShipFrontHatchSuccess, [t" +
-                "ele_numShipSideHatchAttempt] = @tele_numShipSideHatchAttempt, [tele_numShipSideH" +
-                "atchSuccess] = @tele_numShipSideHatchSuccess, [tele_numShipFrontCargoAttempt] = " +
-                "@tele_numShipFrontCargoAttempt, [tele_numShipFrontCargoSuccess] = @tele_numShipF" +
-                "rontCargoSuccess, [tele_numShipSideCargoAttempt] = @tele_numShipSideCargoAttempt" +
-                ", [tele_numShipSideCargoSuccess] = @tele_numShipSideCargoSuccess, [tele_numRocke" +
-                "tLowHatchAttempt] = @tele_numRocketLowHatchAttempt, [tele_numRocketLowHatchSucce" +
-                "ss] = @tele_numRocketLowHatchSuccess, [tele_numRocketMidHatchAttempt] = @tele_nu" +
-                "mRocketMidHatchAttempt, [tele_numRocketMidHatchSuccess] = @tele_numRocketMidHatc" +
-                "hSuccess, [tele_numRocketHighAttempt] = @tele_numRocketHighAttempt, [tele_numRoc" +
-                "ketHighSuccess] = @tele_numRocketHighSuccess, [tele_numRocketLowCargoAttempt] = " +
-                "@tele_numRocketLowCargoAttempt, [tele_numRocketLowCargoSuccess] = @tele_numRocke" +
-                "tLowCargoSuccess, [tele_numRocketMidCargoAttempt] = @tele_numRocketMidCargoAttem" +
-                "pt, [tele_numRocketMidCargoSuccess] = @tele_numRocketMidCargoSuccess, [tele_numR" +
-                "ocketHighCargoAttempt] = @tele_numRocketHighCargoAttempt, [tele_numRocketHighCar" +
-                "goSuccess] = @tele_numRocketHighCargoSuccess, [tele_idClimb] = @tele_idClimb, [t" +
-                "ele_idClimbOutcome] = @tele_idClimbOutcome, [tele_idClimbGrab] = @tele_idClimbGr" +
-                "ab, [tele_idClimbSpeed] = @tele_idClimbSpeed, [tele_numClimbAssists] = @tele_num" +
-                "ClimbAssists, [tele_idClimbLevel] = @tele_idClimbLevel, [tele_flClimbFall] = @te" +
-                "le_flClimbFall, [tele_flDefence] = @tele_flDefence, [flIntakeHatchGround] = @flI" +
-                "ntakeHatchGround, [flIntakeHatchStation] = @flIntakeHatchStation, [flIntakeCargo" +
-                "Ground] = @flIntakeCargoGround, [flIntakeCargoStation] = @flIntakeCargoStation, " +
-                "[comm_txNotes] = @comm_txNotes, [comm_flHighlight] = @comm_flHighlight, [comm_fl" +
-                "Warning] = @comm_flWarning, [comm_idDriveRating] = @comm_idDriveRating, [comm_fl" +
-                "Alliance] = @comm_flAlliance, [comm_flRecovery] = @comm_flRecovery, [comm_flStra" +
-                "tegy] = @comm_flStrategy, [comm_flOwnThing] = @comm_flOwnThing, [comm_flGoodDefe" +
-                "nce] = @comm_flGoodDefence, [dtCreation] = @dtCreation, [dtModified] = @dtModifi" +
-                "ed, [txComputerName] = @txComputerName, [flRanking1] = @flRanking1, [flRanking2]" +
-                " = @flRanking2 WHERE (([id] = @Original_id) AND ([numMatch] = @Original_numMatch" +
-                ") AND ([team] = @Original_team) AND ([idAlliance] = @Original_idAlliance) AND ([" +
-                "idDriveStation] = @Original_idDriveStation) AND ([flCrashed] = @Original_flCrash" +
-                "ed) AND ([flYellow] = @Original_flYellow) AND ([flRed] = @Original_flRed) AND ([" +
-                "auto_flState] = @Original_auto_flState) AND ([auto_idStartPosition] = @Original_" +
-                "auto_idStartPosition) AND ([auto_idStatrLevel] = @Original_auto_idStatrLevel) AN" +
-                "D ([auto_baseLine] = @Original_auto_baseLine) AND ([auto_idStartObject] = @Origi" +
-                "nal_auto_idStartObject) AND ([auto_numShipFrontHatchAttempt] = @Original_auto_nu" +
-                "mShipFrontHatchAttempt) AND ([auto_numShipFrontHatchSuccess] = @Original_auto_nu" +
-                "mShipFrontHatchSuccess) AND ([auto_numShipSideHatchAttempt] = @Original_auto_num" +
-                "ShipSideHatchAttempt) AND ([auto_numShipSideHatchSuccess] = @Original_auto_numSh" +
-                "ipSideHatchSuccess) AND ([auto_numShipFrontCargoAttempt] = @Original_auto_numShi" +
-                "pFrontCargoAttempt) AND ([auto_numShipFrontCargoSuccess] = @Original_auto_numShi" +
-                "pFrontCargoSuccess) AND ([auto_numShipSideCargoAttempt] = @Original_auto_numShip" +
-                "SideCargoAttempt) AND ([auto_numShipSideCargoSuccess] = @Original_auto_numShipSi" +
-                "deCargoSuccess) AND ([auto_numRocketLowHatchAttempt] = @Original_auto_numRocketL" +
-                "owHatchAttempt) AND ([auto_numRocketLowHatchSuccess] = @Original_auto_numRocketL" +
-                "owHatchSuccess) AND ([auto_numRocketMidHatchAttempt] = @Original_auto_numRocketM" +
-                "idHatchAttempt) AND ([auto_numRocketMidHatchSuccess] = @Original_auto_numRocketM" +
-                "idHatchSuccess) AND ([auto_numRocketHighHatchAttempt] = @Original_auto_numRocket" +
-                "HighHatchAttempt) AND ([auto_numRocketHighHatchSuccess] = @Original_auto_numRock" +
-                "etHighHatchSuccess) AND ([auto_numRocketLowCargoAttempt] = @Original_auto_numRoc" +
-                "ketLowCargoAttempt) AND ([auto_numRocketLowCargoSuccess] = @Original_auto_numRoc" +
-                "ketLowCargoSuccess) AND ([auto_numRocketMidCargoAttempt] = @Original_auto_numRoc" +
-                "ketMidCargoAttempt) AND ([auto_numRocketMidCargoSuccess] = @Original_auto_numRoc" +
-                "ketMidCargoSuccess) AND ([auto_numRocketHighCargoAttempt] = @Original_auto_numRo" +
-                "cketHighCargoAttempt) AND ([auto_numRocketHighCargoSuccess] = @Original_auto_num" +
-                "RocketHighCargoSuccess) AND ([auto_flLoseStartObject] = @Original_auto_flLoseSta" +
-                "rtObject) AND ([auto_flRobotContact] = @Original_auto_flRobotContact) AND ([auto" +
-                "_flFoul] = @Original_auto_flFoul) AND ([auto_flCrossOver] = @Original_auto_flCro" +
-                "ssOver) AND ([tele_numShipFrontHatchAttempt] = @Original_tele_numShipFrontHatchA" +
-                "ttempt) AND ([tele_numShipFrontHatchSuccess] = @Original_tele_numShipFrontHatchS" +
-                "uccess) AND ([tele_numShipSideHatchAttempt] = @Original_tele_numShipSideHatchAtt" +
-                "empt) AND ([tele_numShipSideHatchSuccess] = @Original_tele_numShipSideHatchSucce" +
-                "ss) AND ([tele_numShipFrontCargoAttempt] = @Original_tele_numShipFrontCargoAttem" +
-                "pt) AND ([tele_numShipFrontCargoSuccess] = @Original_tele_numShipFrontCargoSucce" +
-                "ss) AND ([tele_numShipSideCargoAttempt] = @Original_tele_numShipSideCargoAttempt" +
-                ") AND ([tele_numShipSideCargoSuccess] = @Original_tele_numShipSideCargoSuccess) " +
-                "AND ([tele_numRocketLowHatchAttempt] = @Original_tele_numRocketLowHatchAttempt) " +
-                "AND ([tele_numRocketLowHatchSuccess] = @Original_tele_numRocketLowHatchSuccess) " +
-                "AND ([tele_numRocketMidHatchAttempt] = @Original_tele_numRocketMidHatchAttempt) " +
-                "AND ([tele_numRocketMidHatchSuccess] = @Original_tele_numRocketMidHatchSuccess) " +
-                "AND ([tele_numRocketHighAttempt] = @Original_tele_numRocketHighAttempt) AND ([te" +
-                "le_numRocketHighSuccess] = @Original_tele_numRocketHighSuccess) AND ([tele_numRo" +
-                "cketLowCargoAttempt] = @Original_tele_numRocketLowCargoAttempt) AND ([tele_numRo" +
-                "cketLowCargoSuccess] = @Original_tele_numRocketLowCargoSuccess) AND ([tele_numRo" +
-                "cketMidCargoAttempt] = @Original_tele_numRocketMidCargoAttempt) AND ([tele_numRo" +
-                "cketMidCargoSuccess] = @Original_tele_numRocketMidCargoSuccess) AND ([tele_numRo" +
-                "cketHighCargoAttempt] = @Original_tele_numRocketHighCargoAttempt) AND ([tele_num" +
-                "RocketHighCargoSuccess] = @Original_tele_numRocketHighCargoSuccess) AND ([tele_i" +
-                "dClimb] = @Original_tele_idClimb) AND ([tele_idClimbOutcome] = @Original_tele_id" +
-                "ClimbOutcome) AND ([tele_idClimbGrab] = @Original_tele_idClimbGrab) AND ([tele_i" +
-                "dClimbSpeed] = @Original_tele_idClimbSpeed) AND ([tele_numClimbAssists] = @Origi" +
-                "nal_tele_numClimbAssists) AND ([tele_idClimbLevel] = @Original_tele_idClimbLevel" +
-                ") AND ([tele_flClimbFall] = @Original_tele_flClimbFall) AND ([tele_flDefence] = " +
-                "@Original_tele_flDefence) AND ([flIntakeHatchGround] = @Original_flIntakeHatchGr" +
-                "ound) AND ([flIntakeHatchStation] = @Original_flIntakeHatchStation) AND ([flInta" +
-                "keCargoGround] = @Original_flIntakeCargoGround) AND ([flIntakeCargoStation] = @O" +
-                "riginal_flIntakeCargoStation) AND ([comm_flHighlight] = @Original_comm_flHighlig" +
-                "ht) AND ([comm_flWarning] = @Original_comm_flWarning) AND ([comm_idDriveRating] " +
-                "= @Original_comm_idDriveRating) AND ([comm_flAlliance] = @Original_comm_flAllian" +
-                "ce) AND ([comm_flRecovery] = @Original_comm_flRecovery) AND ([comm_flStrategy] =" +
-                " @Original_comm_flStrategy) AND ([comm_flOwnThing] = @Original_comm_flOwnThing) " +
-                "AND ([comm_flGoodDefence] = @Original_comm_flGoodDefence) AND ([dtCreation] = @O" +
-                "riginal_dtCreation) AND ([dtModified] = @Original_dtModified) AND ([flRanking1] " +
-                "= @Original_flRanking1) AND ([flRanking2] = @Original_flRanking2));\r\nSELECT id, " +
-                "event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYel" +
-                "low, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine" +
-                ", auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSucce" +
-                "ss, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFron" +
-                "tCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto" +
-                "_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchS" +
-                "uccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRo" +
-                "cketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAtte" +
-                "mpt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocke" +
-                "tMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess" +
-                ", auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, te" +
-                "le_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatc" +
-                "hAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numS" +
-                "hipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess" +
-                ", tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMi" +
-                "dHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_nu" +
-                "mRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess" +
-                ", tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHi" +
-                "ghCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcom" +
-                "e, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel," +
-                " tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, fl" +
-                "IntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_fl" +
-                "Warning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, " +
-                "comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flR" +
-                "anking1, flRanking2 FROM matchscouting WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [matchscouting] SET [event] = @event, [numMatch] = @numMatch, [team] = @te" +
+                "am, [idAlliance] = @idAlliance, [idDriveStation] = @idDriveStation, [txScoutName" +
+                "] = @txScoutName, [flCrashed] = @flCrashed, [flYellow] = @flYellow, [flRed] = @f" +
+                "lRed, [auto_flState] = @auto_flState, [auto_idStartPosition] = @auto_idStartPosi" +
+                "tion, [auto_idStatrLevel] = @auto_idStatrLevel, [auto_baseLine] = @auto_baseLine" +
+                ", [auto_idStartObject] = @auto_idStartObject, [auto_numShipFrontHatchAttempt] = " +
+                "@auto_numShipFrontHatchAttempt, [auto_numShipFrontHatchSuccess] = @auto_numShipF" +
+                "rontHatchSuccess, [auto_numShipSideHatchAttempt] = @auto_numShipSideHatchAttempt" +
+                ", [auto_numShipSideHatchSuccess] = @auto_numShipSideHatchSuccess, [auto_numShipF" +
+                "rontCargoAttempt] = @auto_numShipFrontCargoAttempt, [auto_numShipFrontCargoSucce" +
+                "ss] = @auto_numShipFrontCargoSuccess, [auto_numShipSideCargoAttempt] = @auto_num" +
+                "ShipSideCargoAttempt, [auto_numShipSideCargoSuccess] = @auto_numShipSideCargoSuc" +
+                "cess, [auto_numRocketLowHatchAttempt] = @auto_numRocketLowHatchAttempt, [auto_nu" +
+                "mRocketLowHatchSuccess] = @auto_numRocketLowHatchSuccess, [auto_numRocketMidHatc" +
+                "hAttempt] = @auto_numRocketMidHatchAttempt, [auto_numRocketMidHatchSuccess] = @a" +
+                "uto_numRocketMidHatchSuccess, [auto_numRocketHighHatchAttempt] = @auto_numRocket" +
+                "HighHatchAttempt, [auto_numRocketHighHatchSuccess] = @auto_numRocketHighHatchSuc" +
+                "cess, [auto_numRocketLowCargoAttempt] = @auto_numRocketLowCargoAttempt, [auto_nu" +
+                "mRocketLowCargoSuccess] = @auto_numRocketLowCargoSuccess, [auto_numRocketMidCarg" +
+                "oAttempt] = @auto_numRocketMidCargoAttempt, [auto_numRocketMidCargoSuccess] = @a" +
+                "uto_numRocketMidCargoSuccess, [auto_numRocketHighCargoAttempt] = @auto_numRocket" +
+                "HighCargoAttempt, [auto_numRocketHighCargoSuccess] = @auto_numRocketHighCargoSuc" +
+                "cess, [auto_flLoseStartObject] = @auto_flLoseStartObject, [auto_flRobotContact] " +
+                "= @auto_flRobotContact, [auto_flFoul] = @auto_flFoul, [auto_flCrossOver] = @auto" +
+                "_flCrossOver, [tele_numShipFrontHatchAttempt] = @tele_numShipFrontHatchAttempt, " +
+                "[tele_numShipFrontHatchSuccess] = @tele_numShipFrontHatchSuccess, [tele_numShipS" +
+                "ideHatchAttempt] = @tele_numShipSideHatchAttempt, [tele_numShipSideHatchSuccess]" +
+                " = @tele_numShipSideHatchSuccess, [tele_numShipFrontCargoAttempt] = @tele_numShi" +
+                "pFrontCargoAttempt, [tele_numShipFrontCargoSuccess] = @tele_numShipFrontCargoSuc" +
+                "cess, [tele_numShipSideCargoAttempt] = @tele_numShipSideCargoAttempt, [tele_numS" +
+                "hipSideCargoSuccess] = @tele_numShipSideCargoSuccess, [tele_numRocketLowHatchAtt" +
+                "empt] = @tele_numRocketLowHatchAttempt, [tele_numRocketLowHatchSuccess] = @tele_" +
+                "numRocketLowHatchSuccess, [tele_numRocketMidHatchAttempt] = @tele_numRocketMidHa" +
+                "tchAttempt, [tele_numRocketMidHatchSuccess] = @tele_numRocketMidHatchSuccess, [t" +
+                "ele_numRocketHighAttempt] = @tele_numRocketHighAttempt, [tele_numRocketHighSucce" +
+                "ss] = @tele_numRocketHighSuccess, [tele_numRocketLowCargoAttempt] = @tele_numRoc" +
+                "ketLowCargoAttempt, [tele_numRocketLowCargoSuccess] = @tele_numRocketLowCargoSuc" +
+                "cess, [tele_numRocketMidCargoAttempt] = @tele_numRocketMidCargoAttempt, [tele_nu" +
+                "mRocketMidCargoSuccess] = @tele_numRocketMidCargoSuccess, [tele_numRocketHighCar" +
+                "goAttempt] = @tele_numRocketHighCargoAttempt, [tele_numRocketHighCargoSuccess] =" +
+                " @tele_numRocketHighCargoSuccess, [tele_idClimb] = @tele_idClimb, [tele_idClimbO" +
+                "utcome] = @tele_idClimbOutcome, [tele_idClimbGrab] = @tele_idClimbGrab, [tele_id" +
+                "ClimbSpeed] = @tele_idClimbSpeed, [tele_numClimbAssists] = @tele_numClimbAssists" +
+                ", [tele_idClimbLevel] = @tele_idClimbLevel, [tele_flClimbFall] = @tele_flClimbFa" +
+                "ll, [tele_flDefence] = @tele_flDefence, [flIntakeHatchGround] = @flIntakeHatchGr" +
+                "ound, [flIntakeHatchStation] = @flIntakeHatchStation, [flIntakeCargoGround] = @f" +
+                "lIntakeCargoGround, [flIntakeCargoStation] = @flIntakeCargoStation, [comm_txNote" +
+                "s] = @comm_txNotes, [comm_flHighlight] = @comm_flHighlight, [comm_flWarning] = @" +
+                "comm_flWarning, [comm_idDriveRating] = @comm_idDriveRating, [comm_flAlliance] = " +
+                "@comm_flAlliance, [comm_flRecovery] = @comm_flRecovery, [comm_flStrategy] = @com" +
+                "m_flStrategy, [comm_flOwnThing] = @comm_flOwnThing, [comm_flGoodDefence] = @comm" +
+                "_flGoodDefence, [dtCreation] = @dtCreation, [dtModified] = @dtModified, [txCompu" +
+                "terName] = @txComputerName, [flRanking1] = @flRanking1, [flRanking2] = @flRankin" +
+                "g2 WHERE (([id] = @Original_id) AND ([numMatch] = @Original_numMatch) AND ([team" +
+                "] = @Original_team) AND ([idAlliance] = @Original_idAlliance) AND ([idDriveStati" +
+                "on] = @Original_idDriveStation) AND ([flCrashed] = @Original_flCrashed) AND ([fl" +
+                "Yellow] = @Original_flYellow) AND ([flRed] = @Original_flRed) AND ([auto_flState" +
+                "] = @Original_auto_flState) AND ([auto_idStartPosition] = @Original_auto_idStart" +
+                "Position) AND ([auto_idStatrLevel] = @Original_auto_idStatrLevel) AND ([auto_bas" +
+                "eLine] = @Original_auto_baseLine) AND ([auto_idStartObject] = @Original_auto_idS" +
+                "tartObject) AND ([auto_numShipFrontHatchAttempt] = @Original_auto_numShipFrontHa" +
+                "tchAttempt) AND ([auto_numShipFrontHatchSuccess] = @Original_auto_numShipFrontHa" +
+                "tchSuccess) AND ([auto_numShipSideHatchAttempt] = @Original_auto_numShipSideHatc" +
+                "hAttempt) AND ([auto_numShipSideHatchSuccess] = @Original_auto_numShipSideHatchS" +
+                "uccess) AND ([auto_numShipFrontCargoAttempt] = @Original_auto_numShipFrontCargoA" +
+                "ttempt) AND ([auto_numShipFrontCargoSuccess] = @Original_auto_numShipFrontCargoS" +
+                "uccess) AND ([auto_numShipSideCargoAttempt] = @Original_auto_numShipSideCargoAtt" +
+                "empt) AND ([auto_numShipSideCargoSuccess] = @Original_auto_numShipSideCargoSucce" +
+                "ss) AND ([auto_numRocketLowHatchAttempt] = @Original_auto_numRocketLowHatchAttem" +
+                "pt) AND ([auto_numRocketLowHatchSuccess] = @Original_auto_numRocketLowHatchSucce" +
+                "ss) AND ([auto_numRocketMidHatchAttempt] = @Original_auto_numRocketMidHatchAttem" +
+                "pt) AND ([auto_numRocketMidHatchSuccess] = @Original_auto_numRocketMidHatchSucce" +
+                "ss) AND ([auto_numRocketHighHatchAttempt] = @Original_auto_numRocketHighHatchAtt" +
+                "empt) AND ([auto_numRocketHighHatchSuccess] = @Original_auto_numRocketHighHatchS" +
+                "uccess) AND ([auto_numRocketLowCargoAttempt] = @Original_auto_numRocketLowCargoA" +
+                "ttempt) AND ([auto_numRocketLowCargoSuccess] = @Original_auto_numRocketLowCargoS" +
+                "uccess) AND ([auto_numRocketMidCargoAttempt] = @Original_auto_numRocketMidCargoA" +
+                "ttempt) AND ([auto_numRocketMidCargoSuccess] = @Original_auto_numRocketMidCargoS" +
+                "uccess) AND ([auto_numRocketHighCargoAttempt] = @Original_auto_numRocketHighCarg" +
+                "oAttempt) AND ([auto_numRocketHighCargoSuccess] = @Original_auto_numRocketHighCa" +
+                "rgoSuccess) AND ([auto_flLoseStartObject] = @Original_auto_flLoseStartObject) AN" +
+                "D ([auto_flRobotContact] = @Original_auto_flRobotContact) AND ([auto_flFoul] = @" +
+                "Original_auto_flFoul) AND ([auto_flCrossOver] = @Original_auto_flCrossOver) AND " +
+                "([tele_numShipFrontHatchAttempt] = @Original_tele_numShipFrontHatchAttempt) AND " +
+                "([tele_numShipFrontHatchSuccess] = @Original_tele_numShipFrontHatchSuccess) AND " +
+                "([tele_numShipSideHatchAttempt] = @Original_tele_numShipSideHatchAttempt) AND ([" +
+                "tele_numShipSideHatchSuccess] = @Original_tele_numShipSideHatchSuccess) AND ([te" +
+                "le_numShipFrontCargoAttempt] = @Original_tele_numShipFrontCargoAttempt) AND ([te" +
+                "le_numShipFrontCargoSuccess] = @Original_tele_numShipFrontCargoSuccess) AND ([te" +
+                "le_numShipSideCargoAttempt] = @Original_tele_numShipSideCargoAttempt) AND ([tele" +
+                "_numShipSideCargoSuccess] = @Original_tele_numShipSideCargoSuccess) AND ([tele_n" +
+                "umRocketLowHatchAttempt] = @Original_tele_numRocketLowHatchAttempt) AND ([tele_n" +
+                "umRocketLowHatchSuccess] = @Original_tele_numRocketLowHatchSuccess) AND ([tele_n" +
+                "umRocketMidHatchAttempt] = @Original_tele_numRocketMidHatchAttempt) AND ([tele_n" +
+                "umRocketMidHatchSuccess] = @Original_tele_numRocketMidHatchSuccess) AND ([tele_n" +
+                "umRocketHighAttempt] = @Original_tele_numRocketHighAttempt) AND ([tele_numRocket" +
+                "HighSuccess] = @Original_tele_numRocketHighSuccess) AND ([tele_numRocketLowCargo" +
+                "Attempt] = @Original_tele_numRocketLowCargoAttempt) AND ([tele_numRocketLowCargo" +
+                "Success] = @Original_tele_numRocketLowCargoSuccess) AND ([tele_numRocketMidCargo" +
+                "Attempt] = @Original_tele_numRocketMidCargoAttempt) AND ([tele_numRocketMidCargo" +
+                "Success] = @Original_tele_numRocketMidCargoSuccess) AND ([tele_numRocketHighCarg" +
+                "oAttempt] = @Original_tele_numRocketHighCargoAttempt) AND ([tele_numRocketHighCa" +
+                "rgoSuccess] = @Original_tele_numRocketHighCargoSuccess) AND ([tele_idClimb] = @O" +
+                "riginal_tele_idClimb) AND ([tele_idClimbOutcome] = @Original_tele_idClimbOutcome" +
+                ") AND ([tele_idClimbGrab] = @Original_tele_idClimbGrab) AND ([tele_idClimbSpeed]" +
+                " = @Original_tele_idClimbSpeed) AND ([tele_numClimbAssists] = @Original_tele_num" +
+                "ClimbAssists) AND ([tele_idClimbLevel] = @Original_tele_idClimbLevel) AND ([tele" +
+                "_flClimbFall] = @Original_tele_flClimbFall) AND ([tele_flDefence] = @Original_te" +
+                "le_flDefence) AND ([flIntakeHatchGround] = @Original_flIntakeHatchGround) AND ([" +
+                "flIntakeHatchStation] = @Original_flIntakeHatchStation) AND ([flIntakeCargoGroun" +
+                "d] = @Original_flIntakeCargoGround) AND ([flIntakeCargoStation] = @Original_flIn" +
+                "takeCargoStation) AND ([comm_flHighlight] = @Original_comm_flHighlight) AND ([co" +
+                "mm_flWarning] = @Original_comm_flWarning) AND ([comm_idDriveRating] = @Original_" +
+                "comm_idDriveRating) AND ([comm_flAlliance] = @Original_comm_flAlliance) AND ([co" +
+                "mm_flRecovery] = @Original_comm_flRecovery) AND ([comm_flStrategy] = @Original_c" +
+                "omm_flStrategy) AND ([comm_flOwnThing] = @Original_comm_flOwnThing) AND ([comm_f" +
+                "lGoodDefence] = @Original_comm_flGoodDefence) AND ([dtCreation] = @Original_dtCr" +
+                "eation) AND ([dtModified] = @Original_dtModified) AND ([flRanking1] = @Original_" +
+                "flRanking1) AND ([flRanking2] = @Original_flRanking2));\r\nSELECT id, event, numMa" +
+                "tch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, " +
+                "auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idSta" +
+                "rtObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_num" +
+                "ShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttemp" +
+                "t, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSide" +
+                "CargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto" +
+                "_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatc" +
+                "hAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_nu" +
+                "mRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuc" +
+                "cess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLos" +
+                "eStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFr" +
+                "ontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, te" +
+                "le_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCarg" +
+                "oSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRo" +
+                "cketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttemp" +
+                "t, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighS" +
+                "uccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRo" +
+                "cketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttem" +
+                "pt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idCl" +
+                "imbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClim" +
+                "bFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoG" +
+                "round, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_flWarning, com" +
+                "m_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnTh" +
+                "ing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flRanking1, flR" +
+                "anking2 FROM matchscouting WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3706,6 +3707,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dtModified", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtModified", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flRanking1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking1", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3721,31 +3723,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id, event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCras" +
-                "hed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, aut" +
-                "o_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFront" +
-                "HatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_n" +
-                "umShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAtt" +
-                "empt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocke" +
-                "tLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, " +
-                "auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLo" +
-                "wCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, aut" +
-                "o_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCa" +
-                "rgoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCro" +
-                "ssOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numSh" +
-                "ipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt," +
-                " tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCa" +
-                "rgoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_n" +
-                "umRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttemp" +
-                "t, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCa" +
-                "rgoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_n" +
-                "umRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idC" +
-                "limbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idC" +
-                "limbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchS" +
-                "tation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighligh" +
-                "t, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_fl" +
-                "Strategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txCompute" +
-                "rName, flRanking1, flRanking2 FROM matchscouting";
+            this._commandCollection[0].CommandText = "SELECT        matchscouting.*\r\nFROM            matchscouting";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3990,7 +3968,6 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
-                    int id, 
                     string _event, 
                     int numMatch, 
                     int team, 
@@ -4075,111 +4052,110 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     string txComputerName, 
                     bool flRanking1, 
                     bool flRanking2) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
             if ((_event == null)) {
                 throw new global::System.ArgumentNullException("_event");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(_event));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(_event));
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(numMatch));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(team));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(idAlliance));
-            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(idDriveStation));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(numMatch));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(team));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(idAlliance));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(idDriveStation));
             if ((txScoutName == null)) {
                 throw new global::System.ArgumentNullException("txScoutName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(txScoutName));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(txScoutName));
             }
-            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(flCrashed));
-            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(flYellow));
-            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(flRed));
-            this.Adapter.InsertCommand.Parameters[10].Value = ((bool)(auto_flState));
-            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(auto_idStartPosition));
-            this.Adapter.InsertCommand.Parameters[12].Value = ((int)(auto_idStatrLevel));
-            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(auto_baseLine));
-            this.Adapter.InsertCommand.Parameters[14].Value = ((int)(auto_idStartObject));
-            this.Adapter.InsertCommand.Parameters[15].Value = ((int)(auto_numShipFrontHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[16].Value = ((int)(auto_numShipFrontHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[17].Value = ((int)(auto_numShipSideHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[18].Value = ((int)(auto_numShipSideHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[19].Value = ((int)(auto_numShipFrontCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[20].Value = ((int)(auto_numShipFrontCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[21].Value = ((int)(auto_numShipSideCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[22].Value = ((int)(auto_numShipSideCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[23].Value = ((int)(auto_numRocketLowHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[24].Value = ((int)(auto_numRocketLowHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[25].Value = ((int)(auto_numRocketMidHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[26].Value = ((int)(auto_numRocketMidHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[27].Value = ((int)(auto_numRocketHighHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[28].Value = ((int)(auto_numRocketHighHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[29].Value = ((int)(auto_numRocketLowCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[30].Value = ((int)(auto_numRocketLowCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[31].Value = ((int)(auto_numRocketMidCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[32].Value = ((int)(auto_numRocketMidCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[33].Value = ((int)(auto_numRocketHighCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[34].Value = ((int)(auto_numRocketHighCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[35].Value = ((bool)(auto_flLoseStartObject));
-            this.Adapter.InsertCommand.Parameters[36].Value = ((bool)(auto_flRobotContact));
-            this.Adapter.InsertCommand.Parameters[37].Value = ((bool)(auto_flFoul));
-            this.Adapter.InsertCommand.Parameters[38].Value = ((bool)(auto_flCrossOver));
-            this.Adapter.InsertCommand.Parameters[39].Value = ((int)(tele_numShipFrontHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[40].Value = ((int)(tele_numShipFrontHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[41].Value = ((int)(tele_numShipSideHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[42].Value = ((int)(tele_numShipSideHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[43].Value = ((int)(tele_numShipFrontCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[44].Value = ((int)(tele_numShipFrontCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[45].Value = ((int)(tele_numShipSideCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[46].Value = ((int)(tele_numShipSideCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[47].Value = ((int)(tele_numRocketLowHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[48].Value = ((int)(tele_numRocketLowHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[49].Value = ((int)(tele_numRocketMidHatchAttempt));
-            this.Adapter.InsertCommand.Parameters[50].Value = ((int)(tele_numRocketMidHatchSuccess));
-            this.Adapter.InsertCommand.Parameters[51].Value = ((int)(tele_numRocketHighAttempt));
-            this.Adapter.InsertCommand.Parameters[52].Value = ((int)(tele_numRocketHighSuccess));
-            this.Adapter.InsertCommand.Parameters[53].Value = ((int)(tele_numRocketLowCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[54].Value = ((int)(tele_numRocketLowCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[55].Value = ((int)(tele_numRocketMidCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[56].Value = ((int)(tele_numRocketMidCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[57].Value = ((int)(tele_numRocketHighCargoAttempt));
-            this.Adapter.InsertCommand.Parameters[58].Value = ((int)(tele_numRocketHighCargoSuccess));
-            this.Adapter.InsertCommand.Parameters[59].Value = ((int)(tele_idClimb));
-            this.Adapter.InsertCommand.Parameters[60].Value = ((int)(tele_idClimbOutcome));
-            this.Adapter.InsertCommand.Parameters[61].Value = ((int)(tele_idClimbGrab));
-            this.Adapter.InsertCommand.Parameters[62].Value = ((int)(tele_idClimbSpeed));
-            this.Adapter.InsertCommand.Parameters[63].Value = ((int)(tele_numClimbAssists));
-            this.Adapter.InsertCommand.Parameters[64].Value = ((int)(tele_idClimbLevel));
-            this.Adapter.InsertCommand.Parameters[65].Value = ((bool)(tele_flClimbFall));
-            this.Adapter.InsertCommand.Parameters[66].Value = ((bool)(tele_flDefence));
-            this.Adapter.InsertCommand.Parameters[67].Value = ((bool)(flIntakeHatchGround));
-            this.Adapter.InsertCommand.Parameters[68].Value = ((bool)(flIntakeHatchStation));
-            this.Adapter.InsertCommand.Parameters[69].Value = ((bool)(flIntakeCargoGround));
-            this.Adapter.InsertCommand.Parameters[70].Value = ((bool)(flIntakeCargoStation));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(flCrashed));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((bool)(flYellow));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((bool)(flRed));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(auto_flState));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(auto_idStartPosition));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(auto_idStatrLevel));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(auto_baseLine));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((int)(auto_idStartObject));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((int)(auto_numShipFrontHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((int)(auto_numShipFrontHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((int)(auto_numShipSideHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((int)(auto_numShipSideHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[18].Value = ((int)(auto_numShipFrontCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[19].Value = ((int)(auto_numShipFrontCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[20].Value = ((int)(auto_numShipSideCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[21].Value = ((int)(auto_numShipSideCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((int)(auto_numRocketLowHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((int)(auto_numRocketLowHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((int)(auto_numRocketMidHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[25].Value = ((int)(auto_numRocketMidHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[26].Value = ((int)(auto_numRocketHighHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[27].Value = ((int)(auto_numRocketHighHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[28].Value = ((int)(auto_numRocketLowCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[29].Value = ((int)(auto_numRocketLowCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[30].Value = ((int)(auto_numRocketMidCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[31].Value = ((int)(auto_numRocketMidCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[32].Value = ((int)(auto_numRocketHighCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[33].Value = ((int)(auto_numRocketHighCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[34].Value = ((bool)(auto_flLoseStartObject));
+            this.Adapter.InsertCommand.Parameters[35].Value = ((bool)(auto_flRobotContact));
+            this.Adapter.InsertCommand.Parameters[36].Value = ((bool)(auto_flFoul));
+            this.Adapter.InsertCommand.Parameters[37].Value = ((bool)(auto_flCrossOver));
+            this.Adapter.InsertCommand.Parameters[38].Value = ((int)(tele_numShipFrontHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[39].Value = ((int)(tele_numShipFrontHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[40].Value = ((int)(tele_numShipSideHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[41].Value = ((int)(tele_numShipSideHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[42].Value = ((int)(tele_numShipFrontCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[43].Value = ((int)(tele_numShipFrontCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[44].Value = ((int)(tele_numShipSideCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[45].Value = ((int)(tele_numShipSideCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[46].Value = ((int)(tele_numRocketLowHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[47].Value = ((int)(tele_numRocketLowHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[48].Value = ((int)(tele_numRocketMidHatchAttempt));
+            this.Adapter.InsertCommand.Parameters[49].Value = ((int)(tele_numRocketMidHatchSuccess));
+            this.Adapter.InsertCommand.Parameters[50].Value = ((int)(tele_numRocketHighAttempt));
+            this.Adapter.InsertCommand.Parameters[51].Value = ((int)(tele_numRocketHighSuccess));
+            this.Adapter.InsertCommand.Parameters[52].Value = ((int)(tele_numRocketLowCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[53].Value = ((int)(tele_numRocketLowCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[54].Value = ((int)(tele_numRocketMidCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[55].Value = ((int)(tele_numRocketMidCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[56].Value = ((int)(tele_numRocketHighCargoAttempt));
+            this.Adapter.InsertCommand.Parameters[57].Value = ((int)(tele_numRocketHighCargoSuccess));
+            this.Adapter.InsertCommand.Parameters[58].Value = ((int)(tele_idClimb));
+            this.Adapter.InsertCommand.Parameters[59].Value = ((int)(tele_idClimbOutcome));
+            this.Adapter.InsertCommand.Parameters[60].Value = ((int)(tele_idClimbGrab));
+            this.Adapter.InsertCommand.Parameters[61].Value = ((int)(tele_idClimbSpeed));
+            this.Adapter.InsertCommand.Parameters[62].Value = ((int)(tele_numClimbAssists));
+            this.Adapter.InsertCommand.Parameters[63].Value = ((int)(tele_idClimbLevel));
+            this.Adapter.InsertCommand.Parameters[64].Value = ((bool)(tele_flClimbFall));
+            this.Adapter.InsertCommand.Parameters[65].Value = ((bool)(tele_flDefence));
+            this.Adapter.InsertCommand.Parameters[66].Value = ((bool)(flIntakeHatchGround));
+            this.Adapter.InsertCommand.Parameters[67].Value = ((bool)(flIntakeHatchStation));
+            this.Adapter.InsertCommand.Parameters[68].Value = ((bool)(flIntakeCargoGround));
+            this.Adapter.InsertCommand.Parameters[69].Value = ((bool)(flIntakeCargoStation));
             if ((comm_txNotes == null)) {
                 throw new global::System.ArgumentNullException("comm_txNotes");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[71].Value = ((string)(comm_txNotes));
+                this.Adapter.InsertCommand.Parameters[70].Value = ((string)(comm_txNotes));
             }
-            this.Adapter.InsertCommand.Parameters[72].Value = ((bool)(comm_flHighlight));
-            this.Adapter.InsertCommand.Parameters[73].Value = ((bool)(comm_flWarning));
-            this.Adapter.InsertCommand.Parameters[74].Value = ((int)(comm_idDriveRating));
-            this.Adapter.InsertCommand.Parameters[75].Value = ((bool)(comm_flAlliance));
-            this.Adapter.InsertCommand.Parameters[76].Value = ((bool)(comm_flRecovery));
-            this.Adapter.InsertCommand.Parameters[77].Value = ((bool)(comm_flStrategy));
-            this.Adapter.InsertCommand.Parameters[78].Value = ((bool)(comm_flOwnThing));
-            this.Adapter.InsertCommand.Parameters[79].Value = ((bool)(comm_flGoodDefence));
-            this.Adapter.InsertCommand.Parameters[80].Value = ((System.DateTime)(dtCreation));
-            this.Adapter.InsertCommand.Parameters[81].Value = ((System.DateTime)(dtModified));
+            this.Adapter.InsertCommand.Parameters[71].Value = ((bool)(comm_flHighlight));
+            this.Adapter.InsertCommand.Parameters[72].Value = ((bool)(comm_flWarning));
+            this.Adapter.InsertCommand.Parameters[73].Value = ((int)(comm_idDriveRating));
+            this.Adapter.InsertCommand.Parameters[74].Value = ((bool)(comm_flAlliance));
+            this.Adapter.InsertCommand.Parameters[75].Value = ((bool)(comm_flRecovery));
+            this.Adapter.InsertCommand.Parameters[76].Value = ((bool)(comm_flStrategy));
+            this.Adapter.InsertCommand.Parameters[77].Value = ((bool)(comm_flOwnThing));
+            this.Adapter.InsertCommand.Parameters[78].Value = ((bool)(comm_flGoodDefence));
+            this.Adapter.InsertCommand.Parameters[79].Value = ((System.DateTime)(dtCreation));
+            this.Adapter.InsertCommand.Parameters[80].Value = ((System.DateTime)(dtModified));
             if ((txComputerName == null)) {
                 throw new global::System.ArgumentNullException("txComputerName");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[82].Value = ((string)(txComputerName));
+                this.Adapter.InsertCommand.Parameters[81].Value = ((string)(txComputerName));
             }
-            this.Adapter.InsertCommand.Parameters[83].Value = ((bool)(flRanking1));
-            this.Adapter.InsertCommand.Parameters[84].Value = ((bool)(flRanking2));
+            this.Adapter.InsertCommand.Parameters[82].Value = ((bool)(flRanking1));
+            this.Adapter.InsertCommand.Parameters[83].Value = ((bool)(flRanking2));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4201,7 +4177,6 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    int id, 
                     string _event, 
                     int numMatch, 
                     int team, 
@@ -4366,193 +4341,194 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     System.DateTime Original_dtCreation, 
                     System.DateTime Original_dtModified, 
                     bool Original_flRanking1, 
-                    bool Original_flRanking2) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
+                    bool Original_flRanking2, 
+                    int id) {
             if ((_event == null)) {
                 throw new global::System.ArgumentNullException("_event");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(_event));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(_event));
             }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(numMatch));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(team));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(idAlliance));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(idDriveStation));
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(numMatch));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(team));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(idAlliance));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(idDriveStation));
             if ((txScoutName == null)) {
                 throw new global::System.ArgumentNullException("txScoutName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(txScoutName));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(txScoutName));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(flCrashed));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(flYellow));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(flRed));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(auto_flState));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(auto_idStartPosition));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(auto_idStatrLevel));
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(auto_baseLine));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(auto_idStartObject));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(auto_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(auto_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(auto_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(auto_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(auto_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(auto_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(auto_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(auto_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(auto_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(auto_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(auto_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(auto_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(auto_numRocketHighHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(auto_numRocketHighHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(auto_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(auto_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(auto_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(auto_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(auto_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[34].Value = ((int)(auto_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[35].Value = ((bool)(auto_flLoseStartObject));
-            this.Adapter.UpdateCommand.Parameters[36].Value = ((bool)(auto_flRobotContact));
-            this.Adapter.UpdateCommand.Parameters[37].Value = ((bool)(auto_flFoul));
-            this.Adapter.UpdateCommand.Parameters[38].Value = ((bool)(auto_flCrossOver));
-            this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(tele_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(tele_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(tele_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(tele_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(tele_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(tele_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(tele_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(tele_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(tele_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(tele_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(tele_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(tele_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(tele_numRocketHighAttempt));
-            this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(tele_numRocketHighSuccess));
-            this.Adapter.UpdateCommand.Parameters[53].Value = ((int)(tele_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(tele_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[55].Value = ((int)(tele_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[56].Value = ((int)(tele_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[57].Value = ((int)(tele_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(tele_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[59].Value = ((int)(tele_idClimb));
-            this.Adapter.UpdateCommand.Parameters[60].Value = ((int)(tele_idClimbOutcome));
-            this.Adapter.UpdateCommand.Parameters[61].Value = ((int)(tele_idClimbGrab));
-            this.Adapter.UpdateCommand.Parameters[62].Value = ((int)(tele_idClimbSpeed));
-            this.Adapter.UpdateCommand.Parameters[63].Value = ((int)(tele_numClimbAssists));
-            this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(tele_idClimbLevel));
-            this.Adapter.UpdateCommand.Parameters[65].Value = ((bool)(tele_flClimbFall));
-            this.Adapter.UpdateCommand.Parameters[66].Value = ((bool)(tele_flDefence));
-            this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(flIntakeHatchGround));
-            this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(flIntakeHatchStation));
-            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(flIntakeCargoGround));
-            this.Adapter.UpdateCommand.Parameters[70].Value = ((bool)(flIntakeCargoStation));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(flCrashed));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((bool)(flYellow));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((bool)(flRed));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(auto_flState));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(auto_idStartPosition));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(auto_idStatrLevel));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(auto_baseLine));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(auto_idStartObject));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(auto_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(auto_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(auto_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(auto_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(auto_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(auto_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(auto_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(auto_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(auto_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((int)(auto_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(auto_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(auto_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((int)(auto_numRocketHighHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(auto_numRocketHighHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(auto_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(auto_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(auto_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(auto_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[32].Value = ((int)(auto_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[33].Value = ((int)(auto_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[34].Value = ((bool)(auto_flLoseStartObject));
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((bool)(auto_flRobotContact));
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((bool)(auto_flFoul));
+            this.Adapter.UpdateCommand.Parameters[37].Value = ((bool)(auto_flCrossOver));
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(tele_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(tele_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((int)(tele_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(tele_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(tele_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[43].Value = ((int)(tele_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(tele_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(tele_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((int)(tele_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(tele_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(tele_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((int)(tele_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[50].Value = ((int)(tele_numRocketHighAttempt));
+            this.Adapter.UpdateCommand.Parameters[51].Value = ((int)(tele_numRocketHighSuccess));
+            this.Adapter.UpdateCommand.Parameters[52].Value = ((int)(tele_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[53].Value = ((int)(tele_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((int)(tele_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((int)(tele_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((int)(tele_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[57].Value = ((int)(tele_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((int)(tele_idClimb));
+            this.Adapter.UpdateCommand.Parameters[59].Value = ((int)(tele_idClimbOutcome));
+            this.Adapter.UpdateCommand.Parameters[60].Value = ((int)(tele_idClimbGrab));
+            this.Adapter.UpdateCommand.Parameters[61].Value = ((int)(tele_idClimbSpeed));
+            this.Adapter.UpdateCommand.Parameters[62].Value = ((int)(tele_numClimbAssists));
+            this.Adapter.UpdateCommand.Parameters[63].Value = ((int)(tele_idClimbLevel));
+            this.Adapter.UpdateCommand.Parameters[64].Value = ((bool)(tele_flClimbFall));
+            this.Adapter.UpdateCommand.Parameters[65].Value = ((bool)(tele_flDefence));
+            this.Adapter.UpdateCommand.Parameters[66].Value = ((bool)(flIntakeHatchGround));
+            this.Adapter.UpdateCommand.Parameters[67].Value = ((bool)(flIntakeHatchStation));
+            this.Adapter.UpdateCommand.Parameters[68].Value = ((bool)(flIntakeCargoGround));
+            this.Adapter.UpdateCommand.Parameters[69].Value = ((bool)(flIntakeCargoStation));
             if ((comm_txNotes == null)) {
                 throw new global::System.ArgumentNullException("comm_txNotes");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[71].Value = ((string)(comm_txNotes));
+                this.Adapter.UpdateCommand.Parameters[70].Value = ((string)(comm_txNotes));
             }
-            this.Adapter.UpdateCommand.Parameters[72].Value = ((bool)(comm_flHighlight));
-            this.Adapter.UpdateCommand.Parameters[73].Value = ((bool)(comm_flWarning));
-            this.Adapter.UpdateCommand.Parameters[74].Value = ((int)(comm_idDriveRating));
-            this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(comm_flAlliance));
-            this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(comm_flRecovery));
-            this.Adapter.UpdateCommand.Parameters[77].Value = ((bool)(comm_flStrategy));
-            this.Adapter.UpdateCommand.Parameters[78].Value = ((bool)(comm_flOwnThing));
-            this.Adapter.UpdateCommand.Parameters[79].Value = ((bool)(comm_flGoodDefence));
-            this.Adapter.UpdateCommand.Parameters[80].Value = ((System.DateTime)(dtCreation));
-            this.Adapter.UpdateCommand.Parameters[81].Value = ((System.DateTime)(dtModified));
+            this.Adapter.UpdateCommand.Parameters[71].Value = ((bool)(comm_flHighlight));
+            this.Adapter.UpdateCommand.Parameters[72].Value = ((bool)(comm_flWarning));
+            this.Adapter.UpdateCommand.Parameters[73].Value = ((int)(comm_idDriveRating));
+            this.Adapter.UpdateCommand.Parameters[74].Value = ((bool)(comm_flAlliance));
+            this.Adapter.UpdateCommand.Parameters[75].Value = ((bool)(comm_flRecovery));
+            this.Adapter.UpdateCommand.Parameters[76].Value = ((bool)(comm_flStrategy));
+            this.Adapter.UpdateCommand.Parameters[77].Value = ((bool)(comm_flOwnThing));
+            this.Adapter.UpdateCommand.Parameters[78].Value = ((bool)(comm_flGoodDefence));
+            this.Adapter.UpdateCommand.Parameters[79].Value = ((System.DateTime)(dtCreation));
+            this.Adapter.UpdateCommand.Parameters[80].Value = ((System.DateTime)(dtModified));
             if ((txComputerName == null)) {
                 throw new global::System.ArgumentNullException("txComputerName");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[82].Value = ((string)(txComputerName));
+                this.Adapter.UpdateCommand.Parameters[81].Value = ((string)(txComputerName));
             }
-            this.Adapter.UpdateCommand.Parameters[83].Value = ((bool)(flRanking1));
-            this.Adapter.UpdateCommand.Parameters[84].Value = ((bool)(flRanking2));
-            this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[86].Value = ((int)(Original_numMatch));
-            this.Adapter.UpdateCommand.Parameters[87].Value = ((int)(Original_team));
-            this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_idAlliance));
-            this.Adapter.UpdateCommand.Parameters[89].Value = ((int)(Original_idDriveStation));
-            this.Adapter.UpdateCommand.Parameters[90].Value = ((bool)(Original_flCrashed));
-            this.Adapter.UpdateCommand.Parameters[91].Value = ((bool)(Original_flYellow));
-            this.Adapter.UpdateCommand.Parameters[92].Value = ((bool)(Original_flRed));
-            this.Adapter.UpdateCommand.Parameters[93].Value = ((bool)(Original_auto_flState));
-            this.Adapter.UpdateCommand.Parameters[94].Value = ((int)(Original_auto_idStartPosition));
-            this.Adapter.UpdateCommand.Parameters[95].Value = ((int)(Original_auto_idStatrLevel));
-            this.Adapter.UpdateCommand.Parameters[96].Value = ((bool)(Original_auto_baseLine));
-            this.Adapter.UpdateCommand.Parameters[97].Value = ((int)(Original_auto_idStartObject));
-            this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[99].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[100].Value = ((int)(Original_auto_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(Original_auto_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[102].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[103].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(Original_auto_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[105].Value = ((int)(Original_auto_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[106].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[107].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[108].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[109].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[110].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[111].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[112].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[113].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[114].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[115].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[116].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[117].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[118].Value = ((bool)(Original_auto_flLoseStartObject));
-            this.Adapter.UpdateCommand.Parameters[119].Value = ((bool)(Original_auto_flRobotContact));
-            this.Adapter.UpdateCommand.Parameters[120].Value = ((bool)(Original_auto_flFoul));
-            this.Adapter.UpdateCommand.Parameters[121].Value = ((bool)(Original_auto_flCrossOver));
-            this.Adapter.UpdateCommand.Parameters[122].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[123].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[124].Value = ((int)(Original_tele_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[125].Value = ((int)(Original_tele_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[126].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[127].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[128].Value = ((int)(Original_tele_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[129].Value = ((int)(Original_tele_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[130].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[131].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[132].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[133].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[134].Value = ((int)(Original_tele_numRocketHighAttempt));
-            this.Adapter.UpdateCommand.Parameters[135].Value = ((int)(Original_tele_numRocketHighSuccess));
-            this.Adapter.UpdateCommand.Parameters[136].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[137].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[138].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[139].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[140].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[141].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[142].Value = ((int)(Original_tele_idClimb));
-            this.Adapter.UpdateCommand.Parameters[143].Value = ((int)(Original_tele_idClimbOutcome));
-            this.Adapter.UpdateCommand.Parameters[144].Value = ((int)(Original_tele_idClimbGrab));
-            this.Adapter.UpdateCommand.Parameters[145].Value = ((int)(Original_tele_idClimbSpeed));
-            this.Adapter.UpdateCommand.Parameters[146].Value = ((int)(Original_tele_numClimbAssists));
-            this.Adapter.UpdateCommand.Parameters[147].Value = ((int)(Original_tele_idClimbLevel));
-            this.Adapter.UpdateCommand.Parameters[148].Value = ((bool)(Original_tele_flClimbFall));
-            this.Adapter.UpdateCommand.Parameters[149].Value = ((bool)(Original_tele_flDefence));
-            this.Adapter.UpdateCommand.Parameters[150].Value = ((bool)(Original_flIntakeHatchGround));
-            this.Adapter.UpdateCommand.Parameters[151].Value = ((bool)(Original_flIntakeHatchStation));
-            this.Adapter.UpdateCommand.Parameters[152].Value = ((bool)(Original_flIntakeCargoGround));
-            this.Adapter.UpdateCommand.Parameters[153].Value = ((bool)(Original_flIntakeCargoStation));
-            this.Adapter.UpdateCommand.Parameters[154].Value = ((bool)(Original_comm_flHighlight));
-            this.Adapter.UpdateCommand.Parameters[155].Value = ((bool)(Original_comm_flWarning));
-            this.Adapter.UpdateCommand.Parameters[156].Value = ((int)(Original_comm_idDriveRating));
-            this.Adapter.UpdateCommand.Parameters[157].Value = ((bool)(Original_comm_flAlliance));
-            this.Adapter.UpdateCommand.Parameters[158].Value = ((bool)(Original_comm_flRecovery));
-            this.Adapter.UpdateCommand.Parameters[159].Value = ((bool)(Original_comm_flStrategy));
-            this.Adapter.UpdateCommand.Parameters[160].Value = ((bool)(Original_comm_flOwnThing));
-            this.Adapter.UpdateCommand.Parameters[161].Value = ((bool)(Original_comm_flGoodDefence));
-            this.Adapter.UpdateCommand.Parameters[162].Value = ((System.DateTime)(Original_dtCreation));
-            this.Adapter.UpdateCommand.Parameters[163].Value = ((System.DateTime)(Original_dtModified));
-            this.Adapter.UpdateCommand.Parameters[164].Value = ((bool)(Original_flRanking1));
-            this.Adapter.UpdateCommand.Parameters[165].Value = ((bool)(Original_flRanking2));
+            this.Adapter.UpdateCommand.Parameters[82].Value = ((bool)(flRanking1));
+            this.Adapter.UpdateCommand.Parameters[83].Value = ((bool)(flRanking2));
+            this.Adapter.UpdateCommand.Parameters[84].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Original_numMatch));
+            this.Adapter.UpdateCommand.Parameters[86].Value = ((int)(Original_team));
+            this.Adapter.UpdateCommand.Parameters[87].Value = ((int)(Original_idAlliance));
+            this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_idDriveStation));
+            this.Adapter.UpdateCommand.Parameters[89].Value = ((bool)(Original_flCrashed));
+            this.Adapter.UpdateCommand.Parameters[90].Value = ((bool)(Original_flYellow));
+            this.Adapter.UpdateCommand.Parameters[91].Value = ((bool)(Original_flRed));
+            this.Adapter.UpdateCommand.Parameters[92].Value = ((bool)(Original_auto_flState));
+            this.Adapter.UpdateCommand.Parameters[93].Value = ((int)(Original_auto_idStartPosition));
+            this.Adapter.UpdateCommand.Parameters[94].Value = ((int)(Original_auto_idStatrLevel));
+            this.Adapter.UpdateCommand.Parameters[95].Value = ((bool)(Original_auto_baseLine));
+            this.Adapter.UpdateCommand.Parameters[96].Value = ((int)(Original_auto_idStartObject));
+            this.Adapter.UpdateCommand.Parameters[97].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[99].Value = ((int)(Original_auto_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[100].Value = ((int)(Original_auto_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[102].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[103].Value = ((int)(Original_auto_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(Original_auto_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[105].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[106].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[107].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[108].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[109].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[110].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[111].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[112].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[113].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[114].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[115].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[116].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[117].Value = ((bool)(Original_auto_flLoseStartObject));
+            this.Adapter.UpdateCommand.Parameters[118].Value = ((bool)(Original_auto_flRobotContact));
+            this.Adapter.UpdateCommand.Parameters[119].Value = ((bool)(Original_auto_flFoul));
+            this.Adapter.UpdateCommand.Parameters[120].Value = ((bool)(Original_auto_flCrossOver));
+            this.Adapter.UpdateCommand.Parameters[121].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[122].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[123].Value = ((int)(Original_tele_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[124].Value = ((int)(Original_tele_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[125].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[126].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[127].Value = ((int)(Original_tele_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[128].Value = ((int)(Original_tele_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[129].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[130].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[131].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[132].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[133].Value = ((int)(Original_tele_numRocketHighAttempt));
+            this.Adapter.UpdateCommand.Parameters[134].Value = ((int)(Original_tele_numRocketHighSuccess));
+            this.Adapter.UpdateCommand.Parameters[135].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[136].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[137].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[138].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[139].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[140].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[141].Value = ((int)(Original_tele_idClimb));
+            this.Adapter.UpdateCommand.Parameters[142].Value = ((int)(Original_tele_idClimbOutcome));
+            this.Adapter.UpdateCommand.Parameters[143].Value = ((int)(Original_tele_idClimbGrab));
+            this.Adapter.UpdateCommand.Parameters[144].Value = ((int)(Original_tele_idClimbSpeed));
+            this.Adapter.UpdateCommand.Parameters[145].Value = ((int)(Original_tele_numClimbAssists));
+            this.Adapter.UpdateCommand.Parameters[146].Value = ((int)(Original_tele_idClimbLevel));
+            this.Adapter.UpdateCommand.Parameters[147].Value = ((bool)(Original_tele_flClimbFall));
+            this.Adapter.UpdateCommand.Parameters[148].Value = ((bool)(Original_tele_flDefence));
+            this.Adapter.UpdateCommand.Parameters[149].Value = ((bool)(Original_flIntakeHatchGround));
+            this.Adapter.UpdateCommand.Parameters[150].Value = ((bool)(Original_flIntakeHatchStation));
+            this.Adapter.UpdateCommand.Parameters[151].Value = ((bool)(Original_flIntakeCargoGround));
+            this.Adapter.UpdateCommand.Parameters[152].Value = ((bool)(Original_flIntakeCargoStation));
+            this.Adapter.UpdateCommand.Parameters[153].Value = ((bool)(Original_comm_flHighlight));
+            this.Adapter.UpdateCommand.Parameters[154].Value = ((bool)(Original_comm_flWarning));
+            this.Adapter.UpdateCommand.Parameters[155].Value = ((int)(Original_comm_idDriveRating));
+            this.Adapter.UpdateCommand.Parameters[156].Value = ((bool)(Original_comm_flAlliance));
+            this.Adapter.UpdateCommand.Parameters[157].Value = ((bool)(Original_comm_flRecovery));
+            this.Adapter.UpdateCommand.Parameters[158].Value = ((bool)(Original_comm_flStrategy));
+            this.Adapter.UpdateCommand.Parameters[159].Value = ((bool)(Original_comm_flOwnThing));
+            this.Adapter.UpdateCommand.Parameters[160].Value = ((bool)(Original_comm_flGoodDefence));
+            this.Adapter.UpdateCommand.Parameters[161].Value = ((System.DateTime)(Original_dtCreation));
+            this.Adapter.UpdateCommand.Parameters[162].Value = ((System.DateTime)(Original_dtModified));
+            this.Adapter.UpdateCommand.Parameters[163].Value = ((bool)(Original_flRanking1));
+            this.Adapter.UpdateCommand.Parameters[164].Value = ((bool)(Original_flRanking2));
+            this.Adapter.UpdateCommand.Parameters[165].Value = ((int)(id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4739,7 +4715,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     System.DateTime Original_dtModified, 
                     bool Original_flRanking1, 
                     bool Original_flRanking2) {
-            return this.Update(Original_id, _event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flRanking1, flRanking2, Original_id, Original_numMatch, Original_team, Original_idAlliance, Original_idDriveStation, Original_flCrashed, Original_flYellow, Original_flRed, Original_auto_flState, Original_auto_idStartPosition, Original_auto_idStatrLevel, Original_auto_baseLine, Original_auto_idStartObject, Original_auto_numShipFrontHatchAttempt, Original_auto_numShipFrontHatchSuccess, Original_auto_numShipSideHatchAttempt, Original_auto_numShipSideHatchSuccess, Original_auto_numShipFrontCargoAttempt, Original_auto_numShipFrontCargoSuccess, Original_auto_numShipSideCargoAttempt, Original_auto_numShipSideCargoSuccess, Original_auto_numRocketLowHatchAttempt, Original_auto_numRocketLowHatchSuccess, Original_auto_numRocketMidHatchAttempt, Original_auto_numRocketMidHatchSuccess, Original_auto_numRocketHighHatchAttempt, Original_auto_numRocketHighHatchSuccess, Original_auto_numRocketLowCargoAttempt, Original_auto_numRocketLowCargoSuccess, Original_auto_numRocketMidCargoAttempt, Original_auto_numRocketMidCargoSuccess, Original_auto_numRocketHighCargoAttempt, Original_auto_numRocketHighCargoSuccess, Original_auto_flLoseStartObject, Original_auto_flRobotContact, Original_auto_flFoul, Original_auto_flCrossOver, Original_tele_numShipFrontHatchAttempt, Original_tele_numShipFrontHatchSuccess, Original_tele_numShipSideHatchAttempt, Original_tele_numShipSideHatchSuccess, Original_tele_numShipFrontCargoAttempt, Original_tele_numShipFrontCargoSuccess, Original_tele_numShipSideCargoAttempt, Original_tele_numShipSideCargoSuccess, Original_tele_numRocketLowHatchAttempt, Original_tele_numRocketLowHatchSuccess, Original_tele_numRocketMidHatchAttempt, Original_tele_numRocketMidHatchSuccess, Original_tele_numRocketHighAttempt, Original_tele_numRocketHighSuccess, Original_tele_numRocketLowCargoAttempt, Original_tele_numRocketLowCargoSuccess, Original_tele_numRocketMidCargoAttempt, Original_tele_numRocketMidCargoSuccess, Original_tele_numRocketHighCargoAttempt, Original_tele_numRocketHighCargoSuccess, Original_tele_idClimb, Original_tele_idClimbOutcome, Original_tele_idClimbGrab, Original_tele_idClimbSpeed, Original_tele_numClimbAssists, Original_tele_idClimbLevel, Original_tele_flClimbFall, Original_tele_flDefence, Original_flIntakeHatchGround, Original_flIntakeHatchStation, Original_flIntakeCargoGround, Original_flIntakeCargoStation, Original_comm_flHighlight, Original_comm_flWarning, Original_comm_idDriveRating, Original_comm_flAlliance, Original_comm_flRecovery, Original_comm_flStrategy, Original_comm_flOwnThing, Original_comm_flGoodDefence, Original_dtCreation, Original_dtModified, Original_flRanking1, Original_flRanking2);
+            return this.Update(_event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flRanking1, flRanking2, Original_id, Original_numMatch, Original_team, Original_idAlliance, Original_idDriveStation, Original_flCrashed, Original_flYellow, Original_flRed, Original_auto_flState, Original_auto_idStartPosition, Original_auto_idStatrLevel, Original_auto_baseLine, Original_auto_idStartObject, Original_auto_numShipFrontHatchAttempt, Original_auto_numShipFrontHatchSuccess, Original_auto_numShipSideHatchAttempt, Original_auto_numShipSideHatchSuccess, Original_auto_numShipFrontCargoAttempt, Original_auto_numShipFrontCargoSuccess, Original_auto_numShipSideCargoAttempt, Original_auto_numShipSideCargoSuccess, Original_auto_numRocketLowHatchAttempt, Original_auto_numRocketLowHatchSuccess, Original_auto_numRocketMidHatchAttempt, Original_auto_numRocketMidHatchSuccess, Original_auto_numRocketHighHatchAttempt, Original_auto_numRocketHighHatchSuccess, Original_auto_numRocketLowCargoAttempt, Original_auto_numRocketLowCargoSuccess, Original_auto_numRocketMidCargoAttempt, Original_auto_numRocketMidCargoSuccess, Original_auto_numRocketHighCargoAttempt, Original_auto_numRocketHighCargoSuccess, Original_auto_flLoseStartObject, Original_auto_flRobotContact, Original_auto_flFoul, Original_auto_flCrossOver, Original_tele_numShipFrontHatchAttempt, Original_tele_numShipFrontHatchSuccess, Original_tele_numShipSideHatchAttempt, Original_tele_numShipSideHatchSuccess, Original_tele_numShipFrontCargoAttempt, Original_tele_numShipFrontCargoSuccess, Original_tele_numShipSideCargoAttempt, Original_tele_numShipSideCargoSuccess, Original_tele_numRocketLowHatchAttempt, Original_tele_numRocketLowHatchSuccess, Original_tele_numRocketMidHatchAttempt, Original_tele_numRocketMidHatchSuccess, Original_tele_numRocketHighAttempt, Original_tele_numRocketHighSuccess, Original_tele_numRocketLowCargoAttempt, Original_tele_numRocketLowCargoSuccess, Original_tele_numRocketMidCargoAttempt, Original_tele_numRocketMidCargoSuccess, Original_tele_numRocketHighCargoAttempt, Original_tele_numRocketHighCargoSuccess, Original_tele_idClimb, Original_tele_idClimbOutcome, Original_tele_idClimbGrab, Original_tele_idClimbSpeed, Original_tele_numClimbAssists, Original_tele_idClimbLevel, Original_tele_flClimbFall, Original_tele_flDefence, Original_flIntakeHatchGround, Original_flIntakeHatchStation, Original_flIntakeCargoGround, Original_flIntakeCargoStation, Original_comm_flHighlight, Original_comm_flWarning, Original_comm_idDriveRating, Original_comm_flAlliance, Original_comm_flRecovery, Original_comm_flStrategy, Original_comm_flOwnThing, Original_comm_flGoodDefence, Original_dtCreation, Original_dtModified, Original_flRanking1, Original_flRanking2, Original_id);
         }
     }
     
