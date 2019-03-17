@@ -30,6 +30,8 @@
         {
             System.Windows.Forms.Label label1;
             System.Windows.Forms.RichTextBox instructionsRichTextBox;
+            System.Windows.Forms.Label label2;
+            System.Windows.Forms.Label label3;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.statusTabPage = new System.Windows.Forms.TabPage();
             this.telemetryRichTextBox = new System.Windows.Forms.RichTextBox();
@@ -42,8 +44,14 @@
             this.loadQueryButton = new System.Windows.Forms.Button();
             this.newQueryButton = new System.Windows.Forms.Button();
             this.queryHeaderLabel = new System.Windows.Forms.Label();
+            this.lastUpdatedLabel = new System.Windows.Forms.Label();
+            this.pullDatabaseButton = new System.Windows.Forms.Button();
+            this.numberOfLocalChangesLabel = new System.Windows.Forms.Label();
+            this.pushDatabaseButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             instructionsRichTextBox = new System.Windows.Forms.RichTextBox();
+            label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.statusTabPage.SuspendLayout();
             this.queryTabPage.SuspendLayout();
@@ -55,11 +63,11 @@
             label1.BackColor = System.Drawing.Color.Black;
             label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             label1.ForeColor = System.Drawing.Color.White;
-            label1.Location = new System.Drawing.Point(8, 12);
+            label1.Location = new System.Drawing.Point(13, 23);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(155, 24);
+            label1.Size = new System.Drawing.Size(93, 24);
             label1.TabIndex = 1;
-            label1.Text = "QUICK ACTIONS";
+            label1.Text = "ACTIONS";
             // 
             // instructionsRichTextBox
             // 
@@ -72,6 +80,18 @@
             instructionsRichTextBox.TabIndex = 6;
             instructionsRichTextBox.Text = "This query is a specialized version of a SQL query. On each line, specify a colum" +
     "n name, operator, and value. For example, auto_flBaseline = true";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = System.Drawing.Color.Black;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.ForeColor = System.Drawing.Color.White;
+            label2.Location = new System.Drawing.Point(230, 23);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(124, 24);
+            label2.TabIndex = 4;
+            label2.Text = "TELEMETRY";
             // 
             // tabControl1
             // 
@@ -86,6 +106,12 @@
             // 
             // statusTabPage
             // 
+            this.statusTabPage.Controls.Add(this.pushDatabaseButton);
+            this.statusTabPage.Controls.Add(this.numberOfLocalChangesLabel);
+            this.statusTabPage.Controls.Add(this.pullDatabaseButton);
+            this.statusTabPage.Controls.Add(this.lastUpdatedLabel);
+            this.statusTabPage.Controls.Add(label3);
+            this.statusTabPage.Controls.Add(label2);
             this.statusTabPage.Controls.Add(this.telemetryRichTextBox);
             this.statusTabPage.Controls.Add(this.importButton);
             this.statusTabPage.Controls.Add(label1);
@@ -206,6 +232,56 @@
             this.queryHeaderLabel.TabIndex = 0;
             this.queryHeaderLabel.Text = "Current Query: None";
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = System.Drawing.Color.Black;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label3.ForeColor = System.Drawing.Color.White;
+            label3.Location = new System.Drawing.Point(13, 162);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(111, 24);
+            label3.TabIndex = 5;
+            label3.Text = "DATABASE";
+            // 
+            // lastUpdatedLabel
+            // 
+            this.lastUpdatedLabel.AutoSize = true;
+            this.lastUpdatedLabel.Location = new System.Drawing.Point(17, 190);
+            this.lastUpdatedLabel.Name = "lastUpdatedLabel";
+            this.lastUpdatedLabel.Size = new System.Drawing.Size(95, 16);
+            this.lastUpdatedLabel.TabIndex = 6;
+            this.lastUpdatedLabel.Text = "Last Updated: ";
+            // 
+            // pullDatabaseButton
+            // 
+            this.pullDatabaseButton.Location = new System.Drawing.Point(12, 210);
+            this.pullDatabaseButton.Name = "pullDatabaseButton";
+            this.pullDatabaseButton.Size = new System.Drawing.Size(151, 23);
+            this.pullDatabaseButton.TabIndex = 7;
+            this.pullDatabaseButton.Text = "Pull";
+            this.pullDatabaseButton.UseVisualStyleBackColor = true;
+            this.pullDatabaseButton.Click += new System.EventHandler(this.PullDatabaseButton_Click);
+            // 
+            // numberOfLocalChangesLabel
+            // 
+            this.numberOfLocalChangesLabel.AutoSize = true;
+            this.numberOfLocalChangesLabel.Location = new System.Drawing.Point(12, 277);
+            this.numberOfLocalChangesLabel.Name = "numberOfLocalChangesLabel";
+            this.numberOfLocalChangesLabel.Size = new System.Drawing.Size(169, 16);
+            this.numberOfLocalChangesLabel.TabIndex = 8;
+            this.numberOfLocalChangesLabel.Text = "Number of Local Changes: ";
+            // 
+            // pushDatabaseButton
+            // 
+            this.pushDatabaseButton.Location = new System.Drawing.Point(12, 297);
+            this.pushDatabaseButton.Name = "pushDatabaseButton";
+            this.pushDatabaseButton.Size = new System.Drawing.Size(151, 23);
+            this.pushDatabaseButton.TabIndex = 9;
+            this.pushDatabaseButton.Text = "Push";
+            this.pushDatabaseButton.UseVisualStyleBackColor = true;
+            this.pushDatabaseButton.Click += new System.EventHandler(this.PushDatabaseButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +313,10 @@
         private System.Windows.Forms.Button runQueryButton;
         private System.Windows.Forms.RichTextBox queryRichTextBox;
         private System.Windows.Forms.Button saveAsQueryButton;
+        private System.Windows.Forms.Label lastUpdatedLabel;
+        private System.Windows.Forms.Button pullDatabaseButton;
+        private System.Windows.Forms.Label numberOfLocalChangesLabel;
+        private System.Windows.Forms.Button pushDatabaseButton;
     }
 }
 

@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CspAnalyzeDataSet.cs">
+      <DependentUpon>CspAnalyzeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="CspAnalyzeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

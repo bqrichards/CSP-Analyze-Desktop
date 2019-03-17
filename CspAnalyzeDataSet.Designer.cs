@@ -29,7 +29,7 @@ namespace CSP_Analyze {
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public CspAnalyzeDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -40,7 +40,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected CspAnalyzeDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
@@ -76,7 +76,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public matchscoutingDataTable matchscouting {
@@ -86,7 +86,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -99,7 +99,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataTableCollection Tables {
             get {
@@ -108,7 +108,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public new global::System.Data.DataRelationCollection Relations {
             get {
@@ -117,7 +117,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void InitializeDerivedDataSet() {
             this.BeginInit();
             this.InitClass();
@@ -125,7 +125,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
             CspAnalyzeDataSet cln = ((CspAnalyzeDataSet)(base.Clone()));
             cln.InitVars();
@@ -134,19 +134,19 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeTables() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override bool ShouldSerializeRelations() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override void ReadXmlSerializable(global::System.Xml.XmlReader reader) {
             if ((this.DetermineSchemaSerializationMode(reader) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 this.Reset();
@@ -171,7 +171,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected override global::System.Xml.Schema.XmlSchema GetSchemaSerializable() {
             global::System.IO.MemoryStream stream = new global::System.IO.MemoryStream();
             this.WriteXmlSchema(new global::System.Xml.XmlTextWriter(stream, null));
@@ -180,13 +180,13 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars() {
             this.InitVars(true);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
             this.tablematchscouting = ((matchscoutingDataTable)(base.Tables["matchscouting"]));
             if ((initTable == true)) {
@@ -197,7 +197,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
             this.DataSetName = "CspAnalyzeDataSet";
             this.Prefix = "";
@@ -209,13 +209,13 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializematchscouting() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -223,7 +223,7 @@ namespace CSP_Analyze {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
             CspAnalyzeDataSet ds = new CspAnalyzeDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
@@ -269,7 +269,7 @@ namespace CSP_Analyze {
             return type;
         }
         
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void matchscoutingRowChangeEventHandler(object sender, matchscoutingRowChangeEvent e);
         
         /// <summary>
@@ -281,11 +281,7 @@ namespace CSP_Analyze {
             
             private global::System.Data.DataColumn columnid;
             
-            private global::System.Data.DataColumn columnidEvent;
-            
             private global::System.Data.DataColumn columnnumMatch;
-            
-            private global::System.Data.DataColumn columnidTeam;
             
             private global::System.Data.DataColumn columnidAlliance;
             
@@ -449,8 +445,12 @@ namespace CSP_Analyze {
             
             private global::System.Data.DataColumn columnflRanking2;
             
+            private global::System.Data.DataColumn columnevent;
+            
+            private global::System.Data.DataColumn columnteam;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingDataTable() {
                 this.TableName = "matchscouting";
                 this.BeginInit();
@@ -459,7 +459,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal matchscoutingDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
@@ -476,14 +476,14 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected matchscoutingDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn idColumn {
                 get {
                     return this.columnid;
@@ -491,15 +491,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idEventColumn {
-                get {
-                    return this.columnidEvent;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn numMatchColumn {
                 get {
                     return this.columnnumMatch;
@@ -507,15 +499,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idTeamColumn {
-                get {
-                    return this.columnidTeam;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn idAllianceColumn {
                 get {
                     return this.columnidAlliance;
@@ -523,7 +507,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn idDriveStationColumn {
                 get {
                     return this.columnidDriveStation;
@@ -531,7 +515,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn txScoutNameColumn {
                 get {
                     return this.columntxScoutName;
@@ -539,7 +523,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flCrashedColumn {
                 get {
                     return this.columnflCrashed;
@@ -547,7 +531,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flYellowColumn {
                 get {
                     return this.columnflYellow;
@@ -555,7 +539,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flRedColumn {
                 get {
                     return this.columnflRed;
@@ -563,7 +547,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_flStateColumn {
                 get {
                     return this.columnauto_flState;
@@ -571,7 +555,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_idStartPositionColumn {
                 get {
                     return this.columnauto_idStartPosition;
@@ -579,7 +563,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_idStatrLevelColumn {
                 get {
                     return this.columnauto_idStatrLevel;
@@ -587,7 +571,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_baseLineColumn {
                 get {
                     return this.columnauto_baseLine;
@@ -595,7 +579,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_idStartObjectColumn {
                 get {
                     return this.columnauto_idStartObject;
@@ -603,7 +587,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipFrontHatchAttemptColumn {
                 get {
                     return this.columnauto_numShipFrontHatchAttempt;
@@ -611,7 +595,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipFrontHatchSuccessColumn {
                 get {
                     return this.columnauto_numShipFrontHatchSuccess;
@@ -619,7 +603,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipSideHatchAttemptColumn {
                 get {
                     return this.columnauto_numShipSideHatchAttempt;
@@ -627,7 +611,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipSideHatchSuccessColumn {
                 get {
                     return this.columnauto_numShipSideHatchSuccess;
@@ -635,7 +619,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipFrontCargoAttemptColumn {
                 get {
                     return this.columnauto_numShipFrontCargoAttempt;
@@ -643,7 +627,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipFrontCargoSuccessColumn {
                 get {
                     return this.columnauto_numShipFrontCargoSuccess;
@@ -651,7 +635,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipSideCargoAttemptColumn {
                 get {
                     return this.columnauto_numShipSideCargoAttempt;
@@ -659,7 +643,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numShipSideCargoSuccessColumn {
                 get {
                     return this.columnauto_numShipSideCargoSuccess;
@@ -667,7 +651,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketLowHatchAttemptColumn {
                 get {
                     return this.columnauto_numRocketLowHatchAttempt;
@@ -675,7 +659,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketLowHatchSuccessColumn {
                 get {
                     return this.columnauto_numRocketLowHatchSuccess;
@@ -683,7 +667,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketMidHatchAttemptColumn {
                 get {
                     return this.columnauto_numRocketMidHatchAttempt;
@@ -691,7 +675,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketMidHatchSuccessColumn {
                 get {
                     return this.columnauto_numRocketMidHatchSuccess;
@@ -699,7 +683,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketHighHatchAttemptColumn {
                 get {
                     return this.columnauto_numRocketHighHatchAttempt;
@@ -707,7 +691,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketHighHatchSuccessColumn {
                 get {
                     return this.columnauto_numRocketHighHatchSuccess;
@@ -715,7 +699,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketLowCargoAttemptColumn {
                 get {
                     return this.columnauto_numRocketLowCargoAttempt;
@@ -723,7 +707,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketLowCargoSuccessColumn {
                 get {
                     return this.columnauto_numRocketLowCargoSuccess;
@@ -731,7 +715,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketMidCargoAttemptColumn {
                 get {
                     return this.columnauto_numRocketMidCargoAttempt;
@@ -739,7 +723,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketMidCargoSuccessColumn {
                 get {
                     return this.columnauto_numRocketMidCargoSuccess;
@@ -747,7 +731,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketHighCargoAttemptColumn {
                 get {
                     return this.columnauto_numRocketHighCargoAttempt;
@@ -755,7 +739,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_numRocketHighCargoSuccessColumn {
                 get {
                     return this.columnauto_numRocketHighCargoSuccess;
@@ -763,7 +747,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_flLoseStartObjectColumn {
                 get {
                     return this.columnauto_flLoseStartObject;
@@ -771,7 +755,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_flRobotContactColumn {
                 get {
                     return this.columnauto_flRobotContact;
@@ -779,7 +763,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_flFoulColumn {
                 get {
                     return this.columnauto_flFoul;
@@ -787,7 +771,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn auto_flCrossOverColumn {
                 get {
                     return this.columnauto_flCrossOver;
@@ -795,7 +779,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipFrontHatchAttemptColumn {
                 get {
                     return this.columntele_numShipFrontHatchAttempt;
@@ -803,7 +787,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipFrontHatchSuccessColumn {
                 get {
                     return this.columntele_numShipFrontHatchSuccess;
@@ -811,7 +795,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipSideHatchAttemptColumn {
                 get {
                     return this.columntele_numShipSideHatchAttempt;
@@ -819,7 +803,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipSideHatchSuccessColumn {
                 get {
                     return this.columntele_numShipSideHatchSuccess;
@@ -827,7 +811,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipFrontCargoAttemptColumn {
                 get {
                     return this.columntele_numShipFrontCargoAttempt;
@@ -835,7 +819,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipFrontCargoSuccessColumn {
                 get {
                     return this.columntele_numShipFrontCargoSuccess;
@@ -843,7 +827,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipSideCargoAttemptColumn {
                 get {
                     return this.columntele_numShipSideCargoAttempt;
@@ -851,7 +835,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numShipSideCargoSuccessColumn {
                 get {
                     return this.columntele_numShipSideCargoSuccess;
@@ -859,7 +843,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketLowHatchAttemptColumn {
                 get {
                     return this.columntele_numRocketLowHatchAttempt;
@@ -867,7 +851,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketLowHatchSuccessColumn {
                 get {
                     return this.columntele_numRocketLowHatchSuccess;
@@ -875,7 +859,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketMidHatchAttemptColumn {
                 get {
                     return this.columntele_numRocketMidHatchAttempt;
@@ -883,7 +867,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketMidHatchSuccessColumn {
                 get {
                     return this.columntele_numRocketMidHatchSuccess;
@@ -891,7 +875,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketHighAttemptColumn {
                 get {
                     return this.columntele_numRocketHighAttempt;
@@ -899,7 +883,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketHighSuccessColumn {
                 get {
                     return this.columntele_numRocketHighSuccess;
@@ -907,7 +891,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketLowCargoAttemptColumn {
                 get {
                     return this.columntele_numRocketLowCargoAttempt;
@@ -915,7 +899,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketLowCargoSuccessColumn {
                 get {
                     return this.columntele_numRocketLowCargoSuccess;
@@ -923,7 +907,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketMidCargoAttemptColumn {
                 get {
                     return this.columntele_numRocketMidCargoAttempt;
@@ -931,7 +915,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketMidCargoSuccessColumn {
                 get {
                     return this.columntele_numRocketMidCargoSuccess;
@@ -939,7 +923,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketHighCargoAttemptColumn {
                 get {
                     return this.columntele_numRocketHighCargoAttempt;
@@ -947,7 +931,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numRocketHighCargoSuccessColumn {
                 get {
                     return this.columntele_numRocketHighCargoSuccess;
@@ -955,7 +939,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_idClimbColumn {
                 get {
                     return this.columntele_idClimb;
@@ -963,7 +947,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_idClimbOutcomeColumn {
                 get {
                     return this.columntele_idClimbOutcome;
@@ -971,7 +955,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_idClimbGrabColumn {
                 get {
                     return this.columntele_idClimbGrab;
@@ -979,7 +963,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_idClimbSpeedColumn {
                 get {
                     return this.columntele_idClimbSpeed;
@@ -987,7 +971,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_numClimbAssistsColumn {
                 get {
                     return this.columntele_numClimbAssists;
@@ -995,7 +979,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_idClimbLevelColumn {
                 get {
                     return this.columntele_idClimbLevel;
@@ -1003,7 +987,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_flClimbFallColumn {
                 get {
                     return this.columntele_flClimbFall;
@@ -1011,7 +995,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn tele_flDefenceColumn {
                 get {
                     return this.columntele_flDefence;
@@ -1019,7 +1003,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flIntakeHatchGroundColumn {
                 get {
                     return this.columnflIntakeHatchGround;
@@ -1027,7 +1011,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flIntakeHatchStationColumn {
                 get {
                     return this.columnflIntakeHatchStation;
@@ -1035,7 +1019,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flIntakeCargoGroundColumn {
                 get {
                     return this.columnflIntakeCargoGround;
@@ -1043,7 +1027,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flIntakeCargoStationColumn {
                 get {
                     return this.columnflIntakeCargoStation;
@@ -1051,7 +1035,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_txNotesColumn {
                 get {
                     return this.columncomm_txNotes;
@@ -1059,7 +1043,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flHighlightColumn {
                 get {
                     return this.columncomm_flHighlight;
@@ -1067,7 +1051,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flWarningColumn {
                 get {
                     return this.columncomm_flWarning;
@@ -1075,7 +1059,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_idDriveRatingColumn {
                 get {
                     return this.columncomm_idDriveRating;
@@ -1083,7 +1067,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flAllianceColumn {
                 get {
                     return this.columncomm_flAlliance;
@@ -1091,7 +1075,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flRecoveryColumn {
                 get {
                     return this.columncomm_flRecovery;
@@ -1099,7 +1083,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flStrategyColumn {
                 get {
                     return this.columncomm_flStrategy;
@@ -1107,7 +1091,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flOwnThingColumn {
                 get {
                     return this.columncomm_flOwnThing;
@@ -1115,7 +1099,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn comm_flGoodDefenceColumn {
                 get {
                     return this.columncomm_flGoodDefence;
@@ -1123,7 +1107,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn dtCreationColumn {
                 get {
                     return this.columndtCreation;
@@ -1131,7 +1115,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn dtModifiedColumn {
                 get {
                     return this.columndtModified;
@@ -1139,7 +1123,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn txComputerNameColumn {
                 get {
                     return this.columntxComputerName;
@@ -1147,7 +1131,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flRanking1Column {
                 get {
                     return this.columnflRanking1;
@@ -1155,7 +1139,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn flRanking2Column {
                 get {
                     return this.columnflRanking2;
@@ -1163,7 +1147,23 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn eventColumn {
+                get {
+                    return this.columnevent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn teamColumn {
+                get {
+                    return this.columnteam;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1172,38 +1172,36 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow this[int index] {
                 get {
                     return ((matchscoutingRow)(this.Rows[index]));
                 }
             }
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event matchscoutingRowChangeEventHandler matchscoutingRowChanging;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event matchscoutingRowChangeEventHandler matchscoutingRowChanged;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event matchscoutingRowChangeEventHandler matchscoutingRowDeleting;
             
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public event matchscoutingRowChangeEventHandler matchscoutingRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void AddmatchscoutingRow(matchscoutingRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow AddmatchscoutingRow(
                         int id, 
-                        int idEvent, 
                         int numMatch, 
-                        int idTeam, 
                         int idAlliance, 
                         int idDriveStation, 
                         string txScoutName, 
@@ -1284,13 +1282,13 @@ namespace CSP_Analyze {
                         System.DateTime dtModified, 
                         string txComputerName, 
                         bool flRanking1, 
-                        bool flRanking2) {
+                        bool flRanking2, 
+                        string _event, 
+                        int team) {
                 matchscoutingRow rowmatchscoutingRow = ((matchscoutingRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
-                        idEvent,
                         numMatch,
-                        idTeam,
                         idAlliance,
                         idDriveStation,
                         txScoutName,
@@ -1371,21 +1369,23 @@ namespace CSP_Analyze {
                         dtModified,
                         txComputerName,
                         flRanking1,
-                        flRanking2};
+                        flRanking2,
+                        _event,
+                        team};
                 rowmatchscoutingRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowmatchscoutingRow);
                 return rowmatchscoutingRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow FindByid(int id) {
                 return ((matchscoutingRow)(this.Rows.Find(new object[] {
                             id})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
                 matchscoutingDataTable cln = ((matchscoutingDataTable)(base.Clone()));
                 cln.InitVars();
@@ -1393,18 +1393,16 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
                 return new matchscoutingDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
-                this.columnidEvent = base.Columns["idEvent"];
                 this.columnnumMatch = base.Columns["numMatch"];
-                this.columnidTeam = base.Columns["idTeam"];
                 this.columnidAlliance = base.Columns["idAlliance"];
                 this.columnidDriveStation = base.Columns["idDriveStation"];
                 this.columntxScoutName = base.Columns["txScoutName"];
@@ -1486,19 +1484,17 @@ namespace CSP_Analyze {
                 this.columntxComputerName = base.Columns["txComputerName"];
                 this.columnflRanking1 = base.Columns["flRanking1"];
                 this.columnflRanking2 = base.Columns["flRanking2"];
+                this.columnevent = base.Columns["event"];
+                this.columnteam = base.Columns["team"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
                 this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid);
-                this.columnidEvent = new global::System.Data.DataColumn("idEvent", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidEvent);
                 this.columnnumMatch = new global::System.Data.DataColumn("numMatch", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumMatch);
-                this.columnidTeam = new global::System.Data.DataColumn("idTeam", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidTeam);
                 this.columnidAlliance = new global::System.Data.DataColumn("idAlliance", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidAlliance);
                 this.columnidDriveStation = new global::System.Data.DataColumn("idDriveStation", typeof(int), null, global::System.Data.MappingType.Element);
@@ -1661,13 +1657,18 @@ namespace CSP_Analyze {
                 base.Columns.Add(this.columnflRanking1);
                 this.columnflRanking2 = new global::System.Data.DataColumn("flRanking2", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnflRanking2);
+                this.columnevent = new global::System.Data.DataColumn("event", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "eventColumn");
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnevent");
+                this.columnevent.ExtendedProperties.Add("Generator_UserColumnName", "event");
+                base.Columns.Add(this.columnevent);
+                this.columnteam = new global::System.Data.DataColumn("team", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnteam);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
-                this.columnidEvent.AllowDBNull = false;
                 this.columnnumMatch.AllowDBNull = false;
-                this.columnidTeam.AllowDBNull = false;
                 this.columnidAlliance.AllowDBNull = false;
                 this.columnidDriveStation.AllowDBNull = false;
                 this.columntxScoutName.AllowDBNull = false;
@@ -1752,28 +1753,31 @@ namespace CSP_Analyze {
                 this.columntxComputerName.MaxLength = 2147483647;
                 this.columnflRanking1.AllowDBNull = false;
                 this.columnflRanking2.AllowDBNull = false;
+                this.columnevent.AllowDBNull = false;
+                this.columnevent.MaxLength = 2147483647;
+                this.columnteam.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow NewmatchscoutingRow() {
                 return ((matchscoutingRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
                 return new matchscoutingRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
                 return typeof(matchscoutingRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
                 if ((this.matchscoutingRowChanged != null)) {
@@ -1782,7 +1786,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
                 if ((this.matchscoutingRowChanging != null)) {
@@ -1791,7 +1795,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
                 if ((this.matchscoutingRowDeleted != null)) {
@@ -1800,7 +1804,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
                 if ((this.matchscoutingRowDeleting != null)) {
@@ -1809,13 +1813,13 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void RemovematchscoutingRow(matchscoutingRow row) {
                 this.Rows.Remove(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
@@ -1886,14 +1890,14 @@ namespace CSP_Analyze {
             private matchscoutingDataTable tablematchscouting;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal matchscoutingRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
                 this.tablematchscouting = ((matchscoutingDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int id {
                 get {
                     return ((int)(this[this.tablematchscouting.idColumn]));
@@ -1904,18 +1908,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int idEvent {
-                get {
-                    return ((int)(this[this.tablematchscouting.idEventColumn]));
-                }
-                set {
-                    this[this.tablematchscouting.idEventColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int numMatch {
                 get {
                     return ((int)(this[this.tablematchscouting.numMatchColumn]));
@@ -1926,18 +1919,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int idTeam {
-                get {
-                    return ((int)(this[this.tablematchscouting.idTeamColumn]));
-                }
-                set {
-                    this[this.tablematchscouting.idTeamColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int idAlliance {
                 get {
                     return ((int)(this[this.tablematchscouting.idAllianceColumn]));
@@ -1948,7 +1930,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int idDriveStation {
                 get {
                     return ((int)(this[this.tablematchscouting.idDriveStationColumn]));
@@ -1959,7 +1941,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string txScoutName {
                 get {
                     return ((string)(this[this.tablematchscouting.txScoutNameColumn]));
@@ -1970,7 +1952,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flCrashed {
                 get {
                     return ((bool)(this[this.tablematchscouting.flCrashedColumn]));
@@ -1981,7 +1963,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flYellow {
                 get {
                     return ((bool)(this[this.tablematchscouting.flYellowColumn]));
@@ -1992,7 +1974,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flRed {
                 get {
                     return ((bool)(this[this.tablematchscouting.flRedColumn]));
@@ -2003,7 +1985,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_flState {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_flStateColumn]));
@@ -2014,7 +1996,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_idStartPosition {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_idStartPositionColumn]));
@@ -2025,7 +2007,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_idStatrLevel {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_idStatrLevelColumn]));
@@ -2036,7 +2018,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_baseLine {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_baseLineColumn]));
@@ -2047,7 +2029,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_idStartObject {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_idStartObjectColumn]));
@@ -2058,7 +2040,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipFrontHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipFrontHatchAttemptColumn]));
@@ -2069,7 +2051,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipFrontHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipFrontHatchSuccessColumn]));
@@ -2080,7 +2062,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipSideHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipSideHatchAttemptColumn]));
@@ -2091,7 +2073,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipSideHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipSideHatchSuccessColumn]));
@@ -2102,7 +2084,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipFrontCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipFrontCargoAttemptColumn]));
@@ -2113,7 +2095,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipFrontCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipFrontCargoSuccessColumn]));
@@ -2124,7 +2106,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipSideCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipSideCargoAttemptColumn]));
@@ -2135,7 +2117,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numShipSideCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numShipSideCargoSuccessColumn]));
@@ -2146,7 +2128,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketLowHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketLowHatchAttemptColumn]));
@@ -2157,7 +2139,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketLowHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketLowHatchSuccessColumn]));
@@ -2168,7 +2150,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketMidHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketMidHatchAttemptColumn]));
@@ -2179,7 +2161,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketMidHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketMidHatchSuccessColumn]));
@@ -2190,7 +2172,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketHighHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketHighHatchAttemptColumn]));
@@ -2201,7 +2183,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketHighHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketHighHatchSuccessColumn]));
@@ -2212,7 +2194,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketLowCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketLowCargoAttemptColumn]));
@@ -2223,7 +2205,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketLowCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketLowCargoSuccessColumn]));
@@ -2234,7 +2216,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketMidCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketMidCargoAttemptColumn]));
@@ -2245,7 +2227,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketMidCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketMidCargoSuccessColumn]));
@@ -2256,7 +2238,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketHighCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketHighCargoAttemptColumn]));
@@ -2267,7 +2249,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int auto_numRocketHighCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.auto_numRocketHighCargoSuccessColumn]));
@@ -2278,7 +2260,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_flLoseStartObject {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_flLoseStartObjectColumn]));
@@ -2289,7 +2271,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_flRobotContact {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_flRobotContactColumn]));
@@ -2300,7 +2282,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_flFoul {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_flFoulColumn]));
@@ -2311,7 +2293,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool auto_flCrossOver {
                 get {
                     return ((bool)(this[this.tablematchscouting.auto_flCrossOverColumn]));
@@ -2322,7 +2304,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipFrontHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipFrontHatchAttemptColumn]));
@@ -2333,7 +2315,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipFrontHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipFrontHatchSuccessColumn]));
@@ -2344,7 +2326,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipSideHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipSideHatchAttemptColumn]));
@@ -2355,7 +2337,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipSideHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipSideHatchSuccessColumn]));
@@ -2366,7 +2348,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipFrontCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipFrontCargoAttemptColumn]));
@@ -2377,7 +2359,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipFrontCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipFrontCargoSuccessColumn]));
@@ -2388,7 +2370,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipSideCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipSideCargoAttemptColumn]));
@@ -2399,7 +2381,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numShipSideCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numShipSideCargoSuccessColumn]));
@@ -2410,7 +2392,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketLowHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketLowHatchAttemptColumn]));
@@ -2421,7 +2403,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketLowHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketLowHatchSuccessColumn]));
@@ -2432,7 +2414,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketMidHatchAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketMidHatchAttemptColumn]));
@@ -2443,7 +2425,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketMidHatchSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketMidHatchSuccessColumn]));
@@ -2454,7 +2436,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketHighAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketHighAttemptColumn]));
@@ -2465,7 +2447,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketHighSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketHighSuccessColumn]));
@@ -2476,7 +2458,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketLowCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketLowCargoAttemptColumn]));
@@ -2487,7 +2469,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketLowCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketLowCargoSuccessColumn]));
@@ -2498,7 +2480,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketMidCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketMidCargoAttemptColumn]));
@@ -2509,7 +2491,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketMidCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketMidCargoSuccessColumn]));
@@ -2520,7 +2502,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketHighCargoAttempt {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketHighCargoAttemptColumn]));
@@ -2531,7 +2513,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numRocketHighCargoSuccess {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numRocketHighCargoSuccessColumn]));
@@ -2542,7 +2524,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_idClimb {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_idClimbColumn]));
@@ -2553,7 +2535,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_idClimbOutcome {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_idClimbOutcomeColumn]));
@@ -2564,7 +2546,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_idClimbGrab {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_idClimbGrabColumn]));
@@ -2575,7 +2557,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_idClimbSpeed {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_idClimbSpeedColumn]));
@@ -2586,7 +2568,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_numClimbAssists {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_numClimbAssistsColumn]));
@@ -2597,7 +2579,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int tele_idClimbLevel {
                 get {
                     return ((int)(this[this.tablematchscouting.tele_idClimbLevelColumn]));
@@ -2608,7 +2590,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool tele_flClimbFall {
                 get {
                     return ((bool)(this[this.tablematchscouting.tele_flClimbFallColumn]));
@@ -2619,7 +2601,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool tele_flDefence {
                 get {
                     return ((bool)(this[this.tablematchscouting.tele_flDefenceColumn]));
@@ -2630,7 +2612,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flIntakeHatchGround {
                 get {
                     return ((bool)(this[this.tablematchscouting.flIntakeHatchGroundColumn]));
@@ -2641,7 +2623,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flIntakeHatchStation {
                 get {
                     return ((bool)(this[this.tablematchscouting.flIntakeHatchStationColumn]));
@@ -2652,7 +2634,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flIntakeCargoGround {
                 get {
                     return ((bool)(this[this.tablematchscouting.flIntakeCargoGroundColumn]));
@@ -2663,7 +2645,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flIntakeCargoStation {
                 get {
                     return ((bool)(this[this.tablematchscouting.flIntakeCargoStationColumn]));
@@ -2674,7 +2656,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string comm_txNotes {
                 get {
                     return ((string)(this[this.tablematchscouting.comm_txNotesColumn]));
@@ -2685,7 +2667,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flHighlight {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flHighlightColumn]));
@@ -2696,7 +2678,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flWarning {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flWarningColumn]));
@@ -2707,7 +2689,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int comm_idDriveRating {
                 get {
                     return ((int)(this[this.tablematchscouting.comm_idDriveRatingColumn]));
@@ -2718,7 +2700,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flAlliance {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flAllianceColumn]));
@@ -2729,7 +2711,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flRecovery {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flRecoveryColumn]));
@@ -2740,7 +2722,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flStrategy {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flStrategyColumn]));
@@ -2751,7 +2733,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flOwnThing {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flOwnThingColumn]));
@@ -2762,7 +2744,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool comm_flGoodDefence {
                 get {
                     return ((bool)(this[this.tablematchscouting.comm_flGoodDefenceColumn]));
@@ -2773,7 +2755,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime dtCreation {
                 get {
                     return ((global::System.DateTime)(this[this.tablematchscouting.dtCreationColumn]));
@@ -2784,7 +2766,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public System.DateTime dtModified {
                 get {
                     return ((global::System.DateTime)(this[this.tablematchscouting.dtModifiedColumn]));
@@ -2795,7 +2777,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string txComputerName {
                 get {
                     return ((string)(this[this.tablematchscouting.txComputerNameColumn]));
@@ -2806,7 +2788,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flRanking1 {
                 get {
                     return ((bool)(this[this.tablematchscouting.flRanking1Column]));
@@ -2817,7 +2799,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool flRanking2 {
                 get {
                     return ((bool)(this[this.tablematchscouting.flRanking2Column]));
@@ -2826,12 +2808,34 @@ namespace CSP_Analyze {
                     this[this.tablematchscouting.flRanking2Column] = value;
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string _event {
+                get {
+                    return ((string)(this[this.tablematchscouting.eventColumn]));
+                }
+                set {
+                    this[this.tablematchscouting.eventColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int team {
+                get {
+                    return ((int)(this[this.tablematchscouting.teamColumn]));
+                }
+                set {
+                    this[this.tablematchscouting.teamColumn] = value;
+                }
+            }
         }
         
         /// <summary>
         ///Row event argument class
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public class matchscoutingRowChangeEvent : global::System.EventArgs {
             
             private matchscoutingRow eventRow;
@@ -2839,14 +2843,14 @@ namespace CSP_Analyze {
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRowChangeEvent(matchscoutingRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow Row {
                 get {
                     return this.eventRow;
@@ -2854,7 +2858,7 @@ namespace CSP_Analyze {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
@@ -2888,13 +2892,13 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         private bool _clearBeforeFill;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public matchscoutingTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
             get {
                 if ((this._adapter == null)) {
@@ -2905,7 +2909,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.SqlClient.SqlConnection Connection {
             get {
                 if ((this._connection == null)) {
@@ -2933,7 +2937,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal global::System.Data.SqlClient.SqlTransaction Transaction {
             get {
                 return this._transaction;
@@ -2959,7 +2963,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
             get {
                 if ((this._commandCollection == null)) {
@@ -2970,7 +2974,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool ClearBeforeFill {
             get {
                 return this._clearBeforeFill;
@@ -2981,16 +2985,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitAdapter() {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "matchscouting";
             tableMapping.ColumnMappings.Add("id", "id");
-            tableMapping.ColumnMappings.Add("idEvent", "idEvent");
             tableMapping.ColumnMappings.Add("numMatch", "numMatch");
-            tableMapping.ColumnMappings.Add("idTeam", "idTeam");
             tableMapping.ColumnMappings.Add("idAlliance", "idAlliance");
             tableMapping.ColumnMappings.Add("idDriveStation", "idDriveStation");
             tableMapping.ColumnMappings.Add("txScoutName", "txScoutName");
@@ -3072,81 +3074,81 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("txComputerName", "txComputerName");
             tableMapping.ColumnMappings.Add("flRanking1", "flRanking1");
             tableMapping.ColumnMappings.Add("flRanking2", "flRanking2");
+            tableMapping.ColumnMappings.Add("event", "event");
+            tableMapping.ColumnMappings.Add("team", "team");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [matchscouting] WHERE (([id] = @Original_id) AND ([idEvent] = @Origin" +
-                "al_idEvent) AND ([numMatch] = @Original_numMatch) AND ([idTeam] = @Original_idTe" +
-                "am) AND ([idAlliance] = @Original_idAlliance) AND ([idDriveStation] = @Original_" +
-                "idDriveStation) AND ([flCrashed] = @Original_flCrashed) AND ([flYellow] = @Origi" +
-                "nal_flYellow) AND ([flRed] = @Original_flRed) AND ([auto_flState] = @Original_au" +
-                "to_flState) AND ([auto_idStartPosition] = @Original_auto_idStartPosition) AND ([" +
-                "auto_idStatrLevel] = @Original_auto_idStatrLevel) AND ([auto_baseLine] = @Origin" +
-                "al_auto_baseLine) AND ([auto_idStartObject] = @Original_auto_idStartObject) AND " +
-                "([auto_numShipFrontHatchAttempt] = @Original_auto_numShipFrontHatchAttempt) AND " +
-                "([auto_numShipFrontHatchSuccess] = @Original_auto_numShipFrontHatchSuccess) AND " +
-                "([auto_numShipSideHatchAttempt] = @Original_auto_numShipSideHatchAttempt) AND ([" +
-                "auto_numShipSideHatchSuccess] = @Original_auto_numShipSideHatchSuccess) AND ([au" +
-                "to_numShipFrontCargoAttempt] = @Original_auto_numShipFrontCargoAttempt) AND ([au" +
-                "to_numShipFrontCargoSuccess] = @Original_auto_numShipFrontCargoSuccess) AND ([au" +
-                "to_numShipSideCargoAttempt] = @Original_auto_numShipSideCargoAttempt) AND ([auto" +
-                "_numShipSideCargoSuccess] = @Original_auto_numShipSideCargoSuccess) AND ([auto_n" +
-                "umRocketLowHatchAttempt] = @Original_auto_numRocketLowHatchAttempt) AND ([auto_n" +
-                "umRocketLowHatchSuccess] = @Original_auto_numRocketLowHatchSuccess) AND ([auto_n" +
-                "umRocketMidHatchAttempt] = @Original_auto_numRocketMidHatchAttempt) AND ([auto_n" +
-                "umRocketMidHatchSuccess] = @Original_auto_numRocketMidHatchSuccess) AND ([auto_n" +
-                "umRocketHighHatchAttempt] = @Original_auto_numRocketHighHatchAttempt) AND ([auto" +
-                "_numRocketHighHatchSuccess] = @Original_auto_numRocketHighHatchSuccess) AND ([au" +
-                "to_numRocketLowCargoAttempt] = @Original_auto_numRocketLowCargoAttempt) AND ([au" +
-                "to_numRocketLowCargoSuccess] = @Original_auto_numRocketLowCargoSuccess) AND ([au" +
-                "to_numRocketMidCargoAttempt] = @Original_auto_numRocketMidCargoAttempt) AND ([au" +
-                "to_numRocketMidCargoSuccess] = @Original_auto_numRocketMidCargoSuccess) AND ([au" +
-                "to_numRocketHighCargoAttempt] = @Original_auto_numRocketHighCargoAttempt) AND ([" +
-                "auto_numRocketHighCargoSuccess] = @Original_auto_numRocketHighCargoSuccess) AND " +
-                "([auto_flLoseStartObject] = @Original_auto_flLoseStartObject) AND ([auto_flRobot" +
-                "Contact] = @Original_auto_flRobotContact) AND ([auto_flFoul] = @Original_auto_fl" +
-                "Foul) AND ([auto_flCrossOver] = @Original_auto_flCrossOver) AND ([tele_numShipFr" +
-                "ontHatchAttempt] = @Original_tele_numShipFrontHatchAttempt) AND ([tele_numShipFr" +
-                "ontHatchSuccess] = @Original_tele_numShipFrontHatchSuccess) AND ([tele_numShipSi" +
-                "deHatchAttempt] = @Original_tele_numShipSideHatchAttempt) AND ([tele_numShipSide" +
-                "HatchSuccess] = @Original_tele_numShipSideHatchSuccess) AND ([tele_numShipFrontC" +
-                "argoAttempt] = @Original_tele_numShipFrontCargoAttempt) AND ([tele_numShipFrontC" +
-                "argoSuccess] = @Original_tele_numShipFrontCargoSuccess) AND ([tele_numShipSideCa" +
-                "rgoAttempt] = @Original_tele_numShipSideCargoAttempt) AND ([tele_numShipSideCarg" +
-                "oSuccess] = @Original_tele_numShipSideCargoSuccess) AND ([tele_numRocketLowHatch" +
-                "Attempt] = @Original_tele_numRocketLowHatchAttempt) AND ([tele_numRocketLowHatch" +
-                "Success] = @Original_tele_numRocketLowHatchSuccess) AND ([tele_numRocketMidHatch" +
-                "Attempt] = @Original_tele_numRocketMidHatchAttempt) AND ([tele_numRocketMidHatch" +
-                "Success] = @Original_tele_numRocketMidHatchSuccess) AND ([tele_numRocketHighAtte" +
-                "mpt] = @Original_tele_numRocketHighAttempt) AND ([tele_numRocketHighSuccess] = @" +
-                "Original_tele_numRocketHighSuccess) AND ([tele_numRocketLowCargoAttempt] = @Orig" +
-                "inal_tele_numRocketLowCargoAttempt) AND ([tele_numRocketLowCargoSuccess] = @Orig" +
-                "inal_tele_numRocketLowCargoSuccess) AND ([tele_numRocketMidCargoAttempt] = @Orig" +
-                "inal_tele_numRocketMidCargoAttempt) AND ([tele_numRocketMidCargoSuccess] = @Orig" +
-                "inal_tele_numRocketMidCargoSuccess) AND ([tele_numRocketHighCargoAttempt] = @Ori" +
-                "ginal_tele_numRocketHighCargoAttempt) AND ([tele_numRocketHighCargoSuccess] = @O" +
-                "riginal_tele_numRocketHighCargoSuccess) AND ([tele_idClimb] = @Original_tele_idC" +
-                "limb) AND ([tele_idClimbOutcome] = @Original_tele_idClimbOutcome) AND ([tele_idC" +
-                "limbGrab] = @Original_tele_idClimbGrab) AND ([tele_idClimbSpeed] = @Original_tel" +
-                "e_idClimbSpeed) AND ([tele_numClimbAssists] = @Original_tele_numClimbAssists) AN" +
-                "D ([tele_idClimbLevel] = @Original_tele_idClimbLevel) AND ([tele_flClimbFall] = " +
-                "@Original_tele_flClimbFall) AND ([tele_flDefence] = @Original_tele_flDefence) AN" +
-                "D ([flIntakeHatchGround] = @Original_flIntakeHatchGround) AND ([flIntakeHatchSta" +
-                "tion] = @Original_flIntakeHatchStation) AND ([flIntakeCargoGround] = @Original_f" +
-                "lIntakeCargoGround) AND ([flIntakeCargoStation] = @Original_flIntakeCargoStation" +
-                ") AND ([comm_flHighlight] = @Original_comm_flHighlight) AND ([comm_flWarning] = " +
-                "@Original_comm_flWarning) AND ([comm_idDriveRating] = @Original_comm_idDriveRati" +
-                "ng) AND ([comm_flAlliance] = @Original_comm_flAlliance) AND ([comm_flRecovery] =" +
-                " @Original_comm_flRecovery) AND ([comm_flStrategy] = @Original_comm_flStrategy) " +
-                "AND ([comm_flOwnThing] = @Original_comm_flOwnThing) AND ([comm_flGoodDefence] = " +
-                "@Original_comm_flGoodDefence) AND ([dtCreation] = @Original_dtCreation) AND ([dt" +
-                "Modified] = @Original_dtModified) AND ([flRanking1] = @Original_flRanking1) AND " +
-                "([flRanking2] = @Original_flRanking2))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [matchscouting] WHERE (([id] = @Original_id) AND ([numMatch] = @Origi" +
+                "nal_numMatch) AND ([team] = @Original_team) AND ([idAlliance] = @Original_idAlli" +
+                "ance) AND ([idDriveStation] = @Original_idDriveStation) AND ([flCrashed] = @Orig" +
+                "inal_flCrashed) AND ([flYellow] = @Original_flYellow) AND ([flRed] = @Original_f" +
+                "lRed) AND ([auto_flState] = @Original_auto_flState) AND ([auto_idStartPosition] " +
+                "= @Original_auto_idStartPosition) AND ([auto_idStatrLevel] = @Original_auto_idSt" +
+                "atrLevel) AND ([auto_baseLine] = @Original_auto_baseLine) AND ([auto_idStartObje" +
+                "ct] = @Original_auto_idStartObject) AND ([auto_numShipFrontHatchAttempt] = @Orig" +
+                "inal_auto_numShipFrontHatchAttempt) AND ([auto_numShipFrontHatchSuccess] = @Orig" +
+                "inal_auto_numShipFrontHatchSuccess) AND ([auto_numShipSideHatchAttempt] = @Origi" +
+                "nal_auto_numShipSideHatchAttempt) AND ([auto_numShipSideHatchSuccess] = @Origina" +
+                "l_auto_numShipSideHatchSuccess) AND ([auto_numShipFrontCargoAttempt] = @Original" +
+                "_auto_numShipFrontCargoAttempt) AND ([auto_numShipFrontCargoSuccess] = @Original" +
+                "_auto_numShipFrontCargoSuccess) AND ([auto_numShipSideCargoAttempt] = @Original_" +
+                "auto_numShipSideCargoAttempt) AND ([auto_numShipSideCargoSuccess] = @Original_au" +
+                "to_numShipSideCargoSuccess) AND ([auto_numRocketLowHatchAttempt] = @Original_aut" +
+                "o_numRocketLowHatchAttempt) AND ([auto_numRocketLowHatchSuccess] = @Original_aut" +
+                "o_numRocketLowHatchSuccess) AND ([auto_numRocketMidHatchAttempt] = @Original_aut" +
+                "o_numRocketMidHatchAttempt) AND ([auto_numRocketMidHatchSuccess] = @Original_aut" +
+                "o_numRocketMidHatchSuccess) AND ([auto_numRocketHighHatchAttempt] = @Original_au" +
+                "to_numRocketHighHatchAttempt) AND ([auto_numRocketHighHatchSuccess] = @Original_" +
+                "auto_numRocketHighHatchSuccess) AND ([auto_numRocketLowCargoAttempt] = @Original" +
+                "_auto_numRocketLowCargoAttempt) AND ([auto_numRocketLowCargoSuccess] = @Original" +
+                "_auto_numRocketLowCargoSuccess) AND ([auto_numRocketMidCargoAttempt] = @Original" +
+                "_auto_numRocketMidCargoAttempt) AND ([auto_numRocketMidCargoSuccess] = @Original" +
+                "_auto_numRocketMidCargoSuccess) AND ([auto_numRocketHighCargoAttempt] = @Origina" +
+                "l_auto_numRocketHighCargoAttempt) AND ([auto_numRocketHighCargoSuccess] = @Origi" +
+                "nal_auto_numRocketHighCargoSuccess) AND ([auto_flLoseStartObject] = @Original_au" +
+                "to_flLoseStartObject) AND ([auto_flRobotContact] = @Original_auto_flRobotContact" +
+                ") AND ([auto_flFoul] = @Original_auto_flFoul) AND ([auto_flCrossOver] = @Origina" +
+                "l_auto_flCrossOver) AND ([tele_numShipFrontHatchAttempt] = @Original_tele_numShi" +
+                "pFrontHatchAttempt) AND ([tele_numShipFrontHatchSuccess] = @Original_tele_numShi" +
+                "pFrontHatchSuccess) AND ([tele_numShipSideHatchAttempt] = @Original_tele_numShip" +
+                "SideHatchAttempt) AND ([tele_numShipSideHatchSuccess] = @Original_tele_numShipSi" +
+                "deHatchSuccess) AND ([tele_numShipFrontCargoAttempt] = @Original_tele_numShipFro" +
+                "ntCargoAttempt) AND ([tele_numShipFrontCargoSuccess] = @Original_tele_numShipFro" +
+                "ntCargoSuccess) AND ([tele_numShipSideCargoAttempt] = @Original_tele_numShipSide" +
+                "CargoAttempt) AND ([tele_numShipSideCargoSuccess] = @Original_tele_numShipSideCa" +
+                "rgoSuccess) AND ([tele_numRocketLowHatchAttempt] = @Original_tele_numRocketLowHa" +
+                "tchAttempt) AND ([tele_numRocketLowHatchSuccess] = @Original_tele_numRocketLowHa" +
+                "tchSuccess) AND ([tele_numRocketMidHatchAttempt] = @Original_tele_numRocketMidHa" +
+                "tchAttempt) AND ([tele_numRocketMidHatchSuccess] = @Original_tele_numRocketMidHa" +
+                "tchSuccess) AND ([tele_numRocketHighAttempt] = @Original_tele_numRocketHighAttem" +
+                "pt) AND ([tele_numRocketHighSuccess] = @Original_tele_numRocketHighSuccess) AND " +
+                "([tele_numRocketLowCargoAttempt] = @Original_tele_numRocketLowCargoAttempt) AND " +
+                "([tele_numRocketLowCargoSuccess] = @Original_tele_numRocketLowCargoSuccess) AND " +
+                "([tele_numRocketMidCargoAttempt] = @Original_tele_numRocketMidCargoAttempt) AND " +
+                "([tele_numRocketMidCargoSuccess] = @Original_tele_numRocketMidCargoSuccess) AND " +
+                "([tele_numRocketHighCargoAttempt] = @Original_tele_numRocketHighCargoAttempt) AN" +
+                "D ([tele_numRocketHighCargoSuccess] = @Original_tele_numRocketHighCargoSuccess) " +
+                "AND ([tele_idClimb] = @Original_tele_idClimb) AND ([tele_idClimbOutcome] = @Orig" +
+                "inal_tele_idClimbOutcome) AND ([tele_idClimbGrab] = @Original_tele_idClimbGrab) " +
+                "AND ([tele_idClimbSpeed] = @Original_tele_idClimbSpeed) AND ([tele_numClimbAssis" +
+                "ts] = @Original_tele_numClimbAssists) AND ([tele_idClimbLevel] = @Original_tele_" +
+                "idClimbLevel) AND ([tele_flClimbFall] = @Original_tele_flClimbFall) AND ([tele_f" +
+                "lDefence] = @Original_tele_flDefence) AND ([flIntakeHatchGround] = @Original_flI" +
+                "ntakeHatchGround) AND ([flIntakeHatchStation] = @Original_flIntakeHatchStation) " +
+                "AND ([flIntakeCargoGround] = @Original_flIntakeCargoGround) AND ([flIntakeCargoS" +
+                "tation] = @Original_flIntakeCargoStation) AND ([comm_flHighlight] = @Original_co" +
+                "mm_flHighlight) AND ([comm_flWarning] = @Original_comm_flWarning) AND ([comm_idD" +
+                "riveRating] = @Original_comm_idDriveRating) AND ([comm_flAlliance] = @Original_c" +
+                "omm_flAlliance) AND ([comm_flRecovery] = @Original_comm_flRecovery) AND ([comm_f" +
+                "lStrategy] = @Original_comm_flStrategy) AND ([comm_flOwnThing] = @Original_comm_" +
+                "flOwnThing) AND ([comm_flGoodDefence] = @Original_comm_flGoodDefence) AND ([dtCr" +
+                "eation] = @Original_dtCreation) AND ([dtModified] = @Original_dtModified) AND ([" +
+                "flRanking1] = @Original_flRanking1) AND ([flRanking2] = @Original_flRanking2))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idEvent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idEvent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTeam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTeam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAlliance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAlliance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDriveStation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDriveStation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCrashed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCrashed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3227,89 +3229,89 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [matchscouting] ([id], [idEvent], [numMatch], [idTeam], [idAlliance]," +
-                " [idDriveStation], [txScoutName], [flCrashed], [flYellow], [flRed], [auto_flStat" +
-                "e], [auto_idStartPosition], [auto_idStatrLevel], [auto_baseLine], [auto_idStartO" +
-                "bject], [auto_numShipFrontHatchAttempt], [auto_numShipFrontHatchSuccess], [auto_" +
-                "numShipSideHatchAttempt], [auto_numShipSideHatchSuccess], [auto_numShipFrontCarg" +
-                "oAttempt], [auto_numShipFrontCargoSuccess], [auto_numShipSideCargoAttempt], [aut" +
-                "o_numShipSideCargoSuccess], [auto_numRocketLowHatchAttempt], [auto_numRocketLowH" +
-                "atchSuccess], [auto_numRocketMidHatchAttempt], [auto_numRocketMidHatchSuccess], " +
-                "[auto_numRocketHighHatchAttempt], [auto_numRocketHighHatchSuccess], [auto_numRoc" +
-                "ketLowCargoAttempt], [auto_numRocketLowCargoSuccess], [auto_numRocketMidCargoAtt" +
-                "empt], [auto_numRocketMidCargoSuccess], [auto_numRocketHighCargoAttempt], [auto_" +
-                "numRocketHighCargoSuccess], [auto_flLoseStartObject], [auto_flRobotContact], [au" +
-                "to_flFoul], [auto_flCrossOver], [tele_numShipFrontHatchAttempt], [tele_numShipFr" +
-                "ontHatchSuccess], [tele_numShipSideHatchAttempt], [tele_numShipSideHatchSuccess]" +
-                ", [tele_numShipFrontCargoAttempt], [tele_numShipFrontCargoSuccess], [tele_numShi" +
-                "pSideCargoAttempt], [tele_numShipSideCargoSuccess], [tele_numRocketLowHatchAttem" +
-                "pt], [tele_numRocketLowHatchSuccess], [tele_numRocketMidHatchAttempt], [tele_num" +
-                "RocketMidHatchSuccess], [tele_numRocketHighAttempt], [tele_numRocketHighSuccess]" +
-                ", [tele_numRocketLowCargoAttempt], [tele_numRocketLowCargoSuccess], [tele_numRoc" +
-                "ketMidCargoAttempt], [tele_numRocketMidCargoSuccess], [tele_numRocketHighCargoAt" +
-                "tempt], [tele_numRocketHighCargoSuccess], [tele_idClimb], [tele_idClimbOutcome]," +
-                " [tele_idClimbGrab], [tele_idClimbSpeed], [tele_numClimbAssists], [tele_idClimbL" +
-                "evel], [tele_flClimbFall], [tele_flDefence], [flIntakeHatchGround], [flIntakeHat" +
-                "chStation], [flIntakeCargoGround], [flIntakeCargoStation], [comm_txNotes], [comm" +
-                "_flHighlight], [comm_flWarning], [comm_idDriveRating], [comm_flAlliance], [comm_" +
-                "flRecovery], [comm_flStrategy], [comm_flOwnThing], [comm_flGoodDefence], [dtCrea" +
-                "tion], [dtModified], [txComputerName], [flRanking1], [flRanking2]) VALUES (@id, " +
-                "@idEvent, @numMatch, @idTeam, @idAlliance, @idDriveStation, @txScoutName, @flCra" +
-                "shed, @flYellow, @flRed, @auto_flState, @auto_idStartPosition, @auto_idStatrLeve" +
-                "l, @auto_baseLine, @auto_idStartObject, @auto_numShipFrontHatchAttempt, @auto_nu" +
-                "mShipFrontHatchSuccess, @auto_numShipSideHatchAttempt, @auto_numShipSideHatchSuc" +
-                "cess, @auto_numShipFrontCargoAttempt, @auto_numShipFrontCargoSuccess, @auto_numS" +
-                "hipSideCargoAttempt, @auto_numShipSideCargoSuccess, @auto_numRocketLowHatchAttem" +
-                "pt, @auto_numRocketLowHatchSuccess, @auto_numRocketMidHatchAttempt, @auto_numRoc" +
-                "ketMidHatchSuccess, @auto_numRocketHighHatchAttempt, @auto_numRocketHighHatchSuc" +
-                "cess, @auto_numRocketLowCargoAttempt, @auto_numRocketLowCargoSuccess, @auto_numR" +
-                "ocketMidCargoAttempt, @auto_numRocketMidCargoSuccess, @auto_numRocketHighCargoAt" +
-                "tempt, @auto_numRocketHighCargoSuccess, @auto_flLoseStartObject, @auto_flRobotCo" +
-                "ntact, @auto_flFoul, @auto_flCrossOver, @tele_numShipFrontHatchAttempt, @tele_nu" +
-                "mShipFrontHatchSuccess, @tele_numShipSideHatchAttempt, @tele_numShipSideHatchSuc" +
-                "cess, @tele_numShipFrontCargoAttempt, @tele_numShipFrontCargoSuccess, @tele_numS" +
-                "hipSideCargoAttempt, @tele_numShipSideCargoSuccess, @tele_numRocketLowHatchAttem" +
-                "pt, @tele_numRocketLowHatchSuccess, @tele_numRocketMidHatchAttempt, @tele_numRoc" +
-                "ketMidHatchSuccess, @tele_numRocketHighAttempt, @tele_numRocketHighSuccess, @tel" +
-                "e_numRocketLowCargoAttempt, @tele_numRocketLowCargoSuccess, @tele_numRocketMidCa" +
-                "rgoAttempt, @tele_numRocketMidCargoSuccess, @tele_numRocketHighCargoAttempt, @te" +
-                "le_numRocketHighCargoSuccess, @tele_idClimb, @tele_idClimbOutcome, @tele_idClimb" +
-                "Grab, @tele_idClimbSpeed, @tele_numClimbAssists, @tele_idClimbLevel, @tele_flCli" +
-                "mbFall, @tele_flDefence, @flIntakeHatchGround, @flIntakeHatchStation, @flIntakeC" +
-                "argoGround, @flIntakeCargoStation, @comm_txNotes, @comm_flHighlight, @comm_flWar" +
-                "ning, @comm_idDriveRating, @comm_flAlliance, @comm_flRecovery, @comm_flStrategy," +
-                " @comm_flOwnThing, @comm_flGoodDefence, @dtCreation, @dtModified, @txComputerNam" +
-                "e, @flRanking1, @flRanking2);\r\nSELECT id, idEvent, numMatch, idTeam, idAlliance," +
-                " idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idS" +
-                "tartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShip" +
-                "FrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, " +
-                "auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCa" +
-                "rgoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_num" +
-                "RocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAtte" +
-                "mpt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRock" +
-                "etHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess" +
-                ", auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHi" +
-                "ghCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flR" +
-                "obotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_" +
-                "numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuc" +
-                "cess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShip" +
-                "SideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, t" +
-                "ele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHa" +
-                "tchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocket" +
-                "LowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, t" +
-                "ele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHigh" +
-                "CargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbS" +
-                "peed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence," +
-                " flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoSt" +
-                "ation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_" +
-                "flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefenc" +
-                "e, dtCreation, dtModified, txComputerName, flRanking1, flRanking2 FROM matchscou" +
-                "ting WHERE (id = @id)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [matchscouting] ([id], [event], [numMatch], [team], [idAlliance], [id" +
+                "DriveStation], [txScoutName], [flCrashed], [flYellow], [flRed], [auto_flState], " +
+                "[auto_idStartPosition], [auto_idStatrLevel], [auto_baseLine], [auto_idStartObjec" +
+                "t], [auto_numShipFrontHatchAttempt], [auto_numShipFrontHatchSuccess], [auto_numS" +
+                "hipSideHatchAttempt], [auto_numShipSideHatchSuccess], [auto_numShipFrontCargoAtt" +
+                "empt], [auto_numShipFrontCargoSuccess], [auto_numShipSideCargoAttempt], [auto_nu" +
+                "mShipSideCargoSuccess], [auto_numRocketLowHatchAttempt], [auto_numRocketLowHatch" +
+                "Success], [auto_numRocketMidHatchAttempt], [auto_numRocketMidHatchSuccess], [aut" +
+                "o_numRocketHighHatchAttempt], [auto_numRocketHighHatchSuccess], [auto_numRocketL" +
+                "owCargoAttempt], [auto_numRocketLowCargoSuccess], [auto_numRocketMidCargoAttempt" +
+                "], [auto_numRocketMidCargoSuccess], [auto_numRocketHighCargoAttempt], [auto_numR" +
+                "ocketHighCargoSuccess], [auto_flLoseStartObject], [auto_flRobotContact], [auto_f" +
+                "lFoul], [auto_flCrossOver], [tele_numShipFrontHatchAttempt], [tele_numShipFrontH" +
+                "atchSuccess], [tele_numShipSideHatchAttempt], [tele_numShipSideHatchSuccess], [t" +
+                "ele_numShipFrontCargoAttempt], [tele_numShipFrontCargoSuccess], [tele_numShipSid" +
+                "eCargoAttempt], [tele_numShipSideCargoSuccess], [tele_numRocketLowHatchAttempt]," +
+                " [tele_numRocketLowHatchSuccess], [tele_numRocketMidHatchAttempt], [tele_numRock" +
+                "etMidHatchSuccess], [tele_numRocketHighAttempt], [tele_numRocketHighSuccess], [t" +
+                "ele_numRocketLowCargoAttempt], [tele_numRocketLowCargoSuccess], [tele_numRocketM" +
+                "idCargoAttempt], [tele_numRocketMidCargoSuccess], [tele_numRocketHighCargoAttemp" +
+                "t], [tele_numRocketHighCargoSuccess], [tele_idClimb], [tele_idClimbOutcome], [te" +
+                "le_idClimbGrab], [tele_idClimbSpeed], [tele_numClimbAssists], [tele_idClimbLevel" +
+                "], [tele_flClimbFall], [tele_flDefence], [flIntakeHatchGround], [flIntakeHatchSt" +
+                "ation], [flIntakeCargoGround], [flIntakeCargoStation], [comm_txNotes], [comm_flH" +
+                "ighlight], [comm_flWarning], [comm_idDriveRating], [comm_flAlliance], [comm_flRe" +
+                "covery], [comm_flStrategy], [comm_flOwnThing], [comm_flGoodDefence], [dtCreation" +
+                "], [dtModified], [txComputerName], [flRanking1], [flRanking2]) VALUES (@id, @eve" +
+                "nt, @numMatch, @team, @idAlliance, @idDriveStation, @txScoutName, @flCrashed, @f" +
+                "lYellow, @flRed, @auto_flState, @auto_idStartPosition, @auto_idStatrLevel, @auto" +
+                "_baseLine, @auto_idStartObject, @auto_numShipFrontHatchAttempt, @auto_numShipFro" +
+                "ntHatchSuccess, @auto_numShipSideHatchAttempt, @auto_numShipSideHatchSuccess, @a" +
+                "uto_numShipFrontCargoAttempt, @auto_numShipFrontCargoSuccess, @auto_numShipSideC" +
+                "argoAttempt, @auto_numShipSideCargoSuccess, @auto_numRocketLowHatchAttempt, @aut" +
+                "o_numRocketLowHatchSuccess, @auto_numRocketMidHatchAttempt, @auto_numRocketMidHa" +
+                "tchSuccess, @auto_numRocketHighHatchAttempt, @auto_numRocketHighHatchSuccess, @a" +
+                "uto_numRocketLowCargoAttempt, @auto_numRocketLowCargoSuccess, @auto_numRocketMid" +
+                "CargoAttempt, @auto_numRocketMidCargoSuccess, @auto_numRocketHighCargoAttempt, @" +
+                "auto_numRocketHighCargoSuccess, @auto_flLoseStartObject, @auto_flRobotContact, @" +
+                "auto_flFoul, @auto_flCrossOver, @tele_numShipFrontHatchAttempt, @tele_numShipFro" +
+                "ntHatchSuccess, @tele_numShipSideHatchAttempt, @tele_numShipSideHatchSuccess, @t" +
+                "ele_numShipFrontCargoAttempt, @tele_numShipFrontCargoSuccess, @tele_numShipSideC" +
+                "argoAttempt, @tele_numShipSideCargoSuccess, @tele_numRocketLowHatchAttempt, @tel" +
+                "e_numRocketLowHatchSuccess, @tele_numRocketMidHatchAttempt, @tele_numRocketMidHa" +
+                "tchSuccess, @tele_numRocketHighAttempt, @tele_numRocketHighSuccess, @tele_numRoc" +
+                "ketLowCargoAttempt, @tele_numRocketLowCargoSuccess, @tele_numRocketMidCargoAttem" +
+                "pt, @tele_numRocketMidCargoSuccess, @tele_numRocketHighCargoAttempt, @tele_numRo" +
+                "cketHighCargoSuccess, @tele_idClimb, @tele_idClimbOutcome, @tele_idClimbGrab, @t" +
+                "ele_idClimbSpeed, @tele_numClimbAssists, @tele_idClimbLevel, @tele_flClimbFall, " +
+                "@tele_flDefence, @flIntakeHatchGround, @flIntakeHatchStation, @flIntakeCargoGrou" +
+                "nd, @flIntakeCargoStation, @comm_txNotes, @comm_flHighlight, @comm_flWarning, @c" +
+                "omm_idDriveRating, @comm_flAlliance, @comm_flRecovery, @comm_flStrategy, @comm_f" +
+                "lOwnThing, @comm_flGoodDefence, @dtCreation, @dtModified, @txComputerName, @flRa" +
+                "nking1, @flRanking2);\r\nSELECT id, event, numMatch, team, idAlliance, idDriveStat" +
+                "ion, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition" +
+                ", auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAt" +
+                "tempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShip" +
+                "SideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, " +
+                "auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHat" +
+                "chAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_nu" +
+                "mRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchS" +
+                "uccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRo" +
+                "cketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttem" +
+                "pt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact," +
+                " auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFront" +
+                "HatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_n" +
+                "umShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAtt" +
+                "empt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocke" +
+                "tLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, " +
+                "tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAtte" +
+                "mpt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocke" +
+                "tMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess" +
+                ", tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_n" +
+                "umClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHat" +
+                "chGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_" +
+                "txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, " +
+                "comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreatio" +
+                "n, dtModified, txComputerName, flRanking1, flRanking2 FROM matchscouting WHERE (" +
+                "id = @id)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idEvent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idEvent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTeam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTeam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAlliance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAlliance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDriveStation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDriveStation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txScoutName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txScoutName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3393,156 +3395,155 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [matchscouting] SET [id] = @id, [idEvent] = @idEvent, [numMatch] = @numMat" +
-                "ch, [idTeam] = @idTeam, [idAlliance] = @idAlliance, [idDriveStation] = @idDriveS" +
-                "tation, [txScoutName] = @txScoutName, [flCrashed] = @flCrashed, [flYellow] = @fl" +
-                "Yellow, [flRed] = @flRed, [auto_flState] = @auto_flState, [auto_idStartPosition]" +
-                " = @auto_idStartPosition, [auto_idStatrLevel] = @auto_idStatrLevel, [auto_baseLi" +
-                "ne] = @auto_baseLine, [auto_idStartObject] = @auto_idStartObject, [auto_numShipF" +
-                "rontHatchAttempt] = @auto_numShipFrontHatchAttempt, [auto_numShipFrontHatchSucce" +
-                "ss] = @auto_numShipFrontHatchSuccess, [auto_numShipSideHatchAttempt] = @auto_num" +
-                "ShipSideHatchAttempt, [auto_numShipSideHatchSuccess] = @auto_numShipSideHatchSuc" +
-                "cess, [auto_numShipFrontCargoAttempt] = @auto_numShipFrontCargoAttempt, [auto_nu" +
-                "mShipFrontCargoSuccess] = @auto_numShipFrontCargoSuccess, [auto_numShipSideCargo" +
-                "Attempt] = @auto_numShipSideCargoAttempt, [auto_numShipSideCargoSuccess] = @auto" +
-                "_numShipSideCargoSuccess, [auto_numRocketLowHatchAttempt] = @auto_numRocketLowHa" +
-                "tchAttempt, [auto_numRocketLowHatchSuccess] = @auto_numRocketLowHatchSuccess, [a" +
-                "uto_numRocketMidHatchAttempt] = @auto_numRocketMidHatchAttempt, [auto_numRocketM" +
-                "idHatchSuccess] = @auto_numRocketMidHatchSuccess, [auto_numRocketHighHatchAttemp" +
-                "t] = @auto_numRocketHighHatchAttempt, [auto_numRocketHighHatchSuccess] = @auto_n" +
-                "umRocketHighHatchSuccess, [auto_numRocketLowCargoAttempt] = @auto_numRocketLowCa" +
-                "rgoAttempt, [auto_numRocketLowCargoSuccess] = @auto_numRocketLowCargoSuccess, [a" +
-                "uto_numRocketMidCargoAttempt] = @auto_numRocketMidCargoAttempt, [auto_numRocketM" +
-                "idCargoSuccess] = @auto_numRocketMidCargoSuccess, [auto_numRocketHighCargoAttemp" +
-                "t] = @auto_numRocketHighCargoAttempt, [auto_numRocketHighCargoSuccess] = @auto_n" +
-                "umRocketHighCargoSuccess, [auto_flLoseStartObject] = @auto_flLoseStartObject, [a" +
-                "uto_flRobotContact] = @auto_flRobotContact, [auto_flFoul] = @auto_flFoul, [auto_" +
-                "flCrossOver] = @auto_flCrossOver, [tele_numShipFrontHatchAttempt] = @tele_numShi" +
-                "pFrontHatchAttempt, [tele_numShipFrontHatchSuccess] = @tele_numShipFrontHatchSuc" +
-                "cess, [tele_numShipSideHatchAttempt] = @tele_numShipSideHatchAttempt, [tele_numS" +
-                "hipSideHatchSuccess] = @tele_numShipSideHatchSuccess, [tele_numShipFrontCargoAtt" +
-                "empt] = @tele_numShipFrontCargoAttempt, [tele_numShipFrontCargoSuccess] = @tele_" +
-                "numShipFrontCargoSuccess, [tele_numShipSideCargoAttempt] = @tele_numShipSideCarg" +
-                "oAttempt, [tele_numShipSideCargoSuccess] = @tele_numShipSideCargoSuccess, [tele_" +
-                "numRocketLowHatchAttempt] = @tele_numRocketLowHatchAttempt, [tele_numRocketLowHa" +
-                "tchSuccess] = @tele_numRocketLowHatchSuccess, [tele_numRocketMidHatchAttempt] = " +
-                "@tele_numRocketMidHatchAttempt, [tele_numRocketMidHatchSuccess] = @tele_numRocke" +
-                "tMidHatchSuccess, [tele_numRocketHighAttempt] = @tele_numRocketHighAttempt, [tel" +
-                "e_numRocketHighSuccess] = @tele_numRocketHighSuccess, [tele_numRocketLowCargoAtt" +
-                "empt] = @tele_numRocketLowCargoAttempt, [tele_numRocketLowCargoSuccess] = @tele_" +
-                "numRocketLowCargoSuccess, [tele_numRocketMidCargoAttempt] = @tele_numRocketMidCa" +
-                "rgoAttempt, [tele_numRocketMidCargoSuccess] = @tele_numRocketMidCargoSuccess, [t" +
-                "ele_numRocketHighCargoAttempt] = @tele_numRocketHighCargoAttempt, [tele_numRocke" +
-                "tHighCargoSuccess] = @tele_numRocketHighCargoSuccess, [tele_idClimb] = @tele_idC" +
-                "limb, [tele_idClimbOutcome] = @tele_idClimbOutcome, [tele_idClimbGrab] = @tele_i" +
-                "dClimbGrab, [tele_idClimbSpeed] = @tele_idClimbSpeed, [tele_numClimbAssists] = @" +
-                "tele_numClimbAssists, [tele_idClimbLevel] = @tele_idClimbLevel, [tele_flClimbFal" +
-                "l] = @tele_flClimbFall, [tele_flDefence] = @tele_flDefence, [flIntakeHatchGround" +
-                "] = @flIntakeHatchGround, [flIntakeHatchStation] = @flIntakeHatchStation, [flInt" +
-                "akeCargoGround] = @flIntakeCargoGround, [flIntakeCargoStation] = @flIntakeCargoS" +
-                "tation, [comm_txNotes] = @comm_txNotes, [comm_flHighlight] = @comm_flHighlight, " +
-                "[comm_flWarning] = @comm_flWarning, [comm_idDriveRating] = @comm_idDriveRating, " +
-                "[comm_flAlliance] = @comm_flAlliance, [comm_flRecovery] = @comm_flRecovery, [com" +
-                "m_flStrategy] = @comm_flStrategy, [comm_flOwnThing] = @comm_flOwnThing, [comm_fl" +
-                "GoodDefence] = @comm_flGoodDefence, [dtCreation] = @dtCreation, [dtModified] = @" +
-                "dtModified, [txComputerName] = @txComputerName, [flRanking1] = @flRanking1, [flR" +
-                "anking2] = @flRanking2 WHERE (([id] = @Original_id) AND ([idEvent] = @Original_i" +
-                "dEvent) AND ([numMatch] = @Original_numMatch) AND ([idTeam] = @Original_idTeam) " +
-                "AND ([idAlliance] = @Original_idAlliance) AND ([idDriveStation] = @Original_idDr" +
-                "iveStation) AND ([flCrashed] = @Original_flCrashed) AND ([flYellow] = @Original_" +
-                "flYellow) AND ([flRed] = @Original_flRed) AND ([auto_flState] = @Original_auto_f" +
-                "lState) AND ([auto_idStartPosition] = @Original_auto_idStartPosition) AND ([auto" +
-                "_idStatrLevel] = @Original_auto_idStatrLevel) AND ([auto_baseLine] = @Original_a" +
-                "uto_baseLine) AND ([auto_idStartObject] = @Original_auto_idStartObject) AND ([au" +
-                "to_numShipFrontHatchAttempt] = @Original_auto_numShipFrontHatchAttempt) AND ([au" +
-                "to_numShipFrontHatchSuccess] = @Original_auto_numShipFrontHatchSuccess) AND ([au" +
-                "to_numShipSideHatchAttempt] = @Original_auto_numShipSideHatchAttempt) AND ([auto" +
-                "_numShipSideHatchSuccess] = @Original_auto_numShipSideHatchSuccess) AND ([auto_n" +
-                "umShipFrontCargoAttempt] = @Original_auto_numShipFrontCargoAttempt) AND ([auto_n" +
-                "umShipFrontCargoSuccess] = @Original_auto_numShipFrontCargoSuccess) AND ([auto_n" +
-                "umShipSideCargoAttempt] = @Original_auto_numShipSideCargoAttempt) AND ([auto_num" +
-                "ShipSideCargoSuccess] = @Original_auto_numShipSideCargoSuccess) AND ([auto_numRo" +
-                "cketLowHatchAttempt] = @Original_auto_numRocketLowHatchAttempt) AND ([auto_numRo" +
-                "cketLowHatchSuccess] = @Original_auto_numRocketLowHatchSuccess) AND ([auto_numRo" +
-                "cketMidHatchAttempt] = @Original_auto_numRocketMidHatchAttempt) AND ([auto_numRo" +
-                "cketMidHatchSuccess] = @Original_auto_numRocketMidHatchSuccess) AND ([auto_numRo" +
-                "cketHighHatchAttempt] = @Original_auto_numRocketHighHatchAttempt) AND ([auto_num" +
-                "RocketHighHatchSuccess] = @Original_auto_numRocketHighHatchSuccess) AND ([auto_n" +
-                "umRocketLowCargoAttempt] = @Original_auto_numRocketLowCargoAttempt) AND ([auto_n" +
-                "umRocketLowCargoSuccess] = @Original_auto_numRocketLowCargoSuccess) AND ([auto_n" +
-                "umRocketMidCargoAttempt] = @Original_auto_numRocketMidCargoAttempt) AND ([auto_n" +
-                "umRocketMidCargoSuccess] = @Original_auto_numRocketMidCargoSuccess) AND ([auto_n" +
-                "umRocketHighCargoAttempt] = @Original_auto_numRocketHighCargoAttempt) AND ([auto" +
-                "_numRocketHighCargoSuccess] = @Original_auto_numRocketHighCargoSuccess) AND ([au" +
-                "to_flLoseStartObject] = @Original_auto_flLoseStartObject) AND ([auto_flRobotCont" +
-                "act] = @Original_auto_flRobotContact) AND ([auto_flFoul] = @Original_auto_flFoul" +
-                ") AND ([auto_flCrossOver] = @Original_auto_flCrossOver) AND ([tele_numShipFrontH" +
-                "atchAttempt] = @Original_tele_numShipFrontHatchAttempt) AND ([tele_numShipFrontH" +
-                "atchSuccess] = @Original_tele_numShipFrontHatchSuccess) AND ([tele_numShipSideHa" +
-                "tchAttempt] = @Original_tele_numShipSideHatchAttempt) AND ([tele_numShipSideHatc" +
-                "hSuccess] = @Original_tele_numShipSideHatchSuccess) AND ([tele_numShipFrontCargo" +
-                "Attempt] = @Original_tele_numShipFrontCargoAttempt) AND ([tele_numShipFrontCargo" +
-                "Success] = @Original_tele_numShipFrontCargoSuccess) AND ([tele_numShipSideCargoA" +
-                "ttempt] = @Original_tele_numShipSideCargoAttempt) AND ([tele_numShipSideCargoSuc" +
-                "cess] = @Original_tele_numShipSideCargoSuccess) AND ([tele_numRocketLowHatchAtte" +
-                "mpt] = @Original_tele_numRocketLowHatchAttempt) AND ([tele_numRocketLowHatchSucc" +
-                "ess] = @Original_tele_numRocketLowHatchSuccess) AND ([tele_numRocketMidHatchAtte" +
-                "mpt] = @Original_tele_numRocketMidHatchAttempt) AND ([tele_numRocketMidHatchSucc" +
-                "ess] = @Original_tele_numRocketMidHatchSuccess) AND ([tele_numRocketHighAttempt]" +
-                " = @Original_tele_numRocketHighAttempt) AND ([tele_numRocketHighSuccess] = @Orig" +
-                "inal_tele_numRocketHighSuccess) AND ([tele_numRocketLowCargoAttempt] = @Original" +
-                "_tele_numRocketLowCargoAttempt) AND ([tele_numRocketLowCargoSuccess] = @Original" +
-                "_tele_numRocketLowCargoSuccess) AND ([tele_numRocketMidCargoAttempt] = @Original" +
-                "_tele_numRocketMidCargoAttempt) AND ([tele_numRocketMidCargoSuccess] = @Original" +
-                "_tele_numRocketMidCargoSuccess) AND ([tele_numRocketHighCargoAttempt] = @Origina" +
-                "l_tele_numRocketHighCargoAttempt) AND ([tele_numRocketHighCargoSuccess] = @Origi" +
-                "nal_tele_numRocketHighCargoSuccess) AND ([tele_idClimb] = @Original_tele_idClimb" +
-                ") AND ([tele_idClimbOutcome] = @Original_tele_idClimbOutcome) AND ([tele_idClimb" +
-                "Grab] = @Original_tele_idClimbGrab) AND ([tele_idClimbSpeed] = @Original_tele_id" +
-                "ClimbSpeed) AND ([tele_numClimbAssists] = @Original_tele_numClimbAssists) AND ([" +
-                "tele_idClimbLevel] = @Original_tele_idClimbLevel) AND ([tele_flClimbFall] = @Ori" +
-                "ginal_tele_flClimbFall) AND ([tele_flDefence] = @Original_tele_flDefence) AND ([" +
-                "flIntakeHatchGround] = @Original_flIntakeHatchGround) AND ([flIntakeHatchStation" +
-                "] = @Original_flIntakeHatchStation) AND ([flIntakeCargoGround] = @Original_flInt" +
-                "akeCargoGround) AND ([flIntakeCargoStation] = @Original_flIntakeCargoStation) AN" +
-                "D ([comm_flHighlight] = @Original_comm_flHighlight) AND ([comm_flWarning] = @Ori" +
-                "ginal_comm_flWarning) AND ([comm_idDriveRating] = @Original_comm_idDriveRating) " +
-                "AND ([comm_flAlliance] = @Original_comm_flAlliance) AND ([comm_flRecovery] = @Or" +
-                "iginal_comm_flRecovery) AND ([comm_flStrategy] = @Original_comm_flStrategy) AND " +
-                "([comm_flOwnThing] = @Original_comm_flOwnThing) AND ([comm_flGoodDefence] = @Ori" +
-                "ginal_comm_flGoodDefence) AND ([dtCreation] = @Original_dtCreation) AND ([dtModi" +
-                "fied] = @Original_dtModified) AND ([flRanking1] = @Original_flRanking1) AND ([fl" +
-                "Ranking2] = @Original_flRanking2));\r\nSELECT id, idEvent, numMatch, idTeam, idAll" +
-                "iance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, au" +
-                "to_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_n" +
-                "umShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAtt" +
-                "empt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipF" +
-                "rontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, au" +
-                "to_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHat" +
-                "chAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_n" +
-                "umRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoS" +
-                "uccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRo" +
-                "cketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, au" +
-                "to_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt," +
-                " tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHa" +
-                "tchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_n" +
-                "umShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAtte" +
-                "mpt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocke" +
-                "tMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_num" +
-                "RocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAtte" +
-                "mpt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRock" +
-                "etHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_id" +
-                "ClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDe" +
-                "fence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeC" +
-                "argoStation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating," +
-                " comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGood" +
-                "Defence, dtCreation, dtModified, txComputerName, flRanking1, flRanking2 FROM mat" +
-                "chscouting WHERE (id = @id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [matchscouting] SET [id] = @id, [event] = @event, [numMatch] = @numMatch, " +
+                "[team] = @team, [idAlliance] = @idAlliance, [idDriveStation] = @idDriveStation, " +
+                "[txScoutName] = @txScoutName, [flCrashed] = @flCrashed, [flYellow] = @flYellow, " +
+                "[flRed] = @flRed, [auto_flState] = @auto_flState, [auto_idStartPosition] = @auto" +
+                "_idStartPosition, [auto_idStatrLevel] = @auto_idStatrLevel, [auto_baseLine] = @a" +
+                "uto_baseLine, [auto_idStartObject] = @auto_idStartObject, [auto_numShipFrontHatc" +
+                "hAttempt] = @auto_numShipFrontHatchAttempt, [auto_numShipFrontHatchSuccess] = @a" +
+                "uto_numShipFrontHatchSuccess, [auto_numShipSideHatchAttempt] = @auto_numShipSide" +
+                "HatchAttempt, [auto_numShipSideHatchSuccess] = @auto_numShipSideHatchSuccess, [a" +
+                "uto_numShipFrontCargoAttempt] = @auto_numShipFrontCargoAttempt, [auto_numShipFro" +
+                "ntCargoSuccess] = @auto_numShipFrontCargoSuccess, [auto_numShipSideCargoAttempt]" +
+                " = @auto_numShipSideCargoAttempt, [auto_numShipSideCargoSuccess] = @auto_numShip" +
+                "SideCargoSuccess, [auto_numRocketLowHatchAttempt] = @auto_numRocketLowHatchAttem" +
+                "pt, [auto_numRocketLowHatchSuccess] = @auto_numRocketLowHatchSuccess, [auto_numR" +
+                "ocketMidHatchAttempt] = @auto_numRocketMidHatchAttempt, [auto_numRocketMidHatchS" +
+                "uccess] = @auto_numRocketMidHatchSuccess, [auto_numRocketHighHatchAttempt] = @au" +
+                "to_numRocketHighHatchAttempt, [auto_numRocketHighHatchSuccess] = @auto_numRocket" +
+                "HighHatchSuccess, [auto_numRocketLowCargoAttempt] = @auto_numRocketLowCargoAttem" +
+                "pt, [auto_numRocketLowCargoSuccess] = @auto_numRocketLowCargoSuccess, [auto_numR" +
+                "ocketMidCargoAttempt] = @auto_numRocketMidCargoAttempt, [auto_numRocketMidCargoS" +
+                "uccess] = @auto_numRocketMidCargoSuccess, [auto_numRocketHighCargoAttempt] = @au" +
+                "to_numRocketHighCargoAttempt, [auto_numRocketHighCargoSuccess] = @auto_numRocket" +
+                "HighCargoSuccess, [auto_flLoseStartObject] = @auto_flLoseStartObject, [auto_flRo" +
+                "botContact] = @auto_flRobotContact, [auto_flFoul] = @auto_flFoul, [auto_flCrossO" +
+                "ver] = @auto_flCrossOver, [tele_numShipFrontHatchAttempt] = @tele_numShipFrontHa" +
+                "tchAttempt, [tele_numShipFrontHatchSuccess] = @tele_numShipFrontHatchSuccess, [t" +
+                "ele_numShipSideHatchAttempt] = @tele_numShipSideHatchAttempt, [tele_numShipSideH" +
+                "atchSuccess] = @tele_numShipSideHatchSuccess, [tele_numShipFrontCargoAttempt] = " +
+                "@tele_numShipFrontCargoAttempt, [tele_numShipFrontCargoSuccess] = @tele_numShipF" +
+                "rontCargoSuccess, [tele_numShipSideCargoAttempt] = @tele_numShipSideCargoAttempt" +
+                ", [tele_numShipSideCargoSuccess] = @tele_numShipSideCargoSuccess, [tele_numRocke" +
+                "tLowHatchAttempt] = @tele_numRocketLowHatchAttempt, [tele_numRocketLowHatchSucce" +
+                "ss] = @tele_numRocketLowHatchSuccess, [tele_numRocketMidHatchAttempt] = @tele_nu" +
+                "mRocketMidHatchAttempt, [tele_numRocketMidHatchSuccess] = @tele_numRocketMidHatc" +
+                "hSuccess, [tele_numRocketHighAttempt] = @tele_numRocketHighAttempt, [tele_numRoc" +
+                "ketHighSuccess] = @tele_numRocketHighSuccess, [tele_numRocketLowCargoAttempt] = " +
+                "@tele_numRocketLowCargoAttempt, [tele_numRocketLowCargoSuccess] = @tele_numRocke" +
+                "tLowCargoSuccess, [tele_numRocketMidCargoAttempt] = @tele_numRocketMidCargoAttem" +
+                "pt, [tele_numRocketMidCargoSuccess] = @tele_numRocketMidCargoSuccess, [tele_numR" +
+                "ocketHighCargoAttempt] = @tele_numRocketHighCargoAttempt, [tele_numRocketHighCar" +
+                "goSuccess] = @tele_numRocketHighCargoSuccess, [tele_idClimb] = @tele_idClimb, [t" +
+                "ele_idClimbOutcome] = @tele_idClimbOutcome, [tele_idClimbGrab] = @tele_idClimbGr" +
+                "ab, [tele_idClimbSpeed] = @tele_idClimbSpeed, [tele_numClimbAssists] = @tele_num" +
+                "ClimbAssists, [tele_idClimbLevel] = @tele_idClimbLevel, [tele_flClimbFall] = @te" +
+                "le_flClimbFall, [tele_flDefence] = @tele_flDefence, [flIntakeHatchGround] = @flI" +
+                "ntakeHatchGround, [flIntakeHatchStation] = @flIntakeHatchStation, [flIntakeCargo" +
+                "Ground] = @flIntakeCargoGround, [flIntakeCargoStation] = @flIntakeCargoStation, " +
+                "[comm_txNotes] = @comm_txNotes, [comm_flHighlight] = @comm_flHighlight, [comm_fl" +
+                "Warning] = @comm_flWarning, [comm_idDriveRating] = @comm_idDriveRating, [comm_fl" +
+                "Alliance] = @comm_flAlliance, [comm_flRecovery] = @comm_flRecovery, [comm_flStra" +
+                "tegy] = @comm_flStrategy, [comm_flOwnThing] = @comm_flOwnThing, [comm_flGoodDefe" +
+                "nce] = @comm_flGoodDefence, [dtCreation] = @dtCreation, [dtModified] = @dtModifi" +
+                "ed, [txComputerName] = @txComputerName, [flRanking1] = @flRanking1, [flRanking2]" +
+                " = @flRanking2 WHERE (([id] = @Original_id) AND ([numMatch] = @Original_numMatch" +
+                ") AND ([team] = @Original_team) AND ([idAlliance] = @Original_idAlliance) AND ([" +
+                "idDriveStation] = @Original_idDriveStation) AND ([flCrashed] = @Original_flCrash" +
+                "ed) AND ([flYellow] = @Original_flYellow) AND ([flRed] = @Original_flRed) AND ([" +
+                "auto_flState] = @Original_auto_flState) AND ([auto_idStartPosition] = @Original_" +
+                "auto_idStartPosition) AND ([auto_idStatrLevel] = @Original_auto_idStatrLevel) AN" +
+                "D ([auto_baseLine] = @Original_auto_baseLine) AND ([auto_idStartObject] = @Origi" +
+                "nal_auto_idStartObject) AND ([auto_numShipFrontHatchAttempt] = @Original_auto_nu" +
+                "mShipFrontHatchAttempt) AND ([auto_numShipFrontHatchSuccess] = @Original_auto_nu" +
+                "mShipFrontHatchSuccess) AND ([auto_numShipSideHatchAttempt] = @Original_auto_num" +
+                "ShipSideHatchAttempt) AND ([auto_numShipSideHatchSuccess] = @Original_auto_numSh" +
+                "ipSideHatchSuccess) AND ([auto_numShipFrontCargoAttempt] = @Original_auto_numShi" +
+                "pFrontCargoAttempt) AND ([auto_numShipFrontCargoSuccess] = @Original_auto_numShi" +
+                "pFrontCargoSuccess) AND ([auto_numShipSideCargoAttempt] = @Original_auto_numShip" +
+                "SideCargoAttempt) AND ([auto_numShipSideCargoSuccess] = @Original_auto_numShipSi" +
+                "deCargoSuccess) AND ([auto_numRocketLowHatchAttempt] = @Original_auto_numRocketL" +
+                "owHatchAttempt) AND ([auto_numRocketLowHatchSuccess] = @Original_auto_numRocketL" +
+                "owHatchSuccess) AND ([auto_numRocketMidHatchAttempt] = @Original_auto_numRocketM" +
+                "idHatchAttempt) AND ([auto_numRocketMidHatchSuccess] = @Original_auto_numRocketM" +
+                "idHatchSuccess) AND ([auto_numRocketHighHatchAttempt] = @Original_auto_numRocket" +
+                "HighHatchAttempt) AND ([auto_numRocketHighHatchSuccess] = @Original_auto_numRock" +
+                "etHighHatchSuccess) AND ([auto_numRocketLowCargoAttempt] = @Original_auto_numRoc" +
+                "ketLowCargoAttempt) AND ([auto_numRocketLowCargoSuccess] = @Original_auto_numRoc" +
+                "ketLowCargoSuccess) AND ([auto_numRocketMidCargoAttempt] = @Original_auto_numRoc" +
+                "ketMidCargoAttempt) AND ([auto_numRocketMidCargoSuccess] = @Original_auto_numRoc" +
+                "ketMidCargoSuccess) AND ([auto_numRocketHighCargoAttempt] = @Original_auto_numRo" +
+                "cketHighCargoAttempt) AND ([auto_numRocketHighCargoSuccess] = @Original_auto_num" +
+                "RocketHighCargoSuccess) AND ([auto_flLoseStartObject] = @Original_auto_flLoseSta" +
+                "rtObject) AND ([auto_flRobotContact] = @Original_auto_flRobotContact) AND ([auto" +
+                "_flFoul] = @Original_auto_flFoul) AND ([auto_flCrossOver] = @Original_auto_flCro" +
+                "ssOver) AND ([tele_numShipFrontHatchAttempt] = @Original_tele_numShipFrontHatchA" +
+                "ttempt) AND ([tele_numShipFrontHatchSuccess] = @Original_tele_numShipFrontHatchS" +
+                "uccess) AND ([tele_numShipSideHatchAttempt] = @Original_tele_numShipSideHatchAtt" +
+                "empt) AND ([tele_numShipSideHatchSuccess] = @Original_tele_numShipSideHatchSucce" +
+                "ss) AND ([tele_numShipFrontCargoAttempt] = @Original_tele_numShipFrontCargoAttem" +
+                "pt) AND ([tele_numShipFrontCargoSuccess] = @Original_tele_numShipFrontCargoSucce" +
+                "ss) AND ([tele_numShipSideCargoAttempt] = @Original_tele_numShipSideCargoAttempt" +
+                ") AND ([tele_numShipSideCargoSuccess] = @Original_tele_numShipSideCargoSuccess) " +
+                "AND ([tele_numRocketLowHatchAttempt] = @Original_tele_numRocketLowHatchAttempt) " +
+                "AND ([tele_numRocketLowHatchSuccess] = @Original_tele_numRocketLowHatchSuccess) " +
+                "AND ([tele_numRocketMidHatchAttempt] = @Original_tele_numRocketMidHatchAttempt) " +
+                "AND ([tele_numRocketMidHatchSuccess] = @Original_tele_numRocketMidHatchSuccess) " +
+                "AND ([tele_numRocketHighAttempt] = @Original_tele_numRocketHighAttempt) AND ([te" +
+                "le_numRocketHighSuccess] = @Original_tele_numRocketHighSuccess) AND ([tele_numRo" +
+                "cketLowCargoAttempt] = @Original_tele_numRocketLowCargoAttempt) AND ([tele_numRo" +
+                "cketLowCargoSuccess] = @Original_tele_numRocketLowCargoSuccess) AND ([tele_numRo" +
+                "cketMidCargoAttempt] = @Original_tele_numRocketMidCargoAttempt) AND ([tele_numRo" +
+                "cketMidCargoSuccess] = @Original_tele_numRocketMidCargoSuccess) AND ([tele_numRo" +
+                "cketHighCargoAttempt] = @Original_tele_numRocketHighCargoAttempt) AND ([tele_num" +
+                "RocketHighCargoSuccess] = @Original_tele_numRocketHighCargoSuccess) AND ([tele_i" +
+                "dClimb] = @Original_tele_idClimb) AND ([tele_idClimbOutcome] = @Original_tele_id" +
+                "ClimbOutcome) AND ([tele_idClimbGrab] = @Original_tele_idClimbGrab) AND ([tele_i" +
+                "dClimbSpeed] = @Original_tele_idClimbSpeed) AND ([tele_numClimbAssists] = @Origi" +
+                "nal_tele_numClimbAssists) AND ([tele_idClimbLevel] = @Original_tele_idClimbLevel" +
+                ") AND ([tele_flClimbFall] = @Original_tele_flClimbFall) AND ([tele_flDefence] = " +
+                "@Original_tele_flDefence) AND ([flIntakeHatchGround] = @Original_flIntakeHatchGr" +
+                "ound) AND ([flIntakeHatchStation] = @Original_flIntakeHatchStation) AND ([flInta" +
+                "keCargoGround] = @Original_flIntakeCargoGround) AND ([flIntakeCargoStation] = @O" +
+                "riginal_flIntakeCargoStation) AND ([comm_flHighlight] = @Original_comm_flHighlig" +
+                "ht) AND ([comm_flWarning] = @Original_comm_flWarning) AND ([comm_idDriveRating] " +
+                "= @Original_comm_idDriveRating) AND ([comm_flAlliance] = @Original_comm_flAllian" +
+                "ce) AND ([comm_flRecovery] = @Original_comm_flRecovery) AND ([comm_flStrategy] =" +
+                " @Original_comm_flStrategy) AND ([comm_flOwnThing] = @Original_comm_flOwnThing) " +
+                "AND ([comm_flGoodDefence] = @Original_comm_flGoodDefence) AND ([dtCreation] = @O" +
+                "riginal_dtCreation) AND ([dtModified] = @Original_dtModified) AND ([flRanking1] " +
+                "= @Original_flRanking1) AND ([flRanking2] = @Original_flRanking2));\r\nSELECT id, " +
+                "event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYel" +
+                "low, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine" +
+                ", auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSucce" +
+                "ss, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFron" +
+                "tCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto" +
+                "_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchS" +
+                "uccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRo" +
+                "cketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAtte" +
+                "mpt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocke" +
+                "tMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess" +
+                ", auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, te" +
+                "le_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatc" +
+                "hAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numS" +
+                "hipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess" +
+                ", tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMi" +
+                "dHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_nu" +
+                "mRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess" +
+                ", tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHi" +
+                "ghCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcom" +
+                "e, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel," +
+                " tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, fl" +
+                "IntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_fl" +
+                "Warning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, " +
+                "comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flR" +
+                "anking1, flRanking2 FROM matchscouting WHERE (id = @id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idEvent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idEvent", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTeam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTeam", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idAlliance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAlliance", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDriveStation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDriveStation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txScoutName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txScoutName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -3625,9 +3626,8 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flRanking1", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking1", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flRanking2", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flRanking2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idEvent", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idEvent", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_numMatch", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "numMatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTeam", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTeam", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idAlliance", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idAlliance", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDriveStation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDriveStation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCrashed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCrashed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -3709,24 +3709,48 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
             this._connection.ConnectionString = global::CSP_Analyze.Properties.Settings.Default.scoutingConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        matchscouting.*\r\nFROM            matchscouting";
+            this._commandCollection[0].CommandText = "SELECT id, event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCras" +
+                "hed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, aut" +
+                "o_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFront" +
+                "HatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_n" +
+                "umShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAtt" +
+                "empt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocke" +
+                "tLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, " +
+                "auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLo" +
+                "wCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, aut" +
+                "o_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCa" +
+                "rgoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCro" +
+                "ssOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numSh" +
+                "ipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt," +
+                " tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCa" +
+                "rgoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_n" +
+                "umRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttemp" +
+                "t, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCa" +
+                "rgoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_n" +
+                "umRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idC" +
+                "limbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idC" +
+                "limbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchS" +
+                "tation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighligh" +
+                "t, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_fl" +
+                "Strategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txCompute" +
+                "rName, flRanking1, flRanking2 FROM matchscouting";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
         public virtual int Fill(CspAnalyzeDataSet.matchscoutingDataTable dataTable) {
@@ -3739,7 +3763,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual CspAnalyzeDataSet.matchscoutingDataTable GetData() {
@@ -3750,21 +3774,21 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(CspAnalyzeDataSet.matchscoutingDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(CspAnalyzeDataSet dataSet) {
             return this.Adapter.Update(dataSet, "matchscouting");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow dataRow) {
             return this.Adapter.Update(new global::System.Data.DataRow[] {
@@ -3772,21 +3796,20 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(global::System.Data.DataRow[] dataRows) {
             return this.Adapter.Update(dataRows);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
         public virtual int Delete(
                     int Original_id, 
-                    int Original_idEvent, 
                     int Original_numMatch, 
-                    int Original_idTeam, 
+                    int Original_team, 
                     int Original_idAlliance, 
                     int Original_idDriveStation, 
                     bool Original_flCrashed, 
@@ -3866,87 +3889,86 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     bool Original_flRanking1, 
                     bool Original_flRanking2) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_idEvent));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_numMatch));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_idTeam));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_idAlliance));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_idDriveStation));
-            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_flCrashed));
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_flYellow));
-            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_flRed));
-            this.Adapter.DeleteCommand.Parameters[9].Value = ((bool)(Original_auto_flState));
-            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_auto_idStartPosition));
-            this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_auto_idStatrLevel));
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_auto_baseLine));
-            this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_auto_idStartObject));
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_auto_numShipSideHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_auto_numShipSideHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_auto_numShipSideCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_auto_numShipSideCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[23].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[29].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[31].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[33].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_auto_flLoseStartObject));
-            this.Adapter.DeleteCommand.Parameters[35].Value = ((bool)(Original_auto_flRobotContact));
-            this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_auto_flFoul));
-            this.Adapter.DeleteCommand.Parameters[37].Value = ((bool)(Original_auto_flCrossOver));
-            this.Adapter.DeleteCommand.Parameters[38].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[39].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[40].Value = ((int)(Original_tele_numShipSideHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[41].Value = ((int)(Original_tele_numShipSideHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[42].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[43].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[44].Value = ((int)(Original_tele_numShipSideCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[45].Value = ((int)(Original_tele_numShipSideCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[46].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[47].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[48].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
-            this.Adapter.DeleteCommand.Parameters[49].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
-            this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_tele_numRocketHighAttempt));
-            this.Adapter.DeleteCommand.Parameters[51].Value = ((int)(Original_tele_numRocketHighSuccess));
-            this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[53].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[55].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[56].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
-            this.Adapter.DeleteCommand.Parameters[57].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
-            this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_tele_idClimb));
-            this.Adapter.DeleteCommand.Parameters[59].Value = ((int)(Original_tele_idClimbOutcome));
-            this.Adapter.DeleteCommand.Parameters[60].Value = ((int)(Original_tele_idClimbGrab));
-            this.Adapter.DeleteCommand.Parameters[61].Value = ((int)(Original_tele_idClimbSpeed));
-            this.Adapter.DeleteCommand.Parameters[62].Value = ((int)(Original_tele_numClimbAssists));
-            this.Adapter.DeleteCommand.Parameters[63].Value = ((int)(Original_tele_idClimbLevel));
-            this.Adapter.DeleteCommand.Parameters[64].Value = ((bool)(Original_tele_flClimbFall));
-            this.Adapter.DeleteCommand.Parameters[65].Value = ((bool)(Original_tele_flDefence));
-            this.Adapter.DeleteCommand.Parameters[66].Value = ((bool)(Original_flIntakeHatchGround));
-            this.Adapter.DeleteCommand.Parameters[67].Value = ((bool)(Original_flIntakeHatchStation));
-            this.Adapter.DeleteCommand.Parameters[68].Value = ((bool)(Original_flIntakeCargoGround));
-            this.Adapter.DeleteCommand.Parameters[69].Value = ((bool)(Original_flIntakeCargoStation));
-            this.Adapter.DeleteCommand.Parameters[70].Value = ((bool)(Original_comm_flHighlight));
-            this.Adapter.DeleteCommand.Parameters[71].Value = ((bool)(Original_comm_flWarning));
-            this.Adapter.DeleteCommand.Parameters[72].Value = ((int)(Original_comm_idDriveRating));
-            this.Adapter.DeleteCommand.Parameters[73].Value = ((bool)(Original_comm_flAlliance));
-            this.Adapter.DeleteCommand.Parameters[74].Value = ((bool)(Original_comm_flRecovery));
-            this.Adapter.DeleteCommand.Parameters[75].Value = ((bool)(Original_comm_flStrategy));
-            this.Adapter.DeleteCommand.Parameters[76].Value = ((bool)(Original_comm_flOwnThing));
-            this.Adapter.DeleteCommand.Parameters[77].Value = ((bool)(Original_comm_flGoodDefence));
-            this.Adapter.DeleteCommand.Parameters[78].Value = ((System.DateTime)(Original_dtCreation));
-            this.Adapter.DeleteCommand.Parameters[79].Value = ((System.DateTime)(Original_dtModified));
-            this.Adapter.DeleteCommand.Parameters[80].Value = ((bool)(Original_flRanking1));
-            this.Adapter.DeleteCommand.Parameters[81].Value = ((bool)(Original_flRanking2));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_numMatch));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_team));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_idAlliance));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_idDriveStation));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_flCrashed));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((bool)(Original_flYellow));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((bool)(Original_flRed));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_auto_flState));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_auto_idStartPosition));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_auto_idStatrLevel));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(Original_auto_baseLine));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_auto_idStartObject));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((int)(Original_auto_numShipSideHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((int)(Original_auto_numShipSideHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_auto_numShipSideCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((int)(Original_auto_numShipSideCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[29].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[30].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[31].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[32].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[33].Value = ((bool)(Original_auto_flLoseStartObject));
+            this.Adapter.DeleteCommand.Parameters[34].Value = ((bool)(Original_auto_flRobotContact));
+            this.Adapter.DeleteCommand.Parameters[35].Value = ((bool)(Original_auto_flFoul));
+            this.Adapter.DeleteCommand.Parameters[36].Value = ((bool)(Original_auto_flCrossOver));
+            this.Adapter.DeleteCommand.Parameters[37].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[38].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[39].Value = ((int)(Original_tele_numShipSideHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[40].Value = ((int)(Original_tele_numShipSideHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[41].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[42].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[43].Value = ((int)(Original_tele_numShipSideCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[44].Value = ((int)(Original_tele_numShipSideCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[45].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[46].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[47].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
+            this.Adapter.DeleteCommand.Parameters[48].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
+            this.Adapter.DeleteCommand.Parameters[49].Value = ((int)(Original_tele_numRocketHighAttempt));
+            this.Adapter.DeleteCommand.Parameters[50].Value = ((int)(Original_tele_numRocketHighSuccess));
+            this.Adapter.DeleteCommand.Parameters[51].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[52].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[53].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[54].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[55].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
+            this.Adapter.DeleteCommand.Parameters[56].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
+            this.Adapter.DeleteCommand.Parameters[57].Value = ((int)(Original_tele_idClimb));
+            this.Adapter.DeleteCommand.Parameters[58].Value = ((int)(Original_tele_idClimbOutcome));
+            this.Adapter.DeleteCommand.Parameters[59].Value = ((int)(Original_tele_idClimbGrab));
+            this.Adapter.DeleteCommand.Parameters[60].Value = ((int)(Original_tele_idClimbSpeed));
+            this.Adapter.DeleteCommand.Parameters[61].Value = ((int)(Original_tele_numClimbAssists));
+            this.Adapter.DeleteCommand.Parameters[62].Value = ((int)(Original_tele_idClimbLevel));
+            this.Adapter.DeleteCommand.Parameters[63].Value = ((bool)(Original_tele_flClimbFall));
+            this.Adapter.DeleteCommand.Parameters[64].Value = ((bool)(Original_tele_flDefence));
+            this.Adapter.DeleteCommand.Parameters[65].Value = ((bool)(Original_flIntakeHatchGround));
+            this.Adapter.DeleteCommand.Parameters[66].Value = ((bool)(Original_flIntakeHatchStation));
+            this.Adapter.DeleteCommand.Parameters[67].Value = ((bool)(Original_flIntakeCargoGround));
+            this.Adapter.DeleteCommand.Parameters[68].Value = ((bool)(Original_flIntakeCargoStation));
+            this.Adapter.DeleteCommand.Parameters[69].Value = ((bool)(Original_comm_flHighlight));
+            this.Adapter.DeleteCommand.Parameters[70].Value = ((bool)(Original_comm_flWarning));
+            this.Adapter.DeleteCommand.Parameters[71].Value = ((int)(Original_comm_idDriveRating));
+            this.Adapter.DeleteCommand.Parameters[72].Value = ((bool)(Original_comm_flAlliance));
+            this.Adapter.DeleteCommand.Parameters[73].Value = ((bool)(Original_comm_flRecovery));
+            this.Adapter.DeleteCommand.Parameters[74].Value = ((bool)(Original_comm_flStrategy));
+            this.Adapter.DeleteCommand.Parameters[75].Value = ((bool)(Original_comm_flOwnThing));
+            this.Adapter.DeleteCommand.Parameters[76].Value = ((bool)(Original_comm_flGoodDefence));
+            this.Adapter.DeleteCommand.Parameters[77].Value = ((System.DateTime)(Original_dtCreation));
+            this.Adapter.DeleteCommand.Parameters[78].Value = ((System.DateTime)(Original_dtModified));
+            this.Adapter.DeleteCommand.Parameters[79].Value = ((bool)(Original_flRanking1));
+            this.Adapter.DeleteCommand.Parameters[80].Value = ((bool)(Original_flRanking2));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -3964,14 +3986,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
         public virtual int Insert(
                     int id, 
-                    int idEvent, 
+                    string _event, 
                     int numMatch, 
-                    int idTeam, 
+                    int team, 
                     int idAlliance, 
                     int idDriveStation, 
                     string txScoutName, 
@@ -4054,9 +4076,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     bool flRanking1, 
                     bool flRanking2) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(id));
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(idEvent));
+            if ((_event == null)) {
+                throw new global::System.ArgumentNullException("_event");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(_event));
+            }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(numMatch));
-            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(idTeam));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(team));
             this.Adapter.InsertCommand.Parameters[4].Value = ((int)(idAlliance));
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(idDriveStation));
             if ((txScoutName == null)) {
@@ -4170,14 +4197,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
                     int id, 
-                    int idEvent, 
+                    string _event, 
                     int numMatch, 
-                    int idTeam, 
+                    int team, 
                     int idAlliance, 
                     int idDriveStation, 
                     string txScoutName, 
@@ -4260,9 +4287,8 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     bool flRanking1, 
                     bool flRanking2, 
                     int Original_id, 
-                    int Original_idEvent, 
                     int Original_numMatch, 
-                    int Original_idTeam, 
+                    int Original_team, 
                     int Original_idAlliance, 
                     int Original_idDriveStation, 
                     bool Original_flCrashed, 
@@ -4342,9 +4368,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     bool Original_flRanking1, 
                     bool Original_flRanking2) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(id));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(idEvent));
+            if ((_event == null)) {
+                throw new global::System.ArgumentNullException("_event");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(_event));
+            }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(numMatch));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(idTeam));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(team));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(idAlliance));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(idDriveStation));
             if ((txScoutName == null)) {
@@ -4442,87 +4473,86 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             this.Adapter.UpdateCommand.Parameters[83].Value = ((bool)(flRanking1));
             this.Adapter.UpdateCommand.Parameters[84].Value = ((bool)(flRanking2));
             this.Adapter.UpdateCommand.Parameters[85].Value = ((int)(Original_id));
-            this.Adapter.UpdateCommand.Parameters[86].Value = ((int)(Original_idEvent));
-            this.Adapter.UpdateCommand.Parameters[87].Value = ((int)(Original_numMatch));
-            this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_idTeam));
-            this.Adapter.UpdateCommand.Parameters[89].Value = ((int)(Original_idAlliance));
-            this.Adapter.UpdateCommand.Parameters[90].Value = ((int)(Original_idDriveStation));
-            this.Adapter.UpdateCommand.Parameters[91].Value = ((bool)(Original_flCrashed));
-            this.Adapter.UpdateCommand.Parameters[92].Value = ((bool)(Original_flYellow));
-            this.Adapter.UpdateCommand.Parameters[93].Value = ((bool)(Original_flRed));
-            this.Adapter.UpdateCommand.Parameters[94].Value = ((bool)(Original_auto_flState));
-            this.Adapter.UpdateCommand.Parameters[95].Value = ((int)(Original_auto_idStartPosition));
-            this.Adapter.UpdateCommand.Parameters[96].Value = ((int)(Original_auto_idStatrLevel));
-            this.Adapter.UpdateCommand.Parameters[97].Value = ((bool)(Original_auto_baseLine));
-            this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(Original_auto_idStartObject));
-            this.Adapter.UpdateCommand.Parameters[99].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[100].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(Original_auto_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[102].Value = ((int)(Original_auto_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[103].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[105].Value = ((int)(Original_auto_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[106].Value = ((int)(Original_auto_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[107].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[108].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[109].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[110].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[111].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[112].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[113].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[114].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[115].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[116].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[117].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[118].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[119].Value = ((bool)(Original_auto_flLoseStartObject));
-            this.Adapter.UpdateCommand.Parameters[120].Value = ((bool)(Original_auto_flRobotContact));
-            this.Adapter.UpdateCommand.Parameters[121].Value = ((bool)(Original_auto_flFoul));
-            this.Adapter.UpdateCommand.Parameters[122].Value = ((bool)(Original_auto_flCrossOver));
-            this.Adapter.UpdateCommand.Parameters[123].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[124].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[125].Value = ((int)(Original_tele_numShipSideHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[126].Value = ((int)(Original_tele_numShipSideHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[127].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[128].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[129].Value = ((int)(Original_tele_numShipSideCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[130].Value = ((int)(Original_tele_numShipSideCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[131].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[132].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[133].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
-            this.Adapter.UpdateCommand.Parameters[134].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
-            this.Adapter.UpdateCommand.Parameters[135].Value = ((int)(Original_tele_numRocketHighAttempt));
-            this.Adapter.UpdateCommand.Parameters[136].Value = ((int)(Original_tele_numRocketHighSuccess));
-            this.Adapter.UpdateCommand.Parameters[137].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[138].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[139].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[140].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[141].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
-            this.Adapter.UpdateCommand.Parameters[142].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
-            this.Adapter.UpdateCommand.Parameters[143].Value = ((int)(Original_tele_idClimb));
-            this.Adapter.UpdateCommand.Parameters[144].Value = ((int)(Original_tele_idClimbOutcome));
-            this.Adapter.UpdateCommand.Parameters[145].Value = ((int)(Original_tele_idClimbGrab));
-            this.Adapter.UpdateCommand.Parameters[146].Value = ((int)(Original_tele_idClimbSpeed));
-            this.Adapter.UpdateCommand.Parameters[147].Value = ((int)(Original_tele_numClimbAssists));
-            this.Adapter.UpdateCommand.Parameters[148].Value = ((int)(Original_tele_idClimbLevel));
-            this.Adapter.UpdateCommand.Parameters[149].Value = ((bool)(Original_tele_flClimbFall));
-            this.Adapter.UpdateCommand.Parameters[150].Value = ((bool)(Original_tele_flDefence));
-            this.Adapter.UpdateCommand.Parameters[151].Value = ((bool)(Original_flIntakeHatchGround));
-            this.Adapter.UpdateCommand.Parameters[152].Value = ((bool)(Original_flIntakeHatchStation));
-            this.Adapter.UpdateCommand.Parameters[153].Value = ((bool)(Original_flIntakeCargoGround));
-            this.Adapter.UpdateCommand.Parameters[154].Value = ((bool)(Original_flIntakeCargoStation));
-            this.Adapter.UpdateCommand.Parameters[155].Value = ((bool)(Original_comm_flHighlight));
-            this.Adapter.UpdateCommand.Parameters[156].Value = ((bool)(Original_comm_flWarning));
-            this.Adapter.UpdateCommand.Parameters[157].Value = ((int)(Original_comm_idDriveRating));
-            this.Adapter.UpdateCommand.Parameters[158].Value = ((bool)(Original_comm_flAlliance));
-            this.Adapter.UpdateCommand.Parameters[159].Value = ((bool)(Original_comm_flRecovery));
-            this.Adapter.UpdateCommand.Parameters[160].Value = ((bool)(Original_comm_flStrategy));
-            this.Adapter.UpdateCommand.Parameters[161].Value = ((bool)(Original_comm_flOwnThing));
-            this.Adapter.UpdateCommand.Parameters[162].Value = ((bool)(Original_comm_flGoodDefence));
-            this.Adapter.UpdateCommand.Parameters[163].Value = ((System.DateTime)(Original_dtCreation));
-            this.Adapter.UpdateCommand.Parameters[164].Value = ((System.DateTime)(Original_dtModified));
-            this.Adapter.UpdateCommand.Parameters[165].Value = ((bool)(Original_flRanking1));
-            this.Adapter.UpdateCommand.Parameters[166].Value = ((bool)(Original_flRanking2));
+            this.Adapter.UpdateCommand.Parameters[86].Value = ((int)(Original_numMatch));
+            this.Adapter.UpdateCommand.Parameters[87].Value = ((int)(Original_team));
+            this.Adapter.UpdateCommand.Parameters[88].Value = ((int)(Original_idAlliance));
+            this.Adapter.UpdateCommand.Parameters[89].Value = ((int)(Original_idDriveStation));
+            this.Adapter.UpdateCommand.Parameters[90].Value = ((bool)(Original_flCrashed));
+            this.Adapter.UpdateCommand.Parameters[91].Value = ((bool)(Original_flYellow));
+            this.Adapter.UpdateCommand.Parameters[92].Value = ((bool)(Original_flRed));
+            this.Adapter.UpdateCommand.Parameters[93].Value = ((bool)(Original_auto_flState));
+            this.Adapter.UpdateCommand.Parameters[94].Value = ((int)(Original_auto_idStartPosition));
+            this.Adapter.UpdateCommand.Parameters[95].Value = ((int)(Original_auto_idStatrLevel));
+            this.Adapter.UpdateCommand.Parameters[96].Value = ((bool)(Original_auto_baseLine));
+            this.Adapter.UpdateCommand.Parameters[97].Value = ((int)(Original_auto_idStartObject));
+            this.Adapter.UpdateCommand.Parameters[98].Value = ((int)(Original_auto_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[99].Value = ((int)(Original_auto_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[100].Value = ((int)(Original_auto_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[101].Value = ((int)(Original_auto_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[102].Value = ((int)(Original_auto_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[103].Value = ((int)(Original_auto_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[104].Value = ((int)(Original_auto_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[105].Value = ((int)(Original_auto_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[106].Value = ((int)(Original_auto_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[107].Value = ((int)(Original_auto_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[108].Value = ((int)(Original_auto_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[109].Value = ((int)(Original_auto_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[110].Value = ((int)(Original_auto_numRocketHighHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[111].Value = ((int)(Original_auto_numRocketHighHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[112].Value = ((int)(Original_auto_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[113].Value = ((int)(Original_auto_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[114].Value = ((int)(Original_auto_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[115].Value = ((int)(Original_auto_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[116].Value = ((int)(Original_auto_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[117].Value = ((int)(Original_auto_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[118].Value = ((bool)(Original_auto_flLoseStartObject));
+            this.Adapter.UpdateCommand.Parameters[119].Value = ((bool)(Original_auto_flRobotContact));
+            this.Adapter.UpdateCommand.Parameters[120].Value = ((bool)(Original_auto_flFoul));
+            this.Adapter.UpdateCommand.Parameters[121].Value = ((bool)(Original_auto_flCrossOver));
+            this.Adapter.UpdateCommand.Parameters[122].Value = ((int)(Original_tele_numShipFrontHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[123].Value = ((int)(Original_tele_numShipFrontHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[124].Value = ((int)(Original_tele_numShipSideHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[125].Value = ((int)(Original_tele_numShipSideHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[126].Value = ((int)(Original_tele_numShipFrontCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[127].Value = ((int)(Original_tele_numShipFrontCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[128].Value = ((int)(Original_tele_numShipSideCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[129].Value = ((int)(Original_tele_numShipSideCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[130].Value = ((int)(Original_tele_numRocketLowHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[131].Value = ((int)(Original_tele_numRocketLowHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[132].Value = ((int)(Original_tele_numRocketMidHatchAttempt));
+            this.Adapter.UpdateCommand.Parameters[133].Value = ((int)(Original_tele_numRocketMidHatchSuccess));
+            this.Adapter.UpdateCommand.Parameters[134].Value = ((int)(Original_tele_numRocketHighAttempt));
+            this.Adapter.UpdateCommand.Parameters[135].Value = ((int)(Original_tele_numRocketHighSuccess));
+            this.Adapter.UpdateCommand.Parameters[136].Value = ((int)(Original_tele_numRocketLowCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[137].Value = ((int)(Original_tele_numRocketLowCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[138].Value = ((int)(Original_tele_numRocketMidCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[139].Value = ((int)(Original_tele_numRocketMidCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[140].Value = ((int)(Original_tele_numRocketHighCargoAttempt));
+            this.Adapter.UpdateCommand.Parameters[141].Value = ((int)(Original_tele_numRocketHighCargoSuccess));
+            this.Adapter.UpdateCommand.Parameters[142].Value = ((int)(Original_tele_idClimb));
+            this.Adapter.UpdateCommand.Parameters[143].Value = ((int)(Original_tele_idClimbOutcome));
+            this.Adapter.UpdateCommand.Parameters[144].Value = ((int)(Original_tele_idClimbGrab));
+            this.Adapter.UpdateCommand.Parameters[145].Value = ((int)(Original_tele_idClimbSpeed));
+            this.Adapter.UpdateCommand.Parameters[146].Value = ((int)(Original_tele_numClimbAssists));
+            this.Adapter.UpdateCommand.Parameters[147].Value = ((int)(Original_tele_idClimbLevel));
+            this.Adapter.UpdateCommand.Parameters[148].Value = ((bool)(Original_tele_flClimbFall));
+            this.Adapter.UpdateCommand.Parameters[149].Value = ((bool)(Original_tele_flDefence));
+            this.Adapter.UpdateCommand.Parameters[150].Value = ((bool)(Original_flIntakeHatchGround));
+            this.Adapter.UpdateCommand.Parameters[151].Value = ((bool)(Original_flIntakeHatchStation));
+            this.Adapter.UpdateCommand.Parameters[152].Value = ((bool)(Original_flIntakeCargoGround));
+            this.Adapter.UpdateCommand.Parameters[153].Value = ((bool)(Original_flIntakeCargoStation));
+            this.Adapter.UpdateCommand.Parameters[154].Value = ((bool)(Original_comm_flHighlight));
+            this.Adapter.UpdateCommand.Parameters[155].Value = ((bool)(Original_comm_flWarning));
+            this.Adapter.UpdateCommand.Parameters[156].Value = ((int)(Original_comm_idDriveRating));
+            this.Adapter.UpdateCommand.Parameters[157].Value = ((bool)(Original_comm_flAlliance));
+            this.Adapter.UpdateCommand.Parameters[158].Value = ((bool)(Original_comm_flRecovery));
+            this.Adapter.UpdateCommand.Parameters[159].Value = ((bool)(Original_comm_flStrategy));
+            this.Adapter.UpdateCommand.Parameters[160].Value = ((bool)(Original_comm_flOwnThing));
+            this.Adapter.UpdateCommand.Parameters[161].Value = ((bool)(Original_comm_flGoodDefence));
+            this.Adapter.UpdateCommand.Parameters[162].Value = ((System.DateTime)(Original_dtCreation));
+            this.Adapter.UpdateCommand.Parameters[163].Value = ((System.DateTime)(Original_dtModified));
+            this.Adapter.UpdateCommand.Parameters[164].Value = ((bool)(Original_flRanking1));
+            this.Adapter.UpdateCommand.Parameters[165].Value = ((bool)(Original_flRanking2));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4540,13 +4570,13 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(
-                    int idEvent, 
+                    string _event, 
                     int numMatch, 
-                    int idTeam, 
+                    int team, 
                     int idAlliance, 
                     int idDriveStation, 
                     string txScoutName, 
@@ -4629,9 +4659,8 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     bool flRanking1, 
                     bool flRanking2, 
                     int Original_id, 
-                    int Original_idEvent, 
                     int Original_numMatch, 
-                    int Original_idTeam, 
+                    int Original_team, 
                     int Original_idAlliance, 
                     int Original_idDriveStation, 
                     bool Original_flCrashed, 
@@ -4710,7 +4739,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     System.DateTime Original_dtModified, 
                     bool Original_flRanking1, 
                     bool Original_flRanking2) {
-            return this.Update(Original_id, idEvent, numMatch, idTeam, idAlliance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flRanking1, flRanking2, Original_id, Original_idEvent, Original_numMatch, Original_idTeam, Original_idAlliance, Original_idDriveStation, Original_flCrashed, Original_flYellow, Original_flRed, Original_auto_flState, Original_auto_idStartPosition, Original_auto_idStatrLevel, Original_auto_baseLine, Original_auto_idStartObject, Original_auto_numShipFrontHatchAttempt, Original_auto_numShipFrontHatchSuccess, Original_auto_numShipSideHatchAttempt, Original_auto_numShipSideHatchSuccess, Original_auto_numShipFrontCargoAttempt, Original_auto_numShipFrontCargoSuccess, Original_auto_numShipSideCargoAttempt, Original_auto_numShipSideCargoSuccess, Original_auto_numRocketLowHatchAttempt, Original_auto_numRocketLowHatchSuccess, Original_auto_numRocketMidHatchAttempt, Original_auto_numRocketMidHatchSuccess, Original_auto_numRocketHighHatchAttempt, Original_auto_numRocketHighHatchSuccess, Original_auto_numRocketLowCargoAttempt, Original_auto_numRocketLowCargoSuccess, Original_auto_numRocketMidCargoAttempt, Original_auto_numRocketMidCargoSuccess, Original_auto_numRocketHighCargoAttempt, Original_auto_numRocketHighCargoSuccess, Original_auto_flLoseStartObject, Original_auto_flRobotContact, Original_auto_flFoul, Original_auto_flCrossOver, Original_tele_numShipFrontHatchAttempt, Original_tele_numShipFrontHatchSuccess, Original_tele_numShipSideHatchAttempt, Original_tele_numShipSideHatchSuccess, Original_tele_numShipFrontCargoAttempt, Original_tele_numShipFrontCargoSuccess, Original_tele_numShipSideCargoAttempt, Original_tele_numShipSideCargoSuccess, Original_tele_numRocketLowHatchAttempt, Original_tele_numRocketLowHatchSuccess, Original_tele_numRocketMidHatchAttempt, Original_tele_numRocketMidHatchSuccess, Original_tele_numRocketHighAttempt, Original_tele_numRocketHighSuccess, Original_tele_numRocketLowCargoAttempt, Original_tele_numRocketLowCargoSuccess, Original_tele_numRocketMidCargoAttempt, Original_tele_numRocketMidCargoSuccess, Original_tele_numRocketHighCargoAttempt, Original_tele_numRocketHighCargoSuccess, Original_tele_idClimb, Original_tele_idClimbOutcome, Original_tele_idClimbGrab, Original_tele_idClimbSpeed, Original_tele_numClimbAssists, Original_tele_idClimbLevel, Original_tele_flClimbFall, Original_tele_flDefence, Original_flIntakeHatchGround, Original_flIntakeHatchStation, Original_flIntakeCargoGround, Original_flIntakeCargoStation, Original_comm_flHighlight, Original_comm_flWarning, Original_comm_idDriveRating, Original_comm_flAlliance, Original_comm_flRecovery, Original_comm_flStrategy, Original_comm_flOwnThing, Original_comm_flGoodDefence, Original_dtCreation, Original_dtModified, Original_flRanking1, Original_flRanking2);
+            return this.Update(Original_id, _event, numMatch, team, idAlliance, idDriveStation, txScoutName, flCrashed, flYellow, flRed, auto_flState, auto_idStartPosition, auto_idStatrLevel, auto_baseLine, auto_idStartObject, auto_numShipFrontHatchAttempt, auto_numShipFrontHatchSuccess, auto_numShipSideHatchAttempt, auto_numShipSideHatchSuccess, auto_numShipFrontCargoAttempt, auto_numShipFrontCargoSuccess, auto_numShipSideCargoAttempt, auto_numShipSideCargoSuccess, auto_numRocketLowHatchAttempt, auto_numRocketLowHatchSuccess, auto_numRocketMidHatchAttempt, auto_numRocketMidHatchSuccess, auto_numRocketHighHatchAttempt, auto_numRocketHighHatchSuccess, auto_numRocketLowCargoAttempt, auto_numRocketLowCargoSuccess, auto_numRocketMidCargoAttempt, auto_numRocketMidCargoSuccess, auto_numRocketHighCargoAttempt, auto_numRocketHighCargoSuccess, auto_flLoseStartObject, auto_flRobotContact, auto_flFoul, auto_flCrossOver, tele_numShipFrontHatchAttempt, tele_numShipFrontHatchSuccess, tele_numShipSideHatchAttempt, tele_numShipSideHatchSuccess, tele_numShipFrontCargoAttempt, tele_numShipFrontCargoSuccess, tele_numShipSideCargoAttempt, tele_numShipSideCargoSuccess, tele_numRocketLowHatchAttempt, tele_numRocketLowHatchSuccess, tele_numRocketMidHatchAttempt, tele_numRocketMidHatchSuccess, tele_numRocketHighAttempt, tele_numRocketHighSuccess, tele_numRocketLowCargoAttempt, tele_numRocketLowCargoSuccess, tele_numRocketMidCargoAttempt, tele_numRocketMidCargoSuccess, tele_numRocketHighCargoAttempt, tele_numRocketHighCargoSuccess, tele_idClimb, tele_idClimbOutcome, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, tele_flClimbFall, tele_flDefence, flIntakeHatchGround, flIntakeHatchStation, flIntakeCargoGround, flIntakeCargoStation, comm_txNotes, comm_flHighlight, comm_flWarning, comm_idDriveRating, comm_flAlliance, comm_flRecovery, comm_flStrategy, comm_flOwnThing, comm_flGoodDefence, dtCreation, dtModified, txComputerName, flRanking1, flRanking2, Original_id, Original_numMatch, Original_team, Original_idAlliance, Original_idDriveStation, Original_flCrashed, Original_flYellow, Original_flRed, Original_auto_flState, Original_auto_idStartPosition, Original_auto_idStatrLevel, Original_auto_baseLine, Original_auto_idStartObject, Original_auto_numShipFrontHatchAttempt, Original_auto_numShipFrontHatchSuccess, Original_auto_numShipSideHatchAttempt, Original_auto_numShipSideHatchSuccess, Original_auto_numShipFrontCargoAttempt, Original_auto_numShipFrontCargoSuccess, Original_auto_numShipSideCargoAttempt, Original_auto_numShipSideCargoSuccess, Original_auto_numRocketLowHatchAttempt, Original_auto_numRocketLowHatchSuccess, Original_auto_numRocketMidHatchAttempt, Original_auto_numRocketMidHatchSuccess, Original_auto_numRocketHighHatchAttempt, Original_auto_numRocketHighHatchSuccess, Original_auto_numRocketLowCargoAttempt, Original_auto_numRocketLowCargoSuccess, Original_auto_numRocketMidCargoAttempt, Original_auto_numRocketMidCargoSuccess, Original_auto_numRocketHighCargoAttempt, Original_auto_numRocketHighCargoSuccess, Original_auto_flLoseStartObject, Original_auto_flRobotContact, Original_auto_flFoul, Original_auto_flCrossOver, Original_tele_numShipFrontHatchAttempt, Original_tele_numShipFrontHatchSuccess, Original_tele_numShipSideHatchAttempt, Original_tele_numShipSideHatchSuccess, Original_tele_numShipFrontCargoAttempt, Original_tele_numShipFrontCargoSuccess, Original_tele_numShipSideCargoAttempt, Original_tele_numShipSideCargoSuccess, Original_tele_numRocketLowHatchAttempt, Original_tele_numRocketLowHatchSuccess, Original_tele_numRocketMidHatchAttempt, Original_tele_numRocketMidHatchSuccess, Original_tele_numRocketHighAttempt, Original_tele_numRocketHighSuccess, Original_tele_numRocketLowCargoAttempt, Original_tele_numRocketLowCargoSuccess, Original_tele_numRocketMidCargoAttempt, Original_tele_numRocketMidCargoSuccess, Original_tele_numRocketHighCargoAttempt, Original_tele_numRocketHighCargoSuccess, Original_tele_idClimb, Original_tele_idClimbOutcome, Original_tele_idClimbGrab, Original_tele_idClimbSpeed, Original_tele_numClimbAssists, Original_tele_idClimbLevel, Original_tele_flClimbFall, Original_tele_flDefence, Original_flIntakeHatchGround, Original_flIntakeHatchStation, Original_flIntakeCargoGround, Original_flIntakeCargoStation, Original_comm_flHighlight, Original_comm_flWarning, Original_comm_idDriveRating, Original_comm_flAlliance, Original_comm_flRecovery, Original_comm_flStrategy, Original_comm_flOwnThing, Original_comm_flGoodDefence, Original_dtCreation, Original_dtModified, Original_flRanking1, Original_flRanking2);
         }
     }
     
@@ -4733,7 +4762,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         private global::System.Data.IDbConnection _connection;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public UpdateOrderOption UpdateOrder {
             get {
                 return this._updateOrder;
@@ -4744,7 +4773,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
@@ -4758,7 +4787,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4769,7 +4798,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public global::System.Data.IDbConnection Connection {
             get {
@@ -4788,7 +4817,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         public int TableAdapterInstanceCount {
             get {
@@ -4804,7 +4833,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         ///Update rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(CspAnalyzeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._matchscoutingTableAdapter != null)) {
@@ -4823,7 +4852,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         ///Insert rows in top-down order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(CspAnalyzeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._matchscoutingTableAdapter != null)) {
@@ -4841,7 +4870,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         ///Delete rows in bottom-up order.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(CspAnalyzeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._matchscoutingTableAdapter != null)) {
@@ -4859,7 +4888,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             if (((updatedRows == null) 
                         || (updatedRows.Length < 1))) {
@@ -4883,7 +4912,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         ///Update all changes to the dataset.
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public virtual int UpdateAll(CspAnalyzeDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
@@ -5012,13 +5041,13 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
             global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
             if ((this._connection != null)) {
                 return true;
@@ -5036,7 +5065,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         /// <summary>
         ///Update Order Option
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public enum UpdateOrderOption {
             
             InsertUpdateDelete = 0,
@@ -5047,7 +5076,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         /// <summary>
         ///Used to sort self-referenced table's rows
         ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
             
             private global::System.Data.DataRelation _relation;
@@ -5055,7 +5084,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             private int _childFirst;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
                 this._relation = relation;
                 if (childFirst) {
@@ -5067,7 +5096,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private global::System.Data.DataRow GetRoot(global::System.Data.DataRow row, out int distance) {
                 global::System.Diagnostics.Debug.Assert((row != null));
                 global::System.Data.DataRow root = row;
@@ -5106,7 +5135,7 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
                 if (object.ReferenceEquals(row1, row2)) {
                     return 0;

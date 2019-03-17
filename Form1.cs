@@ -14,11 +14,18 @@ namespace CSP_Analyze
     public partial class Form1 : Form
     {
         private DatabaseController dbController;
-
+           
         public Form1()
         {
             InitializeComponent();
             dbController = new DatabaseController();
+            loadInfoDependantControls();
+        }
+
+        private void loadInfoDependantControls()
+        {
+            lastUpdatedLabel.Text = "Last Updated: " + dbController.RemoteLastUpdated;
+            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + dbController.numberOfLocalMatchScoutingChanges;
         }
 
         private void importButton_Click(object sender, EventArgs e)
@@ -30,6 +37,9 @@ namespace CSP_Analyze
             if (result != DialogResult.OK) return;
 
             string[] selectedFilenames = dialog.FileNames;
+            LinkedList<string> csvMatchToImport = new LinkedList<string>();
+            LinkedList<string> csvPitToImport = new LinkedList<string>();
+
             foreach (string filename in selectedFilenames)
             {
                 string[] lines = File.ReadAllLines(filename);
@@ -45,15 +55,18 @@ namespace CSP_Analyze
                         validMatchscouting++;
 
                         // TODO - import to database
-
+                        csvMatchToImport.AddLast(line);
                     }
                 }
 
-                Log(filename + "- Match:" + validMatchscouting + ", P:" + validPitScouting);
+                Log(Path.GetFileName(filename) + " ~ Valid Match:" + validMatchscouting + ", Valid Pit:" + validPitScouting);
             }
+
+            int localChangeCount = dbController.ImportMatchScoutingRows(csvMatchToImport);
+            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + localChangeCount;
         }
 
-        private void Log(string message)
+        public void Log(string message)
         {
             telemetryRichTextBox.AppendText(message + "\n");
         }
@@ -61,6 +74,8 @@ namespace CSP_Analyze
         private void NewQueryButton_Click(object sender, EventArgs e)
         {
             string queryName = StringPrompt();
+            if (string.IsNullOrEmpty(queryName)) return;
+
             int fileStatus = dbController.CreateQueryFile(queryName, queryRichTextBox.Text);
             switch (fileStatus)
             {
@@ -102,9 +117,7 @@ namespace CSP_Analyze
 
                 if (openFileDialog.ShowDialog() != DialogResult.OK) return;
 
-                string filename = Path.GetFileName(openFileDialog.FileName);
-                filename = filename.Substring(0, filename.Length - filename.LastIndexOf("."));
-
+                string filename = Path.GetFileNameWithoutExtension(openFileDialog.FileName);
                 string content = File.ReadAllText(openFileDialog.FileName);
 
                 dbController.CurrentQueryName = filename;
@@ -159,6 +172,28 @@ namespace CSP_Analyze
             inputBox.CancelButton = cancelButton;
             inputBox.ShowDialog();
             return textBox.Text;
+        }
+
+        private void PullDatabaseButton_Click(object sender, EventArgs e)
+        {
+            pushDatabaseButton.Enabled = false;
+            pullDatabaseButton.Enabled = false;
+            Log("Pulling data from remote database");
+            string result = dbController.RemotePull(this);
+            Log(result);
+            pushDatabaseButton.Enabled = true;
+            pullDatabaseButton.Enabled = true;
+        }
+
+        private void PushDatabaseButton_Click(object sender, EventArgs e)
+        {
+            pushDatabaseButton.Enabled = false;
+            pullDatabaseButton.Enabled = false;
+            Log("Pushing data to remote database");
+            string result = dbController.RemotePush();
+            Log(result);
+            pushDatabaseButton.Enabled = true;
+            pullDatabaseButton.Enabled = true;
         }
     }
 }
