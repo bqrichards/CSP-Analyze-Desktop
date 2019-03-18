@@ -130,10 +130,19 @@ namespace CSP_Analyze
             }
         }
 
-        private void RunQueryButton_Click(object sender, EventArgs e)
+        private void RunQueryButton_Click(object sender, EventArgs eventArgs)
         {
-            QueryResultsForm resultsForm = new QueryResultsForm(dbController, queryRichTextBox.Text);
-            resultsForm.Show();
+            QueryResultsForm resultsForm;
+
+            try
+            {
+                resultsForm = new QueryResultsForm(dbController, queryRichTextBox.Text);
+                resultsForm.Show();
+            }
+            catch (EvaluateException e)
+            {
+                MessageBox.Show("Could not parse query: " + e.Message);
+            }
         }
 
         private string StringPrompt()

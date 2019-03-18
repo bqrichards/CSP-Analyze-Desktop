@@ -13,30 +13,32 @@ namespace CSP_Analyze
     public partial class QueryResultsForm : Form
     {
         private readonly DatabaseController controller;
-        private string query;
 
-        private BindingSource bindingSource;
+        public BindingSource bindingSource;
 
-        public QueryResultsForm(DatabaseController controller, string rawQuery)
+        public QueryResultsForm(DatabaseController controller, string query)
         {
             InitializeComponent();
             this.controller = controller;
-            this.query = rawQuery;
-        }
 
-        private void QueryResultsForm_Load(object sender, EventArgs eventArgs)
-        {
             DataTable table = controller.matchscoutingDataTable.Copy();
             bindingSource = new BindingSource
             {
                 DataSource = table
             };
 
-            if (query != null)
+            try
             {
                 bindingSource.Filter = query;
             }
+            catch (SyntaxErrorException e)
+            {
+                MessageBox.Show("Syntax Error: " + e.Message);
+            }
+        }
 
+        private void QueryResultsForm_Load(object sender, EventArgs eventArgs)
+        {
             resultsDataGridView.DataSource = bindingSource;
 
             // Use the controller and query to run a search
