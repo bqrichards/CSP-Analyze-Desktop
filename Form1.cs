@@ -18,11 +18,15 @@ namespace CSP_Analyze
         public Form1()
         {
             InitializeComponent();
-            dbController = new DatabaseController();
-            loadInfoDependantControls();
         }
 
-        private void loadInfoDependantControls()
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            dbController = new DatabaseController();
+            LoadInfoDependantControls();
+        }
+
+        private void LoadInfoDependantControls()
         {
             lastUpdatedLabel.Text = "Last Updated: " + dbController.RemoteLastUpdated;
             numberOfLocalChangesLabel.Text = "Number of Local Changes: " + dbController.numberOfLocalMatchScoutingChanges;

@@ -27,11 +27,11 @@ namespace CSP_Analyze
 
         private readonly string matchscoutingSavedPath;
 
-        private CspAnalyzeDataSet.matchscoutingDataTable matchscoutingDataTable;
-        private CspAnalyzeDataSetTableAdapters.matchscoutingTableAdapter matchscoutingTableAdapter;
+        public CspAnalyzeDataSet.matchscoutingDataTable matchscoutingDataTable;
+        public CspAnalyzeDataSetTableAdapters.matchscoutingTableAdapter matchscoutingTableAdapter;
 
         public int numberOfLocalMatchScoutingChanges = 0;
-        private int numberOfLocalPitScoutingChanges = 0;
+        //private int numberOfLocalPitScoutingChanges = 0;
 
         public DatabaseController()
         {
@@ -203,16 +203,6 @@ namespace CSP_Analyze
             numberOfLocalMatchScoutingChanges -= result;
             SaveInfo();
             return string.Format("{0} rows affected by the push.", result);
-        }
-
-        public async Task<LinkedList<CspAnalyzeDataSet.matchscoutingRow>> GetResultsFromQuery(string rawQuery)
-        {
-            string[] queries = rawQuery.Split(new string[] { "\r\n", "r", "\n" }, StringSplitOptions.None);
-            LinkedList<CspAnalyzeDataSet.matchscoutingRow> rows = new LinkedList<CspAnalyzeDataSet.matchscoutingRow>();
-
-            // TODO - Run query
-
-            return rows;
         }
     }
 }

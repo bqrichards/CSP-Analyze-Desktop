@@ -12,27 +12,47 @@ namespace CSP_Analyze
 {
     public partial class QueryResultsForm : Form
     {
+        private readonly DatabaseController controller;
+        private string query;
+
+        private BindingSource bindingSource;
+
         public QueryResultsForm(DatabaseController controller, string rawQuery)
         {
             InitializeComponent();
+            this.controller = controller;
+            this.query = rawQuery;
+        }
 
-            // TODO - Initialize the columns of the query view
+        private void QueryResultsForm_Load(object sender, EventArgs eventArgs)
+        {
+            DataTable table = controller.matchscoutingDataTable.Copy();
+            bindingSource = new BindingSource
+            {
+                DataSource = table
+            };
 
+            if (query != null)
+            {
+                bindingSource.Filter = query;
+            }
+
+            resultsDataGridView.DataSource = bindingSource;
 
             // Use the controller and query to run a search
             numberOfRowsLabel.Text = "Number of Rows: Loading";
 
-            Task.Run(async () =>
+            Task.Run(() =>
             {
-                LinkedList<CspAnalyzeDataSet.matchscoutingRow> list = await controller.GetResultsFromQuery(rawQuery);
-                numberOfRowsLabel.Invoke(new Action(() => numberOfRowsLabel.Text = "Number of Rows: " + list.Count));
-                resultsDataGridView.Invoke(new Action(() => GetMatchScoutingViewerFromList(list)));
+                if (numberOfRowsLabel.InvokeRequired)
+                {
+                    numberOfRowsLabel.Invoke(new Action(() => numberOfRowsLabel.Text = "Number of Rows: " + resultsDataGridView.Rows.Count));
+                }
+                else
+                {
+                    numberOfRowsLabel.Text = "Number of Rows: " + resultsDataGridView.Rows.Count;
+                }
             });
-        }
-
-        private void GetMatchScoutingViewerFromList(LinkedList<CspAnalyzeDataSet.matchscoutingRow> rows)
-        {
-            // TODO
         }
     }
 }
