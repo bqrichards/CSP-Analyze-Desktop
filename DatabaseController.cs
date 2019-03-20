@@ -13,7 +13,6 @@ namespace CSP_Analyze
     public class DatabaseController
     {
         public string CurrentQueryName;
-        public string RemoteLastUpdated = "Never";
 
         public static int MATCHSCOUTING_COLUMNS = 85;
         public static int PITSCOUTING_COLUMNS = 39;
@@ -51,45 +50,35 @@ namespace CSP_Analyze
 
             pitscoutingDataTable = new CspAnalyzeDataSet.pitscoutingDataTable();
             pitscoutingTableAdapter = new CspAnalyzeDataSetTableAdapters.pitscoutingTableAdapter();
-
-            AttemptInfoFileLoad();
         }
 
-        private void AttemptInfoFileLoad()
+        private string SaveInfo()
         {
-            if (File.Exists(infoFilePath))
-            {
-                foreach (string line in File.ReadLines(infoFilePath))
-                {
-                    if (line.IndexOf("remote_last_updated") >= 0)
-                    {
-                        RemoteLastUpdated = line.Substring(line.IndexOf("=") + 1);
-                        continue;
-                    }
-                }
-            }
-            else
-            {
-                // set default settings
-                SaveInfo();
-            }
-
-            try
-            {
-                matchscoutingDataTable.ReadXml(matchscoutingSavedPath);
-            }
-            catch (Exception) {}
-        }
-
-        private void SaveInfo()
-        {
-            File.WriteAllText(infoFilePath, "remote_last_updated=" + RemoteLastUpdated);
+            string saveStatus = "";
 
             try
             {
                 matchscoutingDataTable.WriteXml(matchscoutingSavedPath);
+                saveStatus += "Saved Match Scouting.";
             }
-            catch (Exception) {}
+            catch (Exception e) {
+                saveStatus += "Error saving Match Scouting: " + e.Message;
+            }
+
+            saveStatus += "\n";
+
+            try
+            {
+                pitscoutingDataTable.WriteXml(pitscoutingSavedPath);
+                saveStatus += "Saved Pit Scouting.";
+            }
+            catch (Exception e) {
+                saveStatus += "Error saving Pit Scouting: " + e.Message;
+            }
+
+            saveStatus += "\n";
+
+            return saveStatus;
         }
 
         public void ImportPitScoutingRows(LinkedList<string> pits)
@@ -239,17 +228,17 @@ namespace CSP_Analyze
             }
             catch (Exception) {}
 
-            SaveInfo();
+            string status = SaveInfo();
 
-            return string.Format("{0} match rows, {1} pit rows affected by the pull.", matchResult, pitResult);
+            return string.Format(status + "{0} match rows, {1} pit rows affected by the pull.", matchResult, pitResult);
         }
 
         public string RemotePush()
         {
             matchscoutingTableAdapter.Update(matchscoutingDataTable);
             pitscoutingTableAdapter.Update(pitscoutingDataTable);
-            SaveInfo();
-            return string.Format("Pushed.");
+            string status = SaveInfo();
+            return string.Format(status + "Pushed.");
         }
     }
 }

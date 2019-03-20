@@ -37,7 +37,6 @@
             this.mobileImportButton = new System.Windows.Forms.Button();
             this.pushDatabaseButton = new System.Windows.Forms.Button();
             this.pullDatabaseButton = new System.Windows.Forms.Button();
-            this.lastUpdatedLabel = new System.Windows.Forms.Label();
             this.telemetryRichTextBox = new System.Windows.Forms.RichTextBox();
             this.importButton = new System.Windows.Forms.Button();
             this.queryTabPage = new System.Windows.Forms.TabPage();
@@ -50,6 +49,7 @@
             this.loadQueryButton = new System.Windows.Forms.Button();
             this.newQueryButton = new System.Windows.Forms.Button();
             this.queryHeaderLabel = new System.Windows.Forms.Label();
+            this.clearTelemetryButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             instructionsRichTextBox = new System.Windows.Forms.RichTextBox();
             label2 = new System.Windows.Forms.Label();
@@ -132,10 +132,10 @@
             // 
             // statusTabPage
             // 
+            this.statusTabPage.Controls.Add(this.clearTelemetryButton);
             this.statusTabPage.Controls.Add(this.mobileImportButton);
             this.statusTabPage.Controls.Add(this.pushDatabaseButton);
             this.statusTabPage.Controls.Add(this.pullDatabaseButton);
-            this.statusTabPage.Controls.Add(this.lastUpdatedLabel);
             this.statusTabPage.Controls.Add(label3);
             this.statusTabPage.Controls.Add(label2);
             this.statusTabPage.Controls.Add(this.telemetryRichTextBox);
@@ -164,7 +164,7 @@
             // 
             // pushDatabaseButton
             // 
-            this.pushDatabaseButton.Location = new System.Drawing.Point(16, 294);
+            this.pushDatabaseButton.Location = new System.Drawing.Point(16, 268);
             this.pushDatabaseButton.Margin = new System.Windows.Forms.Padding(4);
             this.pushDatabaseButton.Name = "pushDatabaseButton";
             this.pushDatabaseButton.Size = new System.Drawing.Size(201, 28);
@@ -175,7 +175,7 @@
             // 
             // pullDatabaseButton
             // 
-            this.pullDatabaseButton.Location = new System.Drawing.Point(16, 258);
+            this.pullDatabaseButton.Location = new System.Drawing.Point(16, 232);
             this.pullDatabaseButton.Margin = new System.Windows.Forms.Padding(4);
             this.pullDatabaseButton.Name = "pullDatabaseButton";
             this.pullDatabaseButton.Size = new System.Drawing.Size(201, 28);
@@ -183,16 +183,6 @@
             this.pullDatabaseButton.Text = "Pull";
             this.pullDatabaseButton.UseVisualStyleBackColor = true;
             this.pullDatabaseButton.Click += new System.EventHandler(this.PullDatabaseButton_Click);
-            // 
-            // lastUpdatedLabel
-            // 
-            this.lastUpdatedLabel.AutoSize = true;
-            this.lastUpdatedLabel.Location = new System.Drawing.Point(23, 234);
-            this.lastUpdatedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lastUpdatedLabel.Name = "lastUpdatedLabel";
-            this.lastUpdatedLabel.Size = new System.Drawing.Size(119, 20);
-            this.lastUpdatedLabel.TabIndex = 6;
-            this.lastUpdatedLabel.Text = "Last Updated: ";
             // 
             // telemetryRichTextBox
             // 
@@ -342,6 +332,16 @@
             this.queryHeaderLabel.TabIndex = 0;
             this.queryHeaderLabel.Text = "Current Query: None";
             // 
+            // clearTelemetryButton
+            // 
+            this.clearTelemetryButton.Location = new System.Drawing.Point(899, 26);
+            this.clearTelemetryButton.Name = "clearTelemetryButton";
+            this.clearTelemetryButton.Size = new System.Drawing.Size(121, 29);
+            this.clearTelemetryButton.TabIndex = 11;
+            this.clearTelemetryButton.Text = "Clear";
+            this.clearTelemetryButton.UseVisualStyleBackColor = true;
+            this.clearTelemetryButton.Click += new System.EventHandler(this.ClearTelemetryButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,12 +375,12 @@
         private System.Windows.Forms.Button runQueryButton;
         private System.Windows.Forms.RichTextBox queryRichTextBox;
         private System.Windows.Forms.Button saveAsQueryButton;
-        private System.Windows.Forms.Label lastUpdatedLabel;
         private System.Windows.Forms.Button pullDatabaseButton;
         private System.Windows.Forms.Button pushDatabaseButton;
         private System.Windows.Forms.Button mobileImportButton;
         private System.Windows.Forms.ComboBox tableComboBox;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button clearTelemetryButton;
     }
 }
 

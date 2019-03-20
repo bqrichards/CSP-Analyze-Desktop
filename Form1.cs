@@ -23,15 +23,16 @@ namespace CSP_Analyze
         private void Form1_Load(object sender, EventArgs eventArgs)
         {
             dbController = new DatabaseController();
-            lastUpdatedLabel.Text = "Last Updated: " + dbController.RemoteLastUpdated;
             tableComboBox.SelectedIndex = 0;
         }
 
         private void importButton_Click(object sender, EventArgs e)
         {
-            OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = "CSV Files (*.csv)|*.csv|Text Files (*.txt)|*.txt";
-            dialog.Multiselect = true;
+            OpenFileDialog dialog = new OpenFileDialog
+            {
+                Filter = "CSV Files (*.csv)|*.csv|Text Files (*.txt)|*.txt",
+                Multiselect = true
+            };
             DialogResult result = dialog.ShowDialog();
             if (result != DialogResult.OK) return;
 
@@ -221,6 +222,11 @@ namespace CSP_Analyze
         {
             MobileImportForm importForm = new MobileImportForm();
             importForm.Show();
+        }
+
+        private void ClearTelemetryButton_Click(object sender, EventArgs e)
+        {
+            telemetryRichTextBox.Text = "";
         }
     }
 }
