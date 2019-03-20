@@ -16,6 +16,7 @@ namespace CSP_Analyze
         public string RemoteLastUpdated = "Never";
 
         public static int MATCHSCOUTING_COLUMNS = 85;
+        public static int PITSCOUTING_COLUMNS = 39;
 
         public const int SUCCESS = 0;
         public const int ERROR_INVALID_FILENAME = 1;
@@ -26,12 +27,14 @@ namespace CSP_Analyze
         public readonly string infoFilePath;
 
         private readonly string matchscoutingSavedPath;
+        private readonly string pitscoutingSavedPath;
+        private readonly string mobileImportsPath;
 
         public CspAnalyzeDataSet.matchscoutingDataTable matchscoutingDataTable;
         public CspAnalyzeDataSetTableAdapters.matchscoutingTableAdapter matchscoutingTableAdapter;
 
-        public int numberOfLocalMatchScoutingChanges = 0;
-        //private int numberOfLocalPitScoutingChanges = 0;
+        public CspAnalyzeDataSet.pitscoutingDataTable pitscoutingDataTable;
+        public CspAnalyzeDataSetTableAdapters.pitscoutingTableAdapter pitscoutingTableAdapter;
 
         public DatabaseController()
         {
@@ -39,9 +42,15 @@ namespace CSP_Analyze
             Directory.CreateDirectory(rootFolderPath);
             infoFilePath = Path.Combine(rootFolderPath, "info.cfg");
             matchscoutingSavedPath = Path.Combine(rootFolderPath, "matchscouting.xml");
+            pitscoutingSavedPath = Path.Combine(rootFolderPath, "pitscouting.xml");
+            mobileImportsPath = Path.Combine(rootFolderPath, "mobile_imports");
+            Directory.CreateDirectory(mobileImportsPath);
 
             matchscoutingDataTable = new CspAnalyzeDataSet.matchscoutingDataTable();
             matchscoutingTableAdapter = new CspAnalyzeDataSetTableAdapters.matchscoutingTableAdapter();
+
+            pitscoutingDataTable = new CspAnalyzeDataSet.pitscoutingDataTable();
+            pitscoutingTableAdapter = new CspAnalyzeDataSetTableAdapters.pitscoutingTableAdapter();
 
             AttemptInfoFileLoad();
         }
@@ -56,11 +65,6 @@ namespace CSP_Analyze
                     {
                         RemoteLastUpdated = line.Substring(line.IndexOf("=") + 1);
                         continue;
-                    }
-
-                    if (line.IndexOf("local_matchscouting_changes") >= 0)
-                    {
-                        numberOfLocalMatchScoutingChanges = int.Parse(line.Substring(line.IndexOf("=") + 1));
                     }
                 }
             }
@@ -79,7 +83,7 @@ namespace CSP_Analyze
 
         private void SaveInfo()
         {
-            File.WriteAllText(infoFilePath, "remote_last_updated=" + RemoteLastUpdated + "\nlocal_matchscouting_changes=" + numberOfLocalMatchScoutingChanges);
+            File.WriteAllText(infoFilePath, "remote_last_updated=" + RemoteLastUpdated);
 
             try
             {
@@ -88,7 +92,51 @@ namespace CSP_Analyze
             catch (Exception) {}
         }
 
-        public int ImportMatchScoutingRows(LinkedList<string> matches)
+        public void ImportPitScoutingRows(LinkedList<string> pits)
+        {
+            DataColumnCollection columns = pitscoutingDataTable.Columns;
+            Regex dateRegex = new Regex("(\\d+)\\/(\\d+)\\/(\\d+)\\+? ?(\\d+):(\\d+):(\\d+)", RegexOptions.Compiled);
+
+            foreach (string pit in pits)
+            {
+                string[] values = pit.Split(',');
+                DataRow newPit = pitscoutingDataTable.NewRow();
+
+                // Add columns from match scouting
+                for (int i = 1; i < values.Length; i++)
+                {
+                    string columnName = columns[i].ColumnName.ToString();
+                    string value = values[i];
+
+                    if (columnName.IndexOf("dt") >= 0)
+                    {
+                        // this is a date. we need to parse value and turn it into a datetime object
+                        Match dateMatches = dateRegex.Match(value);
+                        GroupCollection groups = dateMatches.Groups;
+                        int[] dateMatchResults = new int[groups.Count];
+                        for (int j = 1; j < dateMatchResults.Length; j++)
+                        {
+                            dateMatchResults[j - 1] = int.Parse(groups[j].Value);
+                        }
+
+                        // year month day hour minute second
+                        DateTime dateTime = new DateTime(dateMatchResults[0], dateMatchResults[1], dateMatchResults[2], dateMatchResults[3], dateMatchResults[4], dateMatchResults[5]);
+                        newPit[columnName] = dateTime;
+                        Console.WriteLine("Set " + columnName + " to " + dateTime);
+                    }
+                    else
+                    {
+                        newPit[columnName] = value;
+                        Console.WriteLine("Set " + columnName + " to " + value);
+                    }
+                }
+
+                // Add rows
+                pitscoutingDataTable.Rows.Add(newPit);
+            }
+        }
+
+        public void ImportMatchScoutingRows(LinkedList<string> matches)
         {
             DataColumnCollection columns = matchscoutingDataTable.Columns;
             Regex dateRegex = new Regex("(\\d+)\\/(\\d+)\\/(\\d+)\\+? ?(\\d+):(\\d+):(\\d+)", RegexOptions.Compiled);
@@ -129,10 +177,7 @@ namespace CSP_Analyze
 
                 // Add rows
                 matchscoutingDataTable.Rows.Add(newMatch);
-                numberOfLocalMatchScoutingChanges++;
             }
-            
-            return numberOfLocalMatchScoutingChanges;
         }
 
         public int CreateQueryFile(string queryName, string contents)
@@ -175,10 +220,11 @@ namespace CSP_Analyze
 
         public string RemotePull()
         {
-            int result;
+            int matchResult, pitResult;
             try
             {
-                result = matchscoutingTableAdapter.Fill(matchscoutingDataTable);
+                matchResult = matchscoutingTableAdapter.Fill(matchscoutingDataTable);
+                pitResult = pitscoutingTableAdapter.Fill(pitscoutingDataTable);
             }
             catch (SqlException e)
             {
@@ -189,20 +235,21 @@ namespace CSP_Analyze
             try
             {
                 matchscoutingDataTable.WriteXml(matchscoutingSavedPath);
+                pitscoutingDataTable.WriteXml(pitscoutingSavedPath);
             }
             catch (Exception) {}
 
             SaveInfo();
 
-            return string.Format("{0} rows affected by the pull.", result);
+            return string.Format("{0} match rows, {1} pit rows affected by the pull.", matchResult, pitResult);
         }
 
         public string RemotePush()
         {
-            int result = matchscoutingTableAdapter.Update(matchscoutingDataTable);
-            numberOfLocalMatchScoutingChanges -= result;
+            matchscoutingTableAdapter.Update(matchscoutingDataTable);
+            pitscoutingTableAdapter.Update(pitscoutingDataTable);
             SaveInfo();
-            return string.Format("{0} rows affected by the push.", result);
+            return string.Format("Pushed.");
         }
     }
 }

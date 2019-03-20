@@ -26,6 +26,8 @@ namespace CSP_Analyze {
         
         private matchscoutingDataTable tablematchscouting;
         
+        private pitscoutingDataTable tablepitscouting;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -57,6 +59,9 @@ namespace CSP_Analyze {
                 if ((ds.Tables["matchscouting"] != null)) {
                     base.Tables.Add(new matchscoutingDataTable(ds.Tables["matchscouting"]));
                 }
+                if ((ds.Tables["pitscouting"] != null)) {
+                    base.Tables.Add(new pitscoutingDataTable(ds.Tables["pitscouting"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -82,6 +87,16 @@ namespace CSP_Analyze {
         public matchscoutingDataTable matchscouting {
             get {
                 return this.tablematchscouting;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public pitscoutingDataTable pitscouting {
+            get {
+                return this.tablepitscouting;
             }
         }
         
@@ -155,6 +170,9 @@ namespace CSP_Analyze {
                 if ((ds.Tables["matchscouting"] != null)) {
                     base.Tables.Add(new matchscoutingDataTable(ds.Tables["matchscouting"]));
                 }
+                if ((ds.Tables["pitscouting"] != null)) {
+                    base.Tables.Add(new pitscoutingDataTable(ds.Tables["pitscouting"]));
+                }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
                 this.Namespace = ds.Namespace;
@@ -194,6 +212,12 @@ namespace CSP_Analyze {
                     this.tablematchscouting.InitVars();
                 }
             }
+            this.tablepitscouting = ((pitscoutingDataTable)(base.Tables["pitscouting"]));
+            if ((initTable == true)) {
+                if ((this.tablepitscouting != null)) {
+                    this.tablepitscouting.InitVars();
+                }
+            }
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -206,11 +230,19 @@ namespace CSP_Analyze {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablematchscouting = new matchscoutingDataTable();
             base.Tables.Add(this.tablematchscouting);
+            this.tablepitscouting = new pitscoutingDataTable();
+            base.Tables.Add(this.tablepitscouting);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private bool ShouldSerializematchscouting() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializepitscouting() {
             return false;
         }
         
@@ -271,6 +303,9 @@ namespace CSP_Analyze {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void matchscoutingRowChangeEventHandler(object sender, matchscoutingRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void pitscoutingRowChangeEventHandler(object sender, pitscoutingRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1886,6 +1921,887 @@ namespace CSP_Analyze {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class pitscoutingDataTable : global::System.Data.TypedTableBase<pitscoutingRow> {
+            
+            private global::System.Data.DataColumn columnid;
+            
+            private global::System.Data.DataColumn columnevent;
+            
+            private global::System.Data.DataColumn columnteam;
+            
+            private global::System.Data.DataColumn columntxScoutName;
+            
+            private global::System.Data.DataColumn columnflAuto;
+            
+            private global::System.Data.DataColumn columnaudo_idAutoType;
+            
+            private global::System.Data.DataColumn columnauto_idStartObject;
+            
+            private global::System.Data.DataColumn columnauto_flHatch;
+            
+            private global::System.Data.DataColumn columnauto_intHatchDeliver;
+            
+            private global::System.Data.DataColumn columnauto_idHatchDeliverHeight;
+            
+            private global::System.Data.DataColumn columnauto_flCargo;
+            
+            private global::System.Data.DataColumn columnauto_intCargoDelivered;
+            
+            private global::System.Data.DataColumn columnauto_idCargoDeliveryHeight;
+            
+            private global::System.Data.DataColumn columnflHatch;
+            
+            private global::System.Data.DataColumn columnflHatchInWall;
+            
+            private global::System.Data.DataColumn columnflHatchInFloor;
+            
+            private global::System.Data.DataColumn columnflhatchOutLow;
+            
+            private global::System.Data.DataColumn columnflHatchOutMed;
+            
+            private global::System.Data.DataColumn columnflHatchOutHigh;
+            
+            private global::System.Data.DataColumn columntxHatchNotes;
+            
+            private global::System.Data.DataColumn columnflCargo;
+            
+            private global::System.Data.DataColumn columnflCargoInWall;
+            
+            private global::System.Data.DataColumn columnflCargoInFloor;
+            
+            private global::System.Data.DataColumn columnflCargoOutLow;
+            
+            private global::System.Data.DataColumn columnflCargoOutMed;
+            
+            private global::System.Data.DataColumn columnflCargoOutHigh;
+            
+            private global::System.Data.DataColumn columntxCargoNotes;
+            
+            private global::System.Data.DataColumn columntele_flClimb;
+            
+            private global::System.Data.DataColumn columntele_idClimbType;
+            
+            private global::System.Data.DataColumn columntele_idClimbGrab;
+            
+            private global::System.Data.DataColumn columntele_idClimbSpeed;
+            
+            private global::System.Data.DataColumn columntele_numClimbAssists;
+            
+            private global::System.Data.DataColumn columntele_idClimbLevel;
+            
+            private global::System.Data.DataColumn columnimgRobotFront;
+            
+            private global::System.Data.DataColumn columnimgRobotSide;
+            
+            private global::System.Data.DataColumn columntxComments;
+            
+            private global::System.Data.DataColumn columndtCreation;
+            
+            private global::System.Data.DataColumn columndtModified;
+            
+            private global::System.Data.DataColumn columntxComputerName;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingDataTable() {
+                this.TableName = "pitscouting";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal pitscoutingDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected pitscoutingDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn idColumn {
+                get {
+                    return this.columnid;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn eventColumn {
+                get {
+                    return this.columnevent;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn teamColumn {
+                get {
+                    return this.columnteam;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn txScoutNameColumn {
+                get {
+                    return this.columntxScoutName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flAutoColumn {
+                get {
+                    return this.columnflAuto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn audo_idAutoTypeColumn {
+                get {
+                    return this.columnaudo_idAutoType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_idStartObjectColumn {
+                get {
+                    return this.columnauto_idStartObject;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_flHatchColumn {
+                get {
+                    return this.columnauto_flHatch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_intHatchDeliverColumn {
+                get {
+                    return this.columnauto_intHatchDeliver;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_idHatchDeliverHeightColumn {
+                get {
+                    return this.columnauto_idHatchDeliverHeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_flCargoColumn {
+                get {
+                    return this.columnauto_flCargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_intCargoDeliveredColumn {
+                get {
+                    return this.columnauto_intCargoDelivered;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn auto_idCargoDeliveryHeightColumn {
+                get {
+                    return this.columnauto_idCargoDeliveryHeight;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flHatchColumn {
+                get {
+                    return this.columnflHatch;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flHatchInWallColumn {
+                get {
+                    return this.columnflHatchInWall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flHatchInFloorColumn {
+                get {
+                    return this.columnflHatchInFloor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flhatchOutLowColumn {
+                get {
+                    return this.columnflhatchOutLow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flHatchOutMedColumn {
+                get {
+                    return this.columnflHatchOutMed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flHatchOutHighColumn {
+                get {
+                    return this.columnflHatchOutHigh;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn txHatchNotesColumn {
+                get {
+                    return this.columntxHatchNotes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoColumn {
+                get {
+                    return this.columnflCargo;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoInWallColumn {
+                get {
+                    return this.columnflCargoInWall;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoInFloorColumn {
+                get {
+                    return this.columnflCargoInFloor;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoOutLowColumn {
+                get {
+                    return this.columnflCargoOutLow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoOutMedColumn {
+                get {
+                    return this.columnflCargoOutMed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn flCargoOutHighColumn {
+                get {
+                    return this.columnflCargoOutHigh;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn txCargoNotesColumn {
+                get {
+                    return this.columntxCargoNotes;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_flClimbColumn {
+                get {
+                    return this.columntele_flClimb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_idClimbTypeColumn {
+                get {
+                    return this.columntele_idClimbType;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_idClimbGrabColumn {
+                get {
+                    return this.columntele_idClimbGrab;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_idClimbSpeedColumn {
+                get {
+                    return this.columntele_idClimbSpeed;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_numClimbAssistsColumn {
+                get {
+                    return this.columntele_numClimbAssists;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn tele_idClimbLevelColumn {
+                get {
+                    return this.columntele_idClimbLevel;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn imgRobotFrontColumn {
+                get {
+                    return this.columnimgRobotFront;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn imgRobotSideColumn {
+                get {
+                    return this.columnimgRobotSide;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn txCommentsColumn {
+                get {
+                    return this.columntxComments;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dtCreationColumn {
+                get {
+                    return this.columndtCreation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn dtModifiedColumn {
+                get {
+                    return this.columndtModified;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn txComputerNameColumn {
+                get {
+                    return this.columntxComputerName;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRow this[int index] {
+                get {
+                    return ((pitscoutingRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pitscoutingRowChangeEventHandler pitscoutingRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pitscoutingRowChangeEventHandler pitscoutingRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pitscoutingRowChangeEventHandler pitscoutingRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event pitscoutingRowChangeEventHandler pitscoutingRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddpitscoutingRow(pitscoutingRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRow AddpitscoutingRow(
+                        string _event, 
+                        int team, 
+                        string txScoutName, 
+                        bool flAuto, 
+                        int audo_idAutoType, 
+                        int auto_idStartObject, 
+                        bool auto_flHatch, 
+                        int auto_intHatchDeliver, 
+                        int auto_idHatchDeliverHeight, 
+                        bool auto_flCargo, 
+                        int auto_intCargoDelivered, 
+                        int auto_idCargoDeliveryHeight, 
+                        bool flHatch, 
+                        bool flHatchInWall, 
+                        bool flHatchInFloor, 
+                        bool flhatchOutLow, 
+                        bool flHatchOutMed, 
+                        bool flHatchOutHigh, 
+                        string txHatchNotes, 
+                        bool flCargo, 
+                        bool flCargoInWall, 
+                        bool flCargoInFloor, 
+                        bool flCargoOutLow, 
+                        bool flCargoOutMed, 
+                        bool flCargoOutHigh, 
+                        string txCargoNotes, 
+                        bool tele_flClimb, 
+                        int tele_idClimbType, 
+                        int tele_idClimbGrab, 
+                        int tele_idClimbSpeed, 
+                        int tele_numClimbAssists, 
+                        int tele_idClimbLevel, 
+                        string imgRobotFront, 
+                        string imgRobotSide, 
+                        string txComments, 
+                        System.DateTime dtCreation, 
+                        System.DateTime dtModified, 
+                        string txComputerName) {
+                pitscoutingRow rowpitscoutingRow = ((pitscoutingRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        _event,
+                        team,
+                        txScoutName,
+                        flAuto,
+                        audo_idAutoType,
+                        auto_idStartObject,
+                        auto_flHatch,
+                        auto_intHatchDeliver,
+                        auto_idHatchDeliverHeight,
+                        auto_flCargo,
+                        auto_intCargoDelivered,
+                        auto_idCargoDeliveryHeight,
+                        flHatch,
+                        flHatchInWall,
+                        flHatchInFloor,
+                        flhatchOutLow,
+                        flHatchOutMed,
+                        flHatchOutHigh,
+                        txHatchNotes,
+                        flCargo,
+                        flCargoInWall,
+                        flCargoInFloor,
+                        flCargoOutLow,
+                        flCargoOutMed,
+                        flCargoOutHigh,
+                        txCargoNotes,
+                        tele_flClimb,
+                        tele_idClimbType,
+                        tele_idClimbGrab,
+                        tele_idClimbSpeed,
+                        tele_numClimbAssists,
+                        tele_idClimbLevel,
+                        imgRobotFront,
+                        imgRobotSide,
+                        txComments,
+                        dtCreation,
+                        dtModified,
+                        txComputerName};
+                rowpitscoutingRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowpitscoutingRow);
+                return rowpitscoutingRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRow FindByid(int id) {
+                return ((pitscoutingRow)(this.Rows.Find(new object[] {
+                            id})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                pitscoutingDataTable cln = ((pitscoutingDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new pitscoutingDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnid = base.Columns["id"];
+                this.columnevent = base.Columns["event"];
+                this.columnteam = base.Columns["team"];
+                this.columntxScoutName = base.Columns["txScoutName"];
+                this.columnflAuto = base.Columns["flAuto"];
+                this.columnaudo_idAutoType = base.Columns["audo_idAutoType"];
+                this.columnauto_idStartObject = base.Columns["auto_idStartObject"];
+                this.columnauto_flHatch = base.Columns["auto_flHatch"];
+                this.columnauto_intHatchDeliver = base.Columns["auto_intHatchDeliver"];
+                this.columnauto_idHatchDeliverHeight = base.Columns["auto_idHatchDeliverHeight"];
+                this.columnauto_flCargo = base.Columns["auto_flCargo"];
+                this.columnauto_intCargoDelivered = base.Columns["auto_intCargoDelivered"];
+                this.columnauto_idCargoDeliveryHeight = base.Columns["auto_idCargoDeliveryHeight"];
+                this.columnflHatch = base.Columns["flHatch"];
+                this.columnflHatchInWall = base.Columns["flHatchInWall"];
+                this.columnflHatchInFloor = base.Columns["flHatchInFloor"];
+                this.columnflhatchOutLow = base.Columns["flhatchOutLow"];
+                this.columnflHatchOutMed = base.Columns["flHatchOutMed"];
+                this.columnflHatchOutHigh = base.Columns["flHatchOutHigh"];
+                this.columntxHatchNotes = base.Columns["txHatchNotes"];
+                this.columnflCargo = base.Columns["flCargo"];
+                this.columnflCargoInWall = base.Columns["flCargoInWall"];
+                this.columnflCargoInFloor = base.Columns["flCargoInFloor"];
+                this.columnflCargoOutLow = base.Columns["flCargoOutLow"];
+                this.columnflCargoOutMed = base.Columns["flCargoOutMed"];
+                this.columnflCargoOutHigh = base.Columns["flCargoOutHigh"];
+                this.columntxCargoNotes = base.Columns["txCargoNotes"];
+                this.columntele_flClimb = base.Columns["tele_flClimb"];
+                this.columntele_idClimbType = base.Columns["tele_idClimbType"];
+                this.columntele_idClimbGrab = base.Columns["tele_idClimbGrab"];
+                this.columntele_idClimbSpeed = base.Columns["tele_idClimbSpeed"];
+                this.columntele_numClimbAssists = base.Columns["tele_numClimbAssists"];
+                this.columntele_idClimbLevel = base.Columns["tele_idClimbLevel"];
+                this.columnimgRobotFront = base.Columns["imgRobotFront"];
+                this.columnimgRobotSide = base.Columns["imgRobotSide"];
+                this.columntxComments = base.Columns["txComments"];
+                this.columndtCreation = base.Columns["dtCreation"];
+                this.columndtModified = base.Columns["dtModified"];
+                this.columntxComputerName = base.Columns["txComputerName"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnid = new global::System.Data.DataColumn("id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid);
+                this.columnevent = new global::System.Data.DataColumn("event", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnPropNameInTable", "eventColumn");
+                this.columnevent.ExtendedProperties.Add("Generator_ColumnVarNameInTable", "columnevent");
+                this.columnevent.ExtendedProperties.Add("Generator_UserColumnName", "event");
+                base.Columns.Add(this.columnevent);
+                this.columnteam = new global::System.Data.DataColumn("team", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnteam);
+                this.columntxScoutName = new global::System.Data.DataColumn("txScoutName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxScoutName);
+                this.columnflAuto = new global::System.Data.DataColumn("flAuto", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflAuto);
+                this.columnaudo_idAutoType = new global::System.Data.DataColumn("audo_idAutoType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnaudo_idAutoType);
+                this.columnauto_idStartObject = new global::System.Data.DataColumn("auto_idStartObject", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_idStartObject);
+                this.columnauto_flHatch = new global::System.Data.DataColumn("auto_flHatch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_flHatch);
+                this.columnauto_intHatchDeliver = new global::System.Data.DataColumn("auto_intHatchDeliver", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_intHatchDeliver);
+                this.columnauto_idHatchDeliverHeight = new global::System.Data.DataColumn("auto_idHatchDeliverHeight", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_idHatchDeliverHeight);
+                this.columnauto_flCargo = new global::System.Data.DataColumn("auto_flCargo", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_flCargo);
+                this.columnauto_intCargoDelivered = new global::System.Data.DataColumn("auto_intCargoDelivered", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_intCargoDelivered);
+                this.columnauto_idCargoDeliveryHeight = new global::System.Data.DataColumn("auto_idCargoDeliveryHeight", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnauto_idCargoDeliveryHeight);
+                this.columnflHatch = new global::System.Data.DataColumn("flHatch", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflHatch);
+                this.columnflHatchInWall = new global::System.Data.DataColumn("flHatchInWall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflHatchInWall);
+                this.columnflHatchInFloor = new global::System.Data.DataColumn("flHatchInFloor", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflHatchInFloor);
+                this.columnflhatchOutLow = new global::System.Data.DataColumn("flhatchOutLow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflhatchOutLow);
+                this.columnflHatchOutMed = new global::System.Data.DataColumn("flHatchOutMed", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflHatchOutMed);
+                this.columnflHatchOutHigh = new global::System.Data.DataColumn("flHatchOutHigh", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflHatchOutHigh);
+                this.columntxHatchNotes = new global::System.Data.DataColumn("txHatchNotes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxHatchNotes);
+                this.columnflCargo = new global::System.Data.DataColumn("flCargo", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargo);
+                this.columnflCargoInWall = new global::System.Data.DataColumn("flCargoInWall", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargoInWall);
+                this.columnflCargoInFloor = new global::System.Data.DataColumn("flCargoInFloor", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargoInFloor);
+                this.columnflCargoOutLow = new global::System.Data.DataColumn("flCargoOutLow", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargoOutLow);
+                this.columnflCargoOutMed = new global::System.Data.DataColumn("flCargoOutMed", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargoOutMed);
+                this.columnflCargoOutHigh = new global::System.Data.DataColumn("flCargoOutHigh", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnflCargoOutHigh);
+                this.columntxCargoNotes = new global::System.Data.DataColumn("txCargoNotes", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxCargoNotes);
+                this.columntele_flClimb = new global::System.Data.DataColumn("tele_flClimb", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_flClimb);
+                this.columntele_idClimbType = new global::System.Data.DataColumn("tele_idClimbType", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_idClimbType);
+                this.columntele_idClimbGrab = new global::System.Data.DataColumn("tele_idClimbGrab", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_idClimbGrab);
+                this.columntele_idClimbSpeed = new global::System.Data.DataColumn("tele_idClimbSpeed", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_idClimbSpeed);
+                this.columntele_numClimbAssists = new global::System.Data.DataColumn("tele_numClimbAssists", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_numClimbAssists);
+                this.columntele_idClimbLevel = new global::System.Data.DataColumn("tele_idClimbLevel", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntele_idClimbLevel);
+                this.columnimgRobotFront = new global::System.Data.DataColumn("imgRobotFront", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimgRobotFront);
+                this.columnimgRobotSide = new global::System.Data.DataColumn("imgRobotSide", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnimgRobotSide);
+                this.columntxComments = new global::System.Data.DataColumn("txComments", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxComments);
+                this.columndtCreation = new global::System.Data.DataColumn("dtCreation", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndtCreation);
+                this.columndtModified = new global::System.Data.DataColumn("dtModified", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columndtModified);
+                this.columntxComputerName = new global::System.Data.DataColumn("txComputerName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntxComputerName);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnid}, true));
+                this.columnid.AutoIncrement = true;
+                this.columnid.AutoIncrementSeed = -1;
+                this.columnid.AutoIncrementStep = -1;
+                this.columnid.AllowDBNull = false;
+                this.columnid.ReadOnly = true;
+                this.columnid.Unique = true;
+                this.columnevent.AllowDBNull = false;
+                this.columnevent.MaxLength = 2147483647;
+                this.columnteam.AllowDBNull = false;
+                this.columntxScoutName.AllowDBNull = false;
+                this.columntxScoutName.MaxLength = 2147483647;
+                this.columnflAuto.AllowDBNull = false;
+                this.columnaudo_idAutoType.AllowDBNull = false;
+                this.columnauto_idStartObject.AllowDBNull = false;
+                this.columnauto_flHatch.AllowDBNull = false;
+                this.columnauto_intHatchDeliver.AllowDBNull = false;
+                this.columnauto_idHatchDeliverHeight.AllowDBNull = false;
+                this.columnauto_flCargo.AllowDBNull = false;
+                this.columnauto_intCargoDelivered.AllowDBNull = false;
+                this.columnauto_idCargoDeliveryHeight.AllowDBNull = false;
+                this.columnflHatch.AllowDBNull = false;
+                this.columnflHatchInWall.AllowDBNull = false;
+                this.columnflHatchInFloor.AllowDBNull = false;
+                this.columnflhatchOutLow.AllowDBNull = false;
+                this.columnflHatchOutMed.AllowDBNull = false;
+                this.columnflHatchOutHigh.AllowDBNull = false;
+                this.columntxHatchNotes.AllowDBNull = false;
+                this.columntxHatchNotes.MaxLength = 2147483647;
+                this.columnflCargo.AllowDBNull = false;
+                this.columnflCargoInWall.AllowDBNull = false;
+                this.columnflCargoInFloor.AllowDBNull = false;
+                this.columnflCargoOutLow.AllowDBNull = false;
+                this.columnflCargoOutMed.AllowDBNull = false;
+                this.columnflCargoOutHigh.AllowDBNull = false;
+                this.columntxCargoNotes.AllowDBNull = false;
+                this.columntxCargoNotes.MaxLength = 2147483647;
+                this.columntele_flClimb.AllowDBNull = false;
+                this.columntele_idClimbType.AllowDBNull = false;
+                this.columntele_idClimbGrab.AllowDBNull = false;
+                this.columntele_idClimbSpeed.AllowDBNull = false;
+                this.columntele_numClimbAssists.AllowDBNull = false;
+                this.columntele_idClimbLevel.AllowDBNull = false;
+                this.columnimgRobotFront.AllowDBNull = false;
+                this.columnimgRobotFront.MaxLength = 2147483647;
+                this.columnimgRobotSide.AllowDBNull = false;
+                this.columnimgRobotSide.MaxLength = 2147483647;
+                this.columntxComments.AllowDBNull = false;
+                this.columntxComments.MaxLength = 2147483647;
+                this.columndtCreation.AllowDBNull = false;
+                this.columndtModified.AllowDBNull = false;
+                this.columntxComputerName.AllowDBNull = false;
+                this.columntxComputerName.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRow NewpitscoutingRow() {
+                return ((pitscoutingRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new pitscoutingRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(pitscoutingRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.pitscoutingRowChanged != null)) {
+                    this.pitscoutingRowChanged(this, new pitscoutingRowChangeEvent(((pitscoutingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.pitscoutingRowChanging != null)) {
+                    this.pitscoutingRowChanging(this, new pitscoutingRowChangeEvent(((pitscoutingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.pitscoutingRowDeleted != null)) {
+                    this.pitscoutingRowDeleted(this, new pitscoutingRowChangeEvent(((pitscoutingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.pitscoutingRowDeleting != null)) {
+                    this.pitscoutingRowDeleting(this, new pitscoutingRowChangeEvent(((pitscoutingRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovepitscoutingRow(pitscoutingRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                CspAnalyzeDataSet ds = new CspAnalyzeDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "pitscoutingDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class matchscoutingRow : global::System.Data.DataRow {
@@ -2836,6 +3752,450 @@ namespace CSP_Analyze {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class pitscoutingRow : global::System.Data.DataRow {
+            
+            private pitscoutingDataTable tablepitscouting;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal pitscoutingRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablepitscouting = ((pitscoutingDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int id {
+                get {
+                    return ((int)(this[this.tablepitscouting.idColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.idColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string _event {
+                get {
+                    return ((string)(this[this.tablepitscouting.eventColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.eventColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int team {
+                get {
+                    return ((int)(this[this.tablepitscouting.teamColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.teamColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string txScoutName {
+                get {
+                    return ((string)(this[this.tablepitscouting.txScoutNameColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.txScoutNameColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flAuto {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flAutoColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flAutoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int audo_idAutoType {
+                get {
+                    return ((int)(this[this.tablepitscouting.audo_idAutoTypeColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.audo_idAutoTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int auto_idStartObject {
+                get {
+                    return ((int)(this[this.tablepitscouting.auto_idStartObjectColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_idStartObjectColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool auto_flHatch {
+                get {
+                    return ((bool)(this[this.tablepitscouting.auto_flHatchColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_flHatchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int auto_intHatchDeliver {
+                get {
+                    return ((int)(this[this.tablepitscouting.auto_intHatchDeliverColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_intHatchDeliverColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int auto_idHatchDeliverHeight {
+                get {
+                    return ((int)(this[this.tablepitscouting.auto_idHatchDeliverHeightColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_idHatchDeliverHeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool auto_flCargo {
+                get {
+                    return ((bool)(this[this.tablepitscouting.auto_flCargoColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_flCargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int auto_intCargoDelivered {
+                get {
+                    return ((int)(this[this.tablepitscouting.auto_intCargoDeliveredColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_intCargoDeliveredColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int auto_idCargoDeliveryHeight {
+                get {
+                    return ((int)(this[this.tablepitscouting.auto_idCargoDeliveryHeightColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.auto_idCargoDeliveryHeightColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flHatch {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flHatchColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flHatchColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flHatchInWall {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flHatchInWallColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flHatchInWallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flHatchInFloor {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flHatchInFloorColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flHatchInFloorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flhatchOutLow {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flhatchOutLowColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flhatchOutLowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flHatchOutMed {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flHatchOutMedColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flHatchOutMedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flHatchOutHigh {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flHatchOutHighColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flHatchOutHighColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string txHatchNotes {
+                get {
+                    return ((string)(this[this.tablepitscouting.txHatchNotesColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.txHatchNotesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargo {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargoInWall {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoInWallColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoInWallColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargoInFloor {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoInFloorColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoInFloorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargoOutLow {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoOutLowColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoOutLowColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargoOutMed {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoOutMedColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoOutMedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool flCargoOutHigh {
+                get {
+                    return ((bool)(this[this.tablepitscouting.flCargoOutHighColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.flCargoOutHighColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string txCargoNotes {
+                get {
+                    return ((string)(this[this.tablepitscouting.txCargoNotesColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.txCargoNotesColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool tele_flClimb {
+                get {
+                    return ((bool)(this[this.tablepitscouting.tele_flClimbColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_flClimbColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tele_idClimbType {
+                get {
+                    return ((int)(this[this.tablepitscouting.tele_idClimbTypeColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_idClimbTypeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tele_idClimbGrab {
+                get {
+                    return ((int)(this[this.tablepitscouting.tele_idClimbGrabColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_idClimbGrabColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tele_idClimbSpeed {
+                get {
+                    return ((int)(this[this.tablepitscouting.tele_idClimbSpeedColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_idClimbSpeedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tele_numClimbAssists {
+                get {
+                    return ((int)(this[this.tablepitscouting.tele_numClimbAssistsColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_numClimbAssistsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int tele_idClimbLevel {
+                get {
+                    return ((int)(this[this.tablepitscouting.tele_idClimbLevelColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.tele_idClimbLevelColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string imgRobotFront {
+                get {
+                    return ((string)(this[this.tablepitscouting.imgRobotFrontColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.imgRobotFrontColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string imgRobotSide {
+                get {
+                    return ((string)(this[this.tablepitscouting.imgRobotSideColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.imgRobotSideColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string txComments {
+                get {
+                    return ((string)(this[this.tablepitscouting.txCommentsColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.txCommentsColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime dtCreation {
+                get {
+                    return ((global::System.DateTime)(this[this.tablepitscouting.dtCreationColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.dtCreationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime dtModified {
+                get {
+                    return ((global::System.DateTime)(this[this.tablepitscouting.dtModifiedColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.dtModifiedColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string txComputerName {
+                get {
+                    return ((string)(this[this.tablepitscouting.txComputerNameColumn]));
+                }
+                set {
+                    this[this.tablepitscouting.txComputerNameColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -2855,6 +4215,40 @@ namespace CSP_Analyze {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public matchscoutingRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class pitscoutingRowChangeEvent : global::System.EventArgs {
+            
+            private pitscoutingRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRowChangeEvent(pitscoutingRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public pitscoutingRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4720,6 +6114,976 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
     }
     
     /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class pitscoutingTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public pitscoutingTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "pitscouting";
+            tableMapping.ColumnMappings.Add("id", "id");
+            tableMapping.ColumnMappings.Add("event", "event");
+            tableMapping.ColumnMappings.Add("team", "team");
+            tableMapping.ColumnMappings.Add("txScoutName", "txScoutName");
+            tableMapping.ColumnMappings.Add("flAuto", "flAuto");
+            tableMapping.ColumnMappings.Add("audo_idAutoType", "audo_idAutoType");
+            tableMapping.ColumnMappings.Add("auto_idStartObject", "auto_idStartObject");
+            tableMapping.ColumnMappings.Add("auto_flHatch", "auto_flHatch");
+            tableMapping.ColumnMappings.Add("auto_intHatchDeliver", "auto_intHatchDeliver");
+            tableMapping.ColumnMappings.Add("auto_idHatchDeliverHeight", "auto_idHatchDeliverHeight");
+            tableMapping.ColumnMappings.Add("auto_flCargo", "auto_flCargo");
+            tableMapping.ColumnMappings.Add("auto_intCargoDelivered", "auto_intCargoDelivered");
+            tableMapping.ColumnMappings.Add("auto_idCargoDeliveryHeight", "auto_idCargoDeliveryHeight");
+            tableMapping.ColumnMappings.Add("flHatch", "flHatch");
+            tableMapping.ColumnMappings.Add("flHatchInWall", "flHatchInWall");
+            tableMapping.ColumnMappings.Add("flHatchInFloor", "flHatchInFloor");
+            tableMapping.ColumnMappings.Add("flhatchOutLow", "flhatchOutLow");
+            tableMapping.ColumnMappings.Add("flHatchOutMed", "flHatchOutMed");
+            tableMapping.ColumnMappings.Add("flHatchOutHigh", "flHatchOutHigh");
+            tableMapping.ColumnMappings.Add("txHatchNotes", "txHatchNotes");
+            tableMapping.ColumnMappings.Add("flCargo", "flCargo");
+            tableMapping.ColumnMappings.Add("flCargoInWall", "flCargoInWall");
+            tableMapping.ColumnMappings.Add("flCargoInFloor", "flCargoInFloor");
+            tableMapping.ColumnMappings.Add("flCargoOutLow", "flCargoOutLow");
+            tableMapping.ColumnMappings.Add("flCargoOutMed", "flCargoOutMed");
+            tableMapping.ColumnMappings.Add("flCargoOutHigh", "flCargoOutHigh");
+            tableMapping.ColumnMappings.Add("txCargoNotes", "txCargoNotes");
+            tableMapping.ColumnMappings.Add("tele_flClimb", "tele_flClimb");
+            tableMapping.ColumnMappings.Add("tele_idClimbType", "tele_idClimbType");
+            tableMapping.ColumnMappings.Add("tele_idClimbGrab", "tele_idClimbGrab");
+            tableMapping.ColumnMappings.Add("tele_idClimbSpeed", "tele_idClimbSpeed");
+            tableMapping.ColumnMappings.Add("tele_numClimbAssists", "tele_numClimbAssists");
+            tableMapping.ColumnMappings.Add("tele_idClimbLevel", "tele_idClimbLevel");
+            tableMapping.ColumnMappings.Add("imgRobotFront", "imgRobotFront");
+            tableMapping.ColumnMappings.Add("imgRobotSide", "imgRobotSide");
+            tableMapping.ColumnMappings.Add("txComments", "txComments");
+            tableMapping.ColumnMappings.Add("dtCreation", "dtCreation");
+            tableMapping.ColumnMappings.Add("dtModified", "dtModified");
+            tableMapping.ColumnMappings.Add("txComputerName", "txComputerName");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [pitscouting] WHERE (([id] = @Original_id) AND ([team] = @Original_te" +
+                "am) AND ([flAuto] = @Original_flAuto) AND ([audo_idAutoType] = @Original_audo_id" +
+                "AutoType) AND ([auto_idStartObject] = @Original_auto_idStartObject) AND ([auto_f" +
+                "lHatch] = @Original_auto_flHatch) AND ([auto_intHatchDeliver] = @Original_auto_i" +
+                "ntHatchDeliver) AND ([auto_idHatchDeliverHeight] = @Original_auto_idHatchDeliver" +
+                "Height) AND ([auto_flCargo] = @Original_auto_flCargo) AND ([auto_intCargoDeliver" +
+                "ed] = @Original_auto_intCargoDelivered) AND ([auto_idCargoDeliveryHeight] = @Ori" +
+                "ginal_auto_idCargoDeliveryHeight) AND ([flHatch] = @Original_flHatch) AND ([flHa" +
+                "tchInWall] = @Original_flHatchInWall) AND ([flHatchInFloor] = @Original_flHatchI" +
+                "nFloor) AND ([flhatchOutLow] = @Original_flhatchOutLow) AND ([flHatchOutMed] = @" +
+                "Original_flHatchOutMed) AND ([flHatchOutHigh] = @Original_flHatchOutHigh) AND ([" +
+                "flCargo] = @Original_flCargo) AND ([flCargoInWall] = @Original_flCargoInWall) AN" +
+                "D ([flCargoInFloor] = @Original_flCargoInFloor) AND ([flCargoOutLow] = @Original" +
+                "_flCargoOutLow) AND ([flCargoOutMed] = @Original_flCargoOutMed) AND ([flCargoOut" +
+                "High] = @Original_flCargoOutHigh) AND ([tele_flClimb] = @Original_tele_flClimb) " +
+                "AND ([tele_idClimbType] = @Original_tele_idClimbType) AND ([tele_idClimbGrab] = " +
+                "@Original_tele_idClimbGrab) AND ([tele_idClimbSpeed] = @Original_tele_idClimbSpe" +
+                "ed) AND ([tele_numClimbAssists] = @Original_tele_numClimbAssists) AND ([tele_idC" +
+                "limbLevel] = @Original_tele_idClimbLevel) AND ([dtCreation] = @Original_dtCreati" +
+                "on) AND ([dtModified] = @Original_dtModified))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flAuto", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flAuto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_audo_idAutoType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "audo_idAutoType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idStartObject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idStartObject", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flHatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_intHatchDeliver", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intHatchDeliver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idHatchDeliverHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idHatchDeliverHeight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flCargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_intCargoDelivered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intCargoDelivered", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idCargoDeliveryHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idCargoDeliveryHeight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInWall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInFloor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flhatchOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flhatchOutLow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutMed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutHigh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInWall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInFloor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutLow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutMed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutHigh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_flClimb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_flClimb", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbGrab", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbGrab", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbSpeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbSpeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_numClimbAssists", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_numClimbAssists", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dtCreation", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtCreation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dtModified", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtModified", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [pitscouting] ([event], [team], [txScoutName], [flAuto], [audo_idAuto" +
+                "Type], [auto_idStartObject], [auto_flHatch], [auto_intHatchDeliver], [auto_idHat" +
+                "chDeliverHeight], [auto_flCargo], [auto_intCargoDelivered], [auto_idCargoDeliver" +
+                "yHeight], [flHatch], [flHatchInWall], [flHatchInFloor], [flhatchOutLow], [flHatc" +
+                "hOutMed], [flHatchOutHigh], [txHatchNotes], [flCargo], [flCargoInWall], [flCargo" +
+                "InFloor], [flCargoOutLow], [flCargoOutMed], [flCargoOutHigh], [txCargoNotes], [t" +
+                "ele_flClimb], [tele_idClimbType], [tele_idClimbGrab], [tele_idClimbSpeed], [tele" +
+                "_numClimbAssists], [tele_idClimbLevel], [imgRobotFront], [imgRobotSide], [txComm" +
+                "ents], [dtCreation], [dtModified], [txComputerName]) VALUES (@event, @team, @txS" +
+                "coutName, @flAuto, @audo_idAutoType, @auto_idStartObject, @auto_flHatch, @auto_i" +
+                "ntHatchDeliver, @auto_idHatchDeliverHeight, @auto_flCargo, @auto_intCargoDeliver" +
+                "ed, @auto_idCargoDeliveryHeight, @flHatch, @flHatchInWall, @flHatchInFloor, @flh" +
+                "atchOutLow, @flHatchOutMed, @flHatchOutHigh, @txHatchNotes, @flCargo, @flCargoIn" +
+                "Wall, @flCargoInFloor, @flCargoOutLow, @flCargoOutMed, @flCargoOutHigh, @txCargo" +
+                "Notes, @tele_flClimb, @tele_idClimbType, @tele_idClimbGrab, @tele_idClimbSpeed, " +
+                "@tele_numClimbAssists, @tele_idClimbLevel, @imgRobotFront, @imgRobotSide, @txCom" +
+                "ments, @dtCreation, @dtModified, @txComputerName);\r\nSELECT id, event, team, txSc" +
+                "outName, flAuto, audo_idAutoType, auto_idStartObject, auto_flHatch, auto_intHatc" +
+                "hDeliver, auto_idHatchDeliverHeight, auto_flCargo, auto_intCargoDelivered, auto_" +
+                "idCargoDeliveryHeight, flHatch, flHatchInWall, flHatchInFloor, flhatchOutLow, fl" +
+                "HatchOutMed, flHatchOutHigh, txHatchNotes, flCargo, flCargoInWall, flCargoInFloo" +
+                "r, flCargoOutLow, flCargoOutMed, flCargoOutHigh, txCargoNotes, tele_flClimb, tel" +
+                "e_idClimbType, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_i" +
+                "dClimbLevel, imgRobotFront, imgRobotSide, txComments, dtCreation, dtModified, tx" +
+                "ComputerName FROM pitscouting WHERE (id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txScoutName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txScoutName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flAuto", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flAuto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@audo_idAutoType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "audo_idAutoType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idStartObject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idStartObject", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flHatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_intHatchDeliver", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intHatchDeliver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idHatchDeliverHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idHatchDeliverHeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flCargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_intCargoDelivered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intCargoDelivered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idCargoDeliveryHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idCargoDeliveryHeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInWall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInFloor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flhatchOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flhatchOutLow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutMed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutHigh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txHatchNotes", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txHatchNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInWall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInFloor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutLow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutMed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutHigh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txCargoNotes", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txCargoNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_flClimb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_flClimb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbGrab", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbGrab", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbSpeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbSpeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_numClimbAssists", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_numClimbAssists", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@imgRobotFront", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "imgRobotFront", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@imgRobotSide", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "imgRobotSide", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txComments", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txComments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dtCreation", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtCreation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dtModified", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtModified", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txComputerName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txComputerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [pitscouting] SET [event] = @event, [team] = @team, [txScoutName] = @txSco" +
+                "utName, [flAuto] = @flAuto, [audo_idAutoType] = @audo_idAutoType, [auto_idStartO" +
+                "bject] = @auto_idStartObject, [auto_flHatch] = @auto_flHatch, [auto_intHatchDeli" +
+                "ver] = @auto_intHatchDeliver, [auto_idHatchDeliverHeight] = @auto_idHatchDeliver" +
+                "Height, [auto_flCargo] = @auto_flCargo, [auto_intCargoDelivered] = @auto_intCarg" +
+                "oDelivered, [auto_idCargoDeliveryHeight] = @auto_idCargoDeliveryHeight, [flHatch" +
+                "] = @flHatch, [flHatchInWall] = @flHatchInWall, [flHatchInFloor] = @flHatchInFlo" +
+                "or, [flhatchOutLow] = @flhatchOutLow, [flHatchOutMed] = @flHatchOutMed, [flHatch" +
+                "OutHigh] = @flHatchOutHigh, [txHatchNotes] = @txHatchNotes, [flCargo] = @flCargo" +
+                ", [flCargoInWall] = @flCargoInWall, [flCargoInFloor] = @flCargoInFloor, [flCargo" +
+                "OutLow] = @flCargoOutLow, [flCargoOutMed] = @flCargoOutMed, [flCargoOutHigh] = @" +
+                "flCargoOutHigh, [txCargoNotes] = @txCargoNotes, [tele_flClimb] = @tele_flClimb, " +
+                "[tele_idClimbType] = @tele_idClimbType, [tele_idClimbGrab] = @tele_idClimbGrab, " +
+                "[tele_idClimbSpeed] = @tele_idClimbSpeed, [tele_numClimbAssists] = @tele_numClim" +
+                "bAssists, [tele_idClimbLevel] = @tele_idClimbLevel, [imgRobotFront] = @imgRobotF" +
+                "ront, [imgRobotSide] = @imgRobotSide, [txComments] = @txComments, [dtCreation] =" +
+                " @dtCreation, [dtModified] = @dtModified, [txComputerName] = @txComputerName WHE" +
+                "RE (([id] = @Original_id) AND ([team] = @Original_team) AND ([flAuto] = @Origina" +
+                "l_flAuto) AND ([audo_idAutoType] = @Original_audo_idAutoType) AND ([auto_idStart" +
+                "Object] = @Original_auto_idStartObject) AND ([auto_flHatch] = @Original_auto_flH" +
+                "atch) AND ([auto_intHatchDeliver] = @Original_auto_intHatchDeliver) AND ([auto_i" +
+                "dHatchDeliverHeight] = @Original_auto_idHatchDeliverHeight) AND ([auto_flCargo] " +
+                "= @Original_auto_flCargo) AND ([auto_intCargoDelivered] = @Original_auto_intCarg" +
+                "oDelivered) AND ([auto_idCargoDeliveryHeight] = @Original_auto_idCargoDeliveryHe" +
+                "ight) AND ([flHatch] = @Original_flHatch) AND ([flHatchInWall] = @Original_flHat" +
+                "chInWall) AND ([flHatchInFloor] = @Original_flHatchInFloor) AND ([flhatchOutLow]" +
+                " = @Original_flhatchOutLow) AND ([flHatchOutMed] = @Original_flHatchOutMed) AND " +
+                "([flHatchOutHigh] = @Original_flHatchOutHigh) AND ([flCargo] = @Original_flCargo" +
+                ") AND ([flCargoInWall] = @Original_flCargoInWall) AND ([flCargoInFloor] = @Origi" +
+                "nal_flCargoInFloor) AND ([flCargoOutLow] = @Original_flCargoOutLow) AND ([flCarg" +
+                "oOutMed] = @Original_flCargoOutMed) AND ([flCargoOutHigh] = @Original_flCargoOut" +
+                "High) AND ([tele_flClimb] = @Original_tele_flClimb) AND ([tele_idClimbType] = @O" +
+                "riginal_tele_idClimbType) AND ([tele_idClimbGrab] = @Original_tele_idClimbGrab) " +
+                "AND ([tele_idClimbSpeed] = @Original_tele_idClimbSpeed) AND ([tele_numClimbAssis" +
+                "ts] = @Original_tele_numClimbAssists) AND ([tele_idClimbLevel] = @Original_tele_" +
+                "idClimbLevel) AND ([dtCreation] = @Original_dtCreation) AND ([dtModified] = @Ori" +
+                "ginal_dtModified));\r\nSELECT id, event, team, txScoutName, flAuto, audo_idAutoTyp" +
+                "e, auto_idStartObject, auto_flHatch, auto_intHatchDeliver, auto_idHatchDeliverHe" +
+                "ight, auto_flCargo, auto_intCargoDelivered, auto_idCargoDeliveryHeight, flHatch," +
+                " flHatchInWall, flHatchInFloor, flhatchOutLow, flHatchOutMed, flHatchOutHigh, tx" +
+                "HatchNotes, flCargo, flCargoInWall, flCargoInFloor, flCargoOutLow, flCargoOutMed" +
+                ", flCargoOutHigh, txCargoNotes, tele_flClimb, tele_idClimbType, tele_idClimbGrab" +
+                ", tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, imgRobotFront, img" +
+                "RobotSide, txComments, dtCreation, dtModified, txComputerName FROM pitscouting W" +
+                "HERE (id = @id)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@event", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "event", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txScoutName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txScoutName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flAuto", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flAuto", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@audo_idAutoType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "audo_idAutoType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idStartObject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idStartObject", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flHatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_intHatchDeliver", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intHatchDeliver", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idHatchDeliverHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idHatchDeliverHeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flCargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_intCargoDelivered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intCargoDelivered", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@auto_idCargoDeliveryHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idCargoDeliveryHeight", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatch", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInWall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInFloor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flhatchOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flhatchOutLow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutMed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flHatchOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutHigh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txHatchNotes", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txHatchNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInWall", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInFloor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutLow", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutMed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@flCargoOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutHigh", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txCargoNotes", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txCargoNotes", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_flClimb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_flClimb", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbGrab", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbGrab", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbSpeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbSpeed", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_numClimbAssists", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_numClimbAssists", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@tele_idClimbLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@imgRobotFront", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "imgRobotFront", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@imgRobotSide", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "imgRobotSide", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txComments", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txComments", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dtCreation", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtCreation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dtModified", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtModified", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@txComputerName", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "txComputerName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_team", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "team", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flAuto", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flAuto", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_audo_idAutoType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "audo_idAutoType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idStartObject", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idStartObject", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flHatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_intHatchDeliver", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intHatchDeliver", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idHatchDeliverHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idHatchDeliverHeight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_flCargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_intCargoDelivered", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_intCargoDelivered", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_auto_idCargoDeliveryHeight", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "auto_idCargoDeliveryHeight", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatch", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatch", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInWall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchInFloor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flhatchOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flhatchOutLow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutMed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flHatchOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flHatchOutHigh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoInWall", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInWall", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoInFloor", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoInFloor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutLow", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutLow", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutMed", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutMed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_flCargoOutHigh", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "flCargoOutHigh", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_flClimb", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_flClimb", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbType", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbGrab", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbGrab", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbSpeed", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbSpeed", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_numClimbAssists", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_numClimbAssists", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_tele_idClimbLevel", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "tele_idClimbLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dtCreation", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtCreation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dtModified", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dtModified", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::CSP_Analyze.Properties.Settings.Default.scoutingConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT pitscouting.*\r\nFROM     pitscouting";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(CspAnalyzeDataSet.pitscoutingDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual CspAnalyzeDataSet.pitscoutingDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            CspAnalyzeDataSet.pitscoutingDataTable dataTable = new CspAnalyzeDataSet.pitscoutingDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(CspAnalyzeDataSet.pitscoutingDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(CspAnalyzeDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "pitscouting");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(
+                    int Original_id, 
+                    int Original_team, 
+                    bool Original_flAuto, 
+                    int Original_audo_idAutoType, 
+                    int Original_auto_idStartObject, 
+                    bool Original_auto_flHatch, 
+                    int Original_auto_intHatchDeliver, 
+                    int Original_auto_idHatchDeliverHeight, 
+                    bool Original_auto_flCargo, 
+                    int Original_auto_intCargoDelivered, 
+                    int Original_auto_idCargoDeliveryHeight, 
+                    bool Original_flHatch, 
+                    bool Original_flHatchInWall, 
+                    bool Original_flHatchInFloor, 
+                    bool Original_flhatchOutLow, 
+                    bool Original_flHatchOutMed, 
+                    bool Original_flHatchOutHigh, 
+                    bool Original_flCargo, 
+                    bool Original_flCargoInWall, 
+                    bool Original_flCargoInFloor, 
+                    bool Original_flCargoOutLow, 
+                    bool Original_flCargoOutMed, 
+                    bool Original_flCargoOutHigh, 
+                    bool Original_tele_flClimb, 
+                    int Original_tele_idClimbType, 
+                    int Original_tele_idClimbGrab, 
+                    int Original_tele_idClimbSpeed, 
+                    int Original_tele_numClimbAssists, 
+                    int Original_tele_idClimbLevel, 
+                    System.DateTime Original_dtCreation, 
+                    System.DateTime Original_dtModified) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_team));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((bool)(Original_flAuto));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_audo_idAutoType));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_auto_idStartObject));
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_auto_flHatch));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_auto_intHatchDeliver));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_auto_idHatchDeliverHeight));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((bool)(Original_auto_flCargo));
+            this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_auto_intCargoDelivered));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_auto_idCargoDeliveryHeight));
+            this.Adapter.DeleteCommand.Parameters[11].Value = ((bool)(Original_flHatch));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((bool)(Original_flHatchInWall));
+            this.Adapter.DeleteCommand.Parameters[13].Value = ((bool)(Original_flHatchInFloor));
+            this.Adapter.DeleteCommand.Parameters[14].Value = ((bool)(Original_flhatchOutLow));
+            this.Adapter.DeleteCommand.Parameters[15].Value = ((bool)(Original_flHatchOutMed));
+            this.Adapter.DeleteCommand.Parameters[16].Value = ((bool)(Original_flHatchOutHigh));
+            this.Adapter.DeleteCommand.Parameters[17].Value = ((bool)(Original_flCargo));
+            this.Adapter.DeleteCommand.Parameters[18].Value = ((bool)(Original_flCargoInWall));
+            this.Adapter.DeleteCommand.Parameters[19].Value = ((bool)(Original_flCargoInFloor));
+            this.Adapter.DeleteCommand.Parameters[20].Value = ((bool)(Original_flCargoOutLow));
+            this.Adapter.DeleteCommand.Parameters[21].Value = ((bool)(Original_flCargoOutMed));
+            this.Adapter.DeleteCommand.Parameters[22].Value = ((bool)(Original_flCargoOutHigh));
+            this.Adapter.DeleteCommand.Parameters[23].Value = ((bool)(Original_tele_flClimb));
+            this.Adapter.DeleteCommand.Parameters[24].Value = ((int)(Original_tele_idClimbType));
+            this.Adapter.DeleteCommand.Parameters[25].Value = ((int)(Original_tele_idClimbGrab));
+            this.Adapter.DeleteCommand.Parameters[26].Value = ((int)(Original_tele_idClimbSpeed));
+            this.Adapter.DeleteCommand.Parameters[27].Value = ((int)(Original_tele_numClimbAssists));
+            this.Adapter.DeleteCommand.Parameters[28].Value = ((int)(Original_tele_idClimbLevel));
+            this.Adapter.DeleteCommand.Parameters[29].Value = ((System.DateTime)(Original_dtCreation));
+            this.Adapter.DeleteCommand.Parameters[30].Value = ((System.DateTime)(Original_dtModified));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(
+                    string _event, 
+                    int team, 
+                    string txScoutName, 
+                    bool flAuto, 
+                    int audo_idAutoType, 
+                    int auto_idStartObject, 
+                    bool auto_flHatch, 
+                    int auto_intHatchDeliver, 
+                    int auto_idHatchDeliverHeight, 
+                    bool auto_flCargo, 
+                    int auto_intCargoDelivered, 
+                    int auto_idCargoDeliveryHeight, 
+                    bool flHatch, 
+                    bool flHatchInWall, 
+                    bool flHatchInFloor, 
+                    bool flhatchOutLow, 
+                    bool flHatchOutMed, 
+                    bool flHatchOutHigh, 
+                    string txHatchNotes, 
+                    bool flCargo, 
+                    bool flCargoInWall, 
+                    bool flCargoInFloor, 
+                    bool flCargoOutLow, 
+                    bool flCargoOutMed, 
+                    bool flCargoOutHigh, 
+                    string txCargoNotes, 
+                    bool tele_flClimb, 
+                    int tele_idClimbType, 
+                    int tele_idClimbGrab, 
+                    int tele_idClimbSpeed, 
+                    int tele_numClimbAssists, 
+                    int tele_idClimbLevel, 
+                    string imgRobotFront, 
+                    string imgRobotSide, 
+                    string txComments, 
+                    System.DateTime dtCreation, 
+                    System.DateTime dtModified, 
+                    string txComputerName) {
+            if ((_event == null)) {
+                throw new global::System.ArgumentNullException("_event");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(_event));
+            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(team));
+            if ((txScoutName == null)) {
+                throw new global::System.ArgumentNullException("txScoutName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(txScoutName));
+            }
+            this.Adapter.InsertCommand.Parameters[3].Value = ((bool)(flAuto));
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(audo_idAutoType));
+            this.Adapter.InsertCommand.Parameters[5].Value = ((int)(auto_idStartObject));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((bool)(auto_flHatch));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(auto_intHatchDeliver));
+            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(auto_idHatchDeliverHeight));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((bool)(auto_flCargo));
+            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(auto_intCargoDelivered));
+            this.Adapter.InsertCommand.Parameters[11].Value = ((int)(auto_idCargoDeliveryHeight));
+            this.Adapter.InsertCommand.Parameters[12].Value = ((bool)(flHatch));
+            this.Adapter.InsertCommand.Parameters[13].Value = ((bool)(flHatchInWall));
+            this.Adapter.InsertCommand.Parameters[14].Value = ((bool)(flHatchInFloor));
+            this.Adapter.InsertCommand.Parameters[15].Value = ((bool)(flhatchOutLow));
+            this.Adapter.InsertCommand.Parameters[16].Value = ((bool)(flHatchOutMed));
+            this.Adapter.InsertCommand.Parameters[17].Value = ((bool)(flHatchOutHigh));
+            if ((txHatchNotes == null)) {
+                throw new global::System.ArgumentNullException("txHatchNotes");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[18].Value = ((string)(txHatchNotes));
+            }
+            this.Adapter.InsertCommand.Parameters[19].Value = ((bool)(flCargo));
+            this.Adapter.InsertCommand.Parameters[20].Value = ((bool)(flCargoInWall));
+            this.Adapter.InsertCommand.Parameters[21].Value = ((bool)(flCargoInFloor));
+            this.Adapter.InsertCommand.Parameters[22].Value = ((bool)(flCargoOutLow));
+            this.Adapter.InsertCommand.Parameters[23].Value = ((bool)(flCargoOutMed));
+            this.Adapter.InsertCommand.Parameters[24].Value = ((bool)(flCargoOutHigh));
+            if ((txCargoNotes == null)) {
+                throw new global::System.ArgumentNullException("txCargoNotes");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[25].Value = ((string)(txCargoNotes));
+            }
+            this.Adapter.InsertCommand.Parameters[26].Value = ((bool)(tele_flClimb));
+            this.Adapter.InsertCommand.Parameters[27].Value = ((int)(tele_idClimbType));
+            this.Adapter.InsertCommand.Parameters[28].Value = ((int)(tele_idClimbGrab));
+            this.Adapter.InsertCommand.Parameters[29].Value = ((int)(tele_idClimbSpeed));
+            this.Adapter.InsertCommand.Parameters[30].Value = ((int)(tele_numClimbAssists));
+            this.Adapter.InsertCommand.Parameters[31].Value = ((int)(tele_idClimbLevel));
+            if ((imgRobotFront == null)) {
+                throw new global::System.ArgumentNullException("imgRobotFront");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[32].Value = ((string)(imgRobotFront));
+            }
+            if ((imgRobotSide == null)) {
+                throw new global::System.ArgumentNullException("imgRobotSide");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[33].Value = ((string)(imgRobotSide));
+            }
+            if ((txComments == null)) {
+                throw new global::System.ArgumentNullException("txComments");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[34].Value = ((string)(txComments));
+            }
+            this.Adapter.InsertCommand.Parameters[35].Value = ((System.DateTime)(dtCreation));
+            this.Adapter.InsertCommand.Parameters[36].Value = ((System.DateTime)(dtModified));
+            if ((txComputerName == null)) {
+                throw new global::System.ArgumentNullException("txComputerName");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[37].Value = ((string)(txComputerName));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string _event, 
+                    int team, 
+                    string txScoutName, 
+                    bool flAuto, 
+                    int audo_idAutoType, 
+                    int auto_idStartObject, 
+                    bool auto_flHatch, 
+                    int auto_intHatchDeliver, 
+                    int auto_idHatchDeliverHeight, 
+                    bool auto_flCargo, 
+                    int auto_intCargoDelivered, 
+                    int auto_idCargoDeliveryHeight, 
+                    bool flHatch, 
+                    bool flHatchInWall, 
+                    bool flHatchInFloor, 
+                    bool flhatchOutLow, 
+                    bool flHatchOutMed, 
+                    bool flHatchOutHigh, 
+                    string txHatchNotes, 
+                    bool flCargo, 
+                    bool flCargoInWall, 
+                    bool flCargoInFloor, 
+                    bool flCargoOutLow, 
+                    bool flCargoOutMed, 
+                    bool flCargoOutHigh, 
+                    string txCargoNotes, 
+                    bool tele_flClimb, 
+                    int tele_idClimbType, 
+                    int tele_idClimbGrab, 
+                    int tele_idClimbSpeed, 
+                    int tele_numClimbAssists, 
+                    int tele_idClimbLevel, 
+                    string imgRobotFront, 
+                    string imgRobotSide, 
+                    string txComments, 
+                    System.DateTime dtCreation, 
+                    System.DateTime dtModified, 
+                    string txComputerName, 
+                    int Original_id, 
+                    int Original_team, 
+                    bool Original_flAuto, 
+                    int Original_audo_idAutoType, 
+                    int Original_auto_idStartObject, 
+                    bool Original_auto_flHatch, 
+                    int Original_auto_intHatchDeliver, 
+                    int Original_auto_idHatchDeliverHeight, 
+                    bool Original_auto_flCargo, 
+                    int Original_auto_intCargoDelivered, 
+                    int Original_auto_idCargoDeliveryHeight, 
+                    bool Original_flHatch, 
+                    bool Original_flHatchInWall, 
+                    bool Original_flHatchInFloor, 
+                    bool Original_flhatchOutLow, 
+                    bool Original_flHatchOutMed, 
+                    bool Original_flHatchOutHigh, 
+                    bool Original_flCargo, 
+                    bool Original_flCargoInWall, 
+                    bool Original_flCargoInFloor, 
+                    bool Original_flCargoOutLow, 
+                    bool Original_flCargoOutMed, 
+                    bool Original_flCargoOutHigh, 
+                    bool Original_tele_flClimb, 
+                    int Original_tele_idClimbType, 
+                    int Original_tele_idClimbGrab, 
+                    int Original_tele_idClimbSpeed, 
+                    int Original_tele_numClimbAssists, 
+                    int Original_tele_idClimbLevel, 
+                    System.DateTime Original_dtCreation, 
+                    System.DateTime Original_dtModified, 
+                    int id) {
+            if ((_event == null)) {
+                throw new global::System.ArgumentNullException("_event");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(_event));
+            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(team));
+            if ((txScoutName == null)) {
+                throw new global::System.ArgumentNullException("txScoutName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(txScoutName));
+            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(flAuto));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(audo_idAutoType));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(auto_idStartObject));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((bool)(auto_flHatch));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(auto_intHatchDeliver));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(auto_idHatchDeliverHeight));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((bool)(auto_flCargo));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(auto_intCargoDelivered));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(auto_idCargoDeliveryHeight));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((bool)(flHatch));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((bool)(flHatchInWall));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((bool)(flHatchInFloor));
+            this.Adapter.UpdateCommand.Parameters[15].Value = ((bool)(flhatchOutLow));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((bool)(flHatchOutMed));
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((bool)(flHatchOutHigh));
+            if ((txHatchNotes == null)) {
+                throw new global::System.ArgumentNullException("txHatchNotes");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(txHatchNotes));
+            }
+            this.Adapter.UpdateCommand.Parameters[19].Value = ((bool)(flCargo));
+            this.Adapter.UpdateCommand.Parameters[20].Value = ((bool)(flCargoInWall));
+            this.Adapter.UpdateCommand.Parameters[21].Value = ((bool)(flCargoInFloor));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((bool)(flCargoOutLow));
+            this.Adapter.UpdateCommand.Parameters[23].Value = ((bool)(flCargoOutMed));
+            this.Adapter.UpdateCommand.Parameters[24].Value = ((bool)(flCargoOutHigh));
+            if ((txCargoNotes == null)) {
+                throw new global::System.ArgumentNullException("txCargoNotes");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(txCargoNotes));
+            }
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((bool)(tele_flClimb));
+            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(tele_idClimbType));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(tele_idClimbGrab));
+            this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(tele_idClimbSpeed));
+            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(tele_numClimbAssists));
+            this.Adapter.UpdateCommand.Parameters[31].Value = ((int)(tele_idClimbLevel));
+            if ((imgRobotFront == null)) {
+                throw new global::System.ArgumentNullException("imgRobotFront");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(imgRobotFront));
+            }
+            if ((imgRobotSide == null)) {
+                throw new global::System.ArgumentNullException("imgRobotSide");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(imgRobotSide));
+            }
+            if ((txComments == null)) {
+                throw new global::System.ArgumentNullException("txComments");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(txComments));
+            }
+            this.Adapter.UpdateCommand.Parameters[35].Value = ((System.DateTime)(dtCreation));
+            this.Adapter.UpdateCommand.Parameters[36].Value = ((System.DateTime)(dtModified));
+            if ((txComputerName == null)) {
+                throw new global::System.ArgumentNullException("txComputerName");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(txComputerName));
+            }
+            this.Adapter.UpdateCommand.Parameters[38].Value = ((int)(Original_id));
+            this.Adapter.UpdateCommand.Parameters[39].Value = ((int)(Original_team));
+            this.Adapter.UpdateCommand.Parameters[40].Value = ((bool)(Original_flAuto));
+            this.Adapter.UpdateCommand.Parameters[41].Value = ((int)(Original_audo_idAutoType));
+            this.Adapter.UpdateCommand.Parameters[42].Value = ((int)(Original_auto_idStartObject));
+            this.Adapter.UpdateCommand.Parameters[43].Value = ((bool)(Original_auto_flHatch));
+            this.Adapter.UpdateCommand.Parameters[44].Value = ((int)(Original_auto_intHatchDeliver));
+            this.Adapter.UpdateCommand.Parameters[45].Value = ((int)(Original_auto_idHatchDeliverHeight));
+            this.Adapter.UpdateCommand.Parameters[46].Value = ((bool)(Original_auto_flCargo));
+            this.Adapter.UpdateCommand.Parameters[47].Value = ((int)(Original_auto_intCargoDelivered));
+            this.Adapter.UpdateCommand.Parameters[48].Value = ((int)(Original_auto_idCargoDeliveryHeight));
+            this.Adapter.UpdateCommand.Parameters[49].Value = ((bool)(Original_flHatch));
+            this.Adapter.UpdateCommand.Parameters[50].Value = ((bool)(Original_flHatchInWall));
+            this.Adapter.UpdateCommand.Parameters[51].Value = ((bool)(Original_flHatchInFloor));
+            this.Adapter.UpdateCommand.Parameters[52].Value = ((bool)(Original_flhatchOutLow));
+            this.Adapter.UpdateCommand.Parameters[53].Value = ((bool)(Original_flHatchOutMed));
+            this.Adapter.UpdateCommand.Parameters[54].Value = ((bool)(Original_flHatchOutHigh));
+            this.Adapter.UpdateCommand.Parameters[55].Value = ((bool)(Original_flCargo));
+            this.Adapter.UpdateCommand.Parameters[56].Value = ((bool)(Original_flCargoInWall));
+            this.Adapter.UpdateCommand.Parameters[57].Value = ((bool)(Original_flCargoInFloor));
+            this.Adapter.UpdateCommand.Parameters[58].Value = ((bool)(Original_flCargoOutLow));
+            this.Adapter.UpdateCommand.Parameters[59].Value = ((bool)(Original_flCargoOutMed));
+            this.Adapter.UpdateCommand.Parameters[60].Value = ((bool)(Original_flCargoOutHigh));
+            this.Adapter.UpdateCommand.Parameters[61].Value = ((bool)(Original_tele_flClimb));
+            this.Adapter.UpdateCommand.Parameters[62].Value = ((int)(Original_tele_idClimbType));
+            this.Adapter.UpdateCommand.Parameters[63].Value = ((int)(Original_tele_idClimbGrab));
+            this.Adapter.UpdateCommand.Parameters[64].Value = ((int)(Original_tele_idClimbSpeed));
+            this.Adapter.UpdateCommand.Parameters[65].Value = ((int)(Original_tele_numClimbAssists));
+            this.Adapter.UpdateCommand.Parameters[66].Value = ((int)(Original_tele_idClimbLevel));
+            this.Adapter.UpdateCommand.Parameters[67].Value = ((System.DateTime)(Original_dtCreation));
+            this.Adapter.UpdateCommand.Parameters[68].Value = ((System.DateTime)(Original_dtModified));
+            this.Adapter.UpdateCommand.Parameters[69].Value = ((int)(id));
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(
+                    string _event, 
+                    int team, 
+                    string txScoutName, 
+                    bool flAuto, 
+                    int audo_idAutoType, 
+                    int auto_idStartObject, 
+                    bool auto_flHatch, 
+                    int auto_intHatchDeliver, 
+                    int auto_idHatchDeliverHeight, 
+                    bool auto_flCargo, 
+                    int auto_intCargoDelivered, 
+                    int auto_idCargoDeliveryHeight, 
+                    bool flHatch, 
+                    bool flHatchInWall, 
+                    bool flHatchInFloor, 
+                    bool flhatchOutLow, 
+                    bool flHatchOutMed, 
+                    bool flHatchOutHigh, 
+                    string txHatchNotes, 
+                    bool flCargo, 
+                    bool flCargoInWall, 
+                    bool flCargoInFloor, 
+                    bool flCargoOutLow, 
+                    bool flCargoOutMed, 
+                    bool flCargoOutHigh, 
+                    string txCargoNotes, 
+                    bool tele_flClimb, 
+                    int tele_idClimbType, 
+                    int tele_idClimbGrab, 
+                    int tele_idClimbSpeed, 
+                    int tele_numClimbAssists, 
+                    int tele_idClimbLevel, 
+                    string imgRobotFront, 
+                    string imgRobotSide, 
+                    string txComments, 
+                    System.DateTime dtCreation, 
+                    System.DateTime dtModified, 
+                    string txComputerName, 
+                    int Original_id, 
+                    int Original_team, 
+                    bool Original_flAuto, 
+                    int Original_audo_idAutoType, 
+                    int Original_auto_idStartObject, 
+                    bool Original_auto_flHatch, 
+                    int Original_auto_intHatchDeliver, 
+                    int Original_auto_idHatchDeliverHeight, 
+                    bool Original_auto_flCargo, 
+                    int Original_auto_intCargoDelivered, 
+                    int Original_auto_idCargoDeliveryHeight, 
+                    bool Original_flHatch, 
+                    bool Original_flHatchInWall, 
+                    bool Original_flHatchInFloor, 
+                    bool Original_flhatchOutLow, 
+                    bool Original_flHatchOutMed, 
+                    bool Original_flHatchOutHigh, 
+                    bool Original_flCargo, 
+                    bool Original_flCargoInWall, 
+                    bool Original_flCargoInFloor, 
+                    bool Original_flCargoOutLow, 
+                    bool Original_flCargoOutMed, 
+                    bool Original_flCargoOutHigh, 
+                    bool Original_tele_flClimb, 
+                    int Original_tele_idClimbType, 
+                    int Original_tele_idClimbGrab, 
+                    int Original_tele_idClimbSpeed, 
+                    int Original_tele_numClimbAssists, 
+                    int Original_tele_idClimbLevel, 
+                    System.DateTime Original_dtCreation, 
+                    System.DateTime Original_dtModified) {
+            return this.Update(_event, team, txScoutName, flAuto, audo_idAutoType, auto_idStartObject, auto_flHatch, auto_intHatchDeliver, auto_idHatchDeliverHeight, auto_flCargo, auto_intCargoDelivered, auto_idCargoDeliveryHeight, flHatch, flHatchInWall, flHatchInFloor, flhatchOutLow, flHatchOutMed, flHatchOutHigh, txHatchNotes, flCargo, flCargoInWall, flCargoInFloor, flCargoOutLow, flCargoOutMed, flCargoOutHigh, txCargoNotes, tele_flClimb, tele_idClimbType, tele_idClimbGrab, tele_idClimbSpeed, tele_numClimbAssists, tele_idClimbLevel, imgRobotFront, imgRobotSide, txComments, dtCreation, dtModified, txComputerName, Original_id, Original_team, Original_flAuto, Original_audo_idAutoType, Original_auto_idStartObject, Original_auto_flHatch, Original_auto_intHatchDeliver, Original_auto_idHatchDeliverHeight, Original_auto_flCargo, Original_auto_intCargoDelivered, Original_auto_idCargoDeliveryHeight, Original_flHatch, Original_flHatchInWall, Original_flHatchInFloor, Original_flhatchOutLow, Original_flHatchOutMed, Original_flHatchOutHigh, Original_flCargo, Original_flCargoInWall, Original_flCargoInFloor, Original_flCargoOutLow, Original_flCargoOutMed, Original_flCargoOutHigh, Original_tele_flClimb, Original_tele_idClimbType, Original_tele_idClimbGrab, Original_tele_idClimbSpeed, Original_tele_numClimbAssists, Original_tele_idClimbLevel, Original_dtCreation, Original_dtModified, Original_id);
+        }
+    }
+    
+    /// <summary>
     ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
     ///</summary>
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -4732,6 +7096,8 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         private UpdateOrderOption _updateOrder;
         
         private matchscoutingTableAdapter _matchscoutingTableAdapter;
+        
+        private pitscoutingTableAdapter _pitscoutingTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -4764,6 +7130,20 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
+            "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
+            "a", "System.Drawing.Design.UITypeEditor")]
+        public pitscoutingTableAdapter pitscoutingTableAdapter {
+            get {
+                return this._pitscoutingTableAdapter;
+            }
+            set {
+                this._pitscoutingTableAdapter = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public bool BackupDataSetBeforeUpdate {
             get {
                 return this._backupDataSetBeforeUpdate;
@@ -4785,6 +7165,10 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                             && (this._matchscoutingTableAdapter.Connection != null))) {
                     return this._matchscoutingTableAdapter.Connection;
                 }
+                if (((this._pitscoutingTableAdapter != null) 
+                            && (this._pitscoutingTableAdapter.Connection != null))) {
+                    return this._pitscoutingTableAdapter.Connection;
+                }
                 return null;
             }
             set {
@@ -4799,6 +7183,9 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
             get {
                 int count = 0;
                 if ((this._matchscoutingTableAdapter != null)) {
+                    count = (count + 1);
+                }
+                if ((this._pitscoutingTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -4821,6 +7208,15 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._pitscoutingTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.pitscouting.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._pitscoutingTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -4839,6 +7235,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._pitscoutingTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.pitscouting.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._pitscoutingTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -4849,6 +7253,14 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(CspAnalyzeDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._pitscoutingTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.pitscouting.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._pitscoutingTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._matchscoutingTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.matchscouting.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -4901,6 +7313,11 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
+            if (((this._pitscoutingTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._pitscoutingTableAdapter.Connection) == false))) {
+                throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
+                        "tring.");
+            }
             global::System.Data.IDbConnection workConnection = this.Connection;
             if ((workConnection == null)) {
                 throw new global::System.ApplicationException("TableAdapterManager contains no connection information. Set each TableAdapterMana" +
@@ -4940,6 +7357,15 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                     if (this._matchscoutingTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._matchscoutingTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._matchscoutingTableAdapter.Adapter);
+                    }
+                }
+                if ((this._pitscoutingTableAdapter != null)) {
+                    revertConnections.Add(this._pitscoutingTableAdapter, this._pitscoutingTableAdapter.Connection);
+                    this._pitscoutingTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._pitscoutingTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._pitscoutingTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._pitscoutingTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._pitscoutingTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -5003,6 +7429,10 @@ namespace CSP_Analyze.CspAnalyzeDataSetTableAdapters {
                 if ((this._matchscoutingTableAdapter != null)) {
                     this._matchscoutingTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._matchscoutingTableAdapter]));
                     this._matchscoutingTableAdapter.Transaction = null;
+                }
+                if ((this._pitscoutingTableAdapter != null)) {
+                    this._pitscoutingTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._pitscoutingTableAdapter]));
+                    this._pitscoutingTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

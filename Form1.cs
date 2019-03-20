@@ -20,16 +20,10 @@ namespace CSP_Analyze
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs eventArgs)
         {
             dbController = new DatabaseController();
-            LoadInfoDependantControls();
-        }
-
-        private void LoadInfoDependantControls()
-        {
             lastUpdatedLabel.Text = "Last Updated: " + dbController.RemoteLastUpdated;
-            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + dbController.numberOfLocalMatchScoutingChanges;
         }
 
         private void importButton_Click(object sender, EventArgs e)
@@ -58,16 +52,22 @@ namespace CSP_Analyze
                         // Valid
                         validMatchscouting++;
 
-                        // TODO - import to database
+                        // Import to database
                         csvMatchToImport.AddLast(line);
+                    }
+                    else if (values.Length == DatabaseController.PITSCOUTING_COLUMNS)
+                    {
+                        validPitScouting++;
+
+                        csvPitToImport.AddLast(line);
                     }
                 }
 
                 Log(Path.GetFileName(filename) + " ~ Valid Match:" + validMatchscouting + ", Valid Pit:" + validPitScouting);
             }
 
-            int localChangeCount = dbController.ImportMatchScoutingRows(csvMatchToImport);
-            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + localChangeCount;
+            dbController.ImportMatchScoutingRows(csvMatchToImport);
+            dbController.ImportPitScoutingRows(csvPitToImport);
         }
 
         public void Log(string message)
@@ -75,7 +75,7 @@ namespace CSP_Analyze
             telemetryRichTextBox.AppendText(message + "\n");
         }
 
-        private void NewQueryButton_Click(object sender, EventArgs e)
+        private void NewQueryButton_Click(object sender, EventArgs eventArgs)
         {
             string queryName = StringPrompt();
             if (string.IsNullOrEmpty(queryName)) return;
@@ -101,18 +101,18 @@ namespace CSP_Analyze
             }
         }
 
-        private void SaveQueryButton_Click(object sender, EventArgs e)
+        private void SaveQueryButton_Click(object sender, EventArgs eventArgs)
         {
             int saveStatus = dbController.SaveQueryFile(queryRichTextBox.Text);
             if (saveStatus != DatabaseController.SUCCESS) MessageBox.Show("Couldn't save query", "Error", MessageBoxButtons.OK);
         }
 
-        private void SaveAsQueryButton_Click(object sender, EventArgs e)
+        private void SaveAsQueryButton_Click(object sender, EventArgs eventArgs)
         {
             NewQueryButton_Click(null, null);
         }
 
-        private void LoadQueryButton_Click(object sender, EventArgs e)
+        private void LoadQueryButton_Click(object sender, EventArgs eventArgs)
         {
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
@@ -133,6 +133,8 @@ namespace CSP_Analyze
         private void RunQueryButton_Click(object sender, EventArgs eventArgs)
         {
             QueryResultsForm resultsForm;
+            string table = tableComboBox.SelectedText;
+
 
             try
             {
@@ -188,7 +190,7 @@ namespace CSP_Analyze
             return textBox.Text;
         }
 
-        private async void PullDatabaseButton_Click(object sender, EventArgs e)
+        private async void PullDatabaseButton_Click(object sender, EventArgs eventArgs)
         {
             pushDatabaseButton.Enabled = false;
             pullDatabaseButton.Enabled = false;
@@ -199,16 +201,21 @@ namespace CSP_Analyze
             pullDatabaseButton.Enabled = true;
         }
 
-        private async void PushDatabaseButton_Click(object sender, EventArgs e)
+        private async void PushDatabaseButton_Click(object sender, EventArgs eventArgs)
         {
             pushDatabaseButton.Enabled = false;
             pullDatabaseButton.Enabled = false;
             Log("Pushing data to remote database");
             string result = await Task.Run(() => dbController.RemotePush());
             Log(result);
-            numberOfLocalChangesLabel.Text = "Number of Local Changes: " + dbController.numberOfLocalMatchScoutingChanges;
             pushDatabaseButton.Enabled = true;
             pullDatabaseButton.Enabled = true;
+        }
+
+        private void MobileImportButton_Click(object sender, EventArgs eventArgs)
+        {
+            MobileImportForm importForm = new MobileImportForm();
+            importForm.Show();
         }
     }
 }
