@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace CSP_Analyze
 {
@@ -50,9 +47,12 @@ namespace CSP_Analyze
 
             pitscoutingDataTable = new CspAnalyzeDataSet.pitscoutingDataTable();
             pitscoutingTableAdapter = new CspAnalyzeDataSetTableAdapters.pitscoutingTableAdapter();
+
+            matchscoutingDataTable.ReadXml(matchscoutingSavedPath);
+            pitscoutingDataTable.ReadXml(pitscoutingSavedPath);
         }
 
-        private string SaveInfo()
+        public string SaveInfo()
         {
             string saveStatus = "";
 
