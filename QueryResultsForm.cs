@@ -12,19 +12,29 @@ namespace CSP_Analyze
 {
     public partial class QueryResultsForm : Form
     {
-        private readonly DatabaseController controller;
-
         public BindingSource bindingSource;
 
-        public QueryResultsForm(DatabaseController controller, string query)
+        public QueryResultsForm(DatabaseController controller, string query, int table)
         {
             InitializeComponent();
-            this.controller = controller;
+            
+            DataTable dataTable;
+            if (table == 0)
+            {
+                dataTable = controller.matchscoutingDataTable.Copy();
+            }
+            else if (table == 1)
+            {
+                dataTable = controller.pitscoutingDataTable.Copy();
+            }
+            else
+            {
+                throw new ArgumentException("int table can only be 0 or 1");
+            }
 
-            DataTable table = controller.matchscoutingDataTable.Copy();
             bindingSource = new BindingSource
             {
-                DataSource = table
+                DataSource = dataTable
             };
 
             try

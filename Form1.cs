@@ -24,6 +24,7 @@ namespace CSP_Analyze
         {
             dbController = new DatabaseController();
             lastUpdatedLabel.Text = "Last Updated: " + dbController.RemoteLastUpdated;
+            tableComboBox.SelectedIndex = 0;
         }
 
         private void importButton_Click(object sender, EventArgs e)
@@ -133,12 +134,16 @@ namespace CSP_Analyze
         private void RunQueryButton_Click(object sender, EventArgs eventArgs)
         {
             QueryResultsForm resultsForm;
-            string table = tableComboBox.SelectedText;
-
+            int index = tableComboBox.SelectedIndex;
+            if (index == -1)
+            {
+                MessageBox.Show("Invalid Table Selected. Should be Match or Pit");
+                return;
+            }
 
             try
             {
-                resultsForm = new QueryResultsForm(dbController, queryRichTextBox.Text);
+                resultsForm = new QueryResultsForm(dbController, queryRichTextBox.Text, index);
                 resultsForm.Show();
             }
             catch (EvaluateException e)
