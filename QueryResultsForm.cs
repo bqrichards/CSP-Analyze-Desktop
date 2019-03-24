@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSP_Analyze
@@ -47,19 +46,7 @@ namespace CSP_Analyze
             resultsDataGridView.DataSource = bindingSource;
 
             // Use the controller and query to run a search
-            numberOfRowsLabel.Text = "Number of Rows: Loading";
-
-            Task.Run(() =>
-            {
-                if (numberOfRowsLabel.InvokeRequired)
-                {
-                    numberOfRowsLabel.Invoke(new Action(() => numberOfRowsLabel.Text = "Number of Rows: " + resultsDataGridView.Rows.Count));
-                }
-                else
-                {
-                    numberOfRowsLabel.Text = "Number of Rows: " + resultsDataGridView.Rows.Count;
-                }
-            });
+            numberOfRowsLabel.Text = "Number of Rows: " + resultsDataGridView.Rows.Count;
         }
     }
 }

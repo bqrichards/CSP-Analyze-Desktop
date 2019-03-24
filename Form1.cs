@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Linq;
 
 namespace CSP_Analyze
 {
@@ -226,6 +227,55 @@ namespace CSP_Analyze
         private void ClearTelemetryButton_Click(object sender, EventArgs e)
         {
             telemetryRichTextBox.Text = "";
+        }
+
+        private void OpenNewExperimentalQueryButton_Click(object sender, EventArgs e)
+        {
+            new NewQueryForm(dbController).Show();
+        }
+
+        private void ViewTopTeamsButton_Click(object sender, EventArgs e)
+        {
+            Dictionary<string, int> teams = new Dictionary<string, int>();
+            Dictionary<string, int> numTimesIterated = new Dictionary<string, int>();
+
+            foreach (CspAnalyzeDataSet.matchscoutingRow row in dbController.matchscoutingDataTable.Rows)
+            {
+                // add up scores
+                int score = 0;
+                score += (row.auto_idStatrLevel == 3 ? 6 : row.auto_idStatrLevel == 2 ? 3 : row.auto_idStatrLevel == 1 ? 1 : 0);
+                score += (row.auto_numShipFrontHatchSuccess + row.auto_numShipSideHatchSuccess + row.tele_numShipFrontHatchSuccess + row.tele_numShipFrontHatchSuccess) * 2; // cargoship hatches
+                score += (row.auto_numShipFrontCargoSuccess + row.auto_numShipSideCargoSuccess + row.tele_numShipFrontCargoSuccess + row.tele_numShipSideCargoSuccess) * 3; // cargoship cargo
+                score += (row.auto_numRocketHighHatchSuccess + row.auto_numRocketMidHatchSuccess + row.auto_numRocketLowHatchSuccess + row.tele_numRocketHighAttempt + row.tele_numRocketMidHatchSuccess + row.tele_numRocketLowHatchSuccess) * 2; // rocket hatches
+                score += (row.auto_numRocketHighCargoSuccess + row.auto_numRocketMidCargoSuccess + row.auto_numRocketLowCargoSuccess + row.tele_numRocketHighCargoSuccess + row.tele_numRocketMidCargoSuccess + row.tele_numRocketLowCargoSuccess) * 3; // rocket cargo
+                score += (row.tele_idClimbLevel == 3 ? 12 : row.auto_idStatrLevel == 2 ? 6 : row.auto_idStatrLevel == 1 ? 3 : 0);
+
+                try
+                {
+                    teams[row.team.ToString()] += score;
+                    numTimesIterated[row.team.ToString()] += 1;
+                } catch (KeyNotFoundException)
+                {
+                    teams[row.team.ToString()] = score;
+                    numTimesIterated[row.team.ToString()] = 1;
+                }
+            }
+
+            List<KeyValuePair<string, int>> scoresList = teams.ToList();
+            Dictionary<string, int> averageTeamScore = new Dictionary<string, int>();
+            foreach (KeyValuePair<string, int> pair in scoresList)
+            {
+                averageTeamScore[pair.Key] = pair.Value / numTimesIterated[pair.Key];
+            }
+
+            List<KeyValuePair<string, int>> averageTeamScoreList = averageTeamScore.ToList();
+
+            averageTeamScoreList.Sort((pair1, pair2) => pair2.Value.CompareTo(pair1.Value));
+
+            for (int i = 0; i < averageTeamScoreList.Count; i++)
+            {
+                telemetryRichTextBox.AppendText("#" + (i+1) +" Team: " + averageTeamScoreList[i].Key + " - Avg. Score: " + averageTeamScoreList[i].Value + "\n");
+            }
         }
     }
 }

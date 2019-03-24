@@ -48,8 +48,11 @@ namespace CSP_Analyze
             pitscoutingDataTable = new CspAnalyzeDataSet.pitscoutingDataTable();
             pitscoutingTableAdapter = new CspAnalyzeDataSetTableAdapters.pitscoutingTableAdapter();
 
-            matchscoutingDataTable.ReadXml(matchscoutingSavedPath);
-            pitscoutingDataTable.ReadXml(pitscoutingSavedPath);
+            try
+            {
+                matchscoutingDataTable.ReadXml(matchscoutingSavedPath);
+                pitscoutingDataTable.ReadXml(pitscoutingSavedPath);
+            } catch (FileNotFoundException) {}
         }
 
         public string SaveInfo()

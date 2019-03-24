@@ -34,12 +34,15 @@
             System.Windows.Forms.Label label3;
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.statusTabPage = new System.Windows.Forms.TabPage();
+            this.viewTopTeamsButton = new System.Windows.Forms.Button();
+            this.clearTelemetryButton = new System.Windows.Forms.Button();
             this.mobileImportButton = new System.Windows.Forms.Button();
             this.pushDatabaseButton = new System.Windows.Forms.Button();
             this.pullDatabaseButton = new System.Windows.Forms.Button();
             this.telemetryRichTextBox = new System.Windows.Forms.RichTextBox();
             this.importButton = new System.Windows.Forms.Button();
             this.queryTabPage = new System.Windows.Forms.TabPage();
+            this.openNewExperimentalQueryButton = new System.Windows.Forms.Button();
             this.tableComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.saveAsQueryButton = new System.Windows.Forms.Button();
@@ -49,7 +52,6 @@
             this.loadQueryButton = new System.Windows.Forms.Button();
             this.newQueryButton = new System.Windows.Forms.Button();
             this.queryHeaderLabel = new System.Windows.Forms.Label();
-            this.clearTelemetryButton = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             instructionsRichTextBox = new System.Windows.Forms.RichTextBox();
             label2 = new System.Windows.Forms.Label();
@@ -132,6 +134,7 @@
             // 
             // statusTabPage
             // 
+            this.statusTabPage.Controls.Add(this.viewTopTeamsButton);
             this.statusTabPage.Controls.Add(this.clearTelemetryButton);
             this.statusTabPage.Controls.Add(this.mobileImportButton);
             this.statusTabPage.Controls.Add(this.pushDatabaseButton);
@@ -150,9 +153,28 @@
             this.statusTabPage.Text = "Status";
             this.statusTabPage.UseVisualStyleBackColor = true;
             // 
+            // viewTopTeamsButton
+            // 
+            this.viewTopTeamsButton.Location = new System.Drawing.Point(16, 304);
+            this.viewTopTeamsButton.Name = "viewTopTeamsButton";
+            this.viewTopTeamsButton.Size = new System.Drawing.Size(201, 29);
+            this.viewTopTeamsButton.TabIndex = 12;
+            this.viewTopTeamsButton.Text = "View Top Teams";
+            this.viewTopTeamsButton.UseVisualStyleBackColor = true;
+            this.viewTopTeamsButton.Click += new System.EventHandler(this.ViewTopTeamsButton_Click);
+            // 
+            // clearTelemetryButton
+            // 
+            this.clearTelemetryButton.Location = new System.Drawing.Point(899, 26);
+            this.clearTelemetryButton.Name = "clearTelemetryButton";
+            this.clearTelemetryButton.Size = new System.Drawing.Size(121, 29);
+            this.clearTelemetryButton.TabIndex = 11;
+            this.clearTelemetryButton.Text = "Clear";
+            this.clearTelemetryButton.UseVisualStyleBackColor = true;
+            this.clearTelemetryButton.Click += new System.EventHandler(this.ClearTelemetryButton_Click);
+            // 
             // mobileImportButton
             // 
-            this.mobileImportButton.Enabled = false;
             this.mobileImportButton.Location = new System.Drawing.Point(16, 98);
             this.mobileImportButton.Margin = new System.Windows.Forms.Padding(4);
             this.mobileImportButton.Name = "mobileImportButton";
@@ -186,12 +208,13 @@
             // 
             // telemetryRichTextBox
             // 
-            this.telemetryRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.telemetryRichTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.telemetryRichTextBox.Location = new System.Drawing.Point(304, 62);
             this.telemetryRichTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.telemetryRichTextBox.Name = "telemetryRichTextBox";
-            this.telemetryRichTextBox.Size = new System.Drawing.Size(716, 362);
+            this.telemetryRichTextBox.Size = new System.Drawing.Size(736, 450);
             this.telemetryRichTextBox.TabIndex = 3;
             this.telemetryRichTextBox.Text = "";
             // 
@@ -208,6 +231,7 @@
             // 
             // queryTabPage
             // 
+            this.queryTabPage.Controls.Add(this.openNewExperimentalQueryButton);
             this.queryTabPage.Controls.Add(this.tableComboBox);
             this.queryTabPage.Controls.Add(this.label4);
             this.queryTabPage.Controls.Add(this.saveAsQueryButton);
@@ -226,6 +250,16 @@
             this.queryTabPage.TabIndex = 1;
             this.queryTabPage.Text = "Query";
             this.queryTabPage.UseVisualStyleBackColor = true;
+            // 
+            // openNewExperimentalQueryButton
+            // 
+            this.openNewExperimentalQueryButton.Location = new System.Drawing.Point(898, 68);
+            this.openNewExperimentalQueryButton.Name = "openNewExperimentalQueryButton";
+            this.openNewExperimentalQueryButton.Size = new System.Drawing.Size(146, 28);
+            this.openNewExperimentalQueryButton.TabIndex = 10;
+            this.openNewExperimentalQueryButton.Text = "experimental";
+            this.openNewExperimentalQueryButton.UseVisualStyleBackColor = true;
+            this.openNewExperimentalQueryButton.Click += new System.EventHandler(this.OpenNewExperimentalQueryButton_Click);
             // 
             // tableComboBox
             // 
@@ -332,16 +366,6 @@
             this.queryHeaderLabel.TabIndex = 0;
             this.queryHeaderLabel.Text = "Current Query: None";
             // 
-            // clearTelemetryButton
-            // 
-            this.clearTelemetryButton.Location = new System.Drawing.Point(899, 26);
-            this.clearTelemetryButton.Name = "clearTelemetryButton";
-            this.clearTelemetryButton.Size = new System.Drawing.Size(121, 29);
-            this.clearTelemetryButton.TabIndex = 11;
-            this.clearTelemetryButton.Text = "Clear";
-            this.clearTelemetryButton.UseVisualStyleBackColor = true;
-            this.clearTelemetryButton.Click += new System.EventHandler(this.ClearTelemetryButton_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -381,6 +405,8 @@
         private System.Windows.Forms.ComboBox tableComboBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button clearTelemetryButton;
+        private System.Windows.Forms.Button openNewExperimentalQueryButton;
+        private System.Windows.Forms.Button viewTopTeamsButton;
     }
 }
 
